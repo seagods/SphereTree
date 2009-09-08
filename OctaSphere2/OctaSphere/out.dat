@@ -1,0 +1,20 @@
+Hardware not Available, using software
+height=768  width=1024
+Creating Camera CCam 
+height=600  width=800
+ Max Number of Lights=3377
+ new istart=8
+new istop=40
+ISTART  ISTOP 8  40
+ new istart=40
+new istop=168
+ISTART  ISTOP 40  168
+ new istart=168
+new istop=680
+ISTART  ISTOP 168  680
+ new istart=680
+new istop=2728
+ISTART  ISTOP 680  2728
+ new istart=2728
+new istop=10920
+ISTART  ISTOP 2728  10920

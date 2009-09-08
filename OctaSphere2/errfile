@@ -1,0 +1,5 @@
+rm -f Sphere  *.o  core
+g++ -g  -c Sphere.cpp `sdl-config --cflags`
+cc -g -c gl2ps.c 
+g++ -g -o Sphere  Sphere.o  gl2ps.o  \
+	 `sdl-config --libs` -lGL -lGLU -lgltt -lttf  -lm

@@ -1,0 +1,450 @@
+\documentclass[12pt]{article}
+\setlength{\textheight}{9.80in}
+\setlength{\textwidth}{6.40in}
+\setlength{\oddsidemargin}{0.0mm}
+\setlength{\evensidemargin}{1.0mm}
+\setlength{\topmargin}{-0.6in}
+\setlength{\parindent}{0.2in}
+\setlength{\parskip}{1.5ex}
+\newtheorem{defn}{Definition}
+\renewcommand{\baselinestretch}{1.2}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\title{Topology on a Sphere Using a Truncated Icosahedron}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+We shall start off with a "template" pentagon, then introduce the nodes and
+faces of a dodecahedron. (There is an article in "MathSchool" here discussing
+the construction of the the dodecahedron discussed here. From this dodecahedron,
+we construct an icosahedron, and form the "bucky-ball" or truncated icosahedron
+from that. This in turn we decompose into triangles.
+
+We go into some detail as to node numbers, face numbers, edge numbers, and the
+ connections between the faces of the polyhedra. The main purpose of this article
+is to accompany a computer code, explaining all the details on nodes, faces, edges
+and connections between faces.
+
+
+\section{A Template Pentagon}
+
+We start off with a template pentagon. For the actual positions of the vertices
+ in terms of Golden Ratios, see "MathSchool" or just use very basic trig.
+\vspace*{10cm}
+\begin{figure}[htb]
+\special{psfile=Template.eps vscale=50 hscale=50 voffset=10 hoffset=100}
+\caption{ We envisage a template pentagon centred at the origin in the 
+($x,y$) plane. Any pentagon shall use this convention for node and edge numbering.
+Note the normal (edge 1 vector  cross edge 2 vector) points in the positive $z$
+direction. So if this is used as a "base" for a dodecahedron, the normal is an {\it inward
+normal.}}
+\end{figure}
+
+We shall add a pentagon to each edge of a "base" pentagon in the $(x,y)$ plane and
+"fold them up" as discussed in "MathSchool". This shall give us the "bottom half"
+of a dodecahedron. We shall insist all out normals be inward pointing. (It makes
+no real difference as to whether the normals are inward or outward, however they
+must either be {\it all} inward or {\it all} outward. When it comes to the upper half
+we must have a mirror image template pentagon as shown below.
+
+\vspace*{10cm}
+\begin{figure}[htb]
+\special{psfile=Template2.eps vscale=50 hscale=50 voffset=10 hoffset=100}
+\caption{ A mirror image template for the "upper half" of a dodecahedron.
+}
+\end{figure}
+
+\section{The Dodecahedron}
+
+So, we start with a base pentagon (face $A$), We "glue" identical pentagons
+to the edges, and "fold them up" so that there are no gaps between the outer ring 
+pentagons. This gives us a "lower half" for a dodecahedron. We have six faces
+and fifteen nodes numbered as below.
+
+\vspace*{10cm}
+\begin{figure}[htb]
+\special{psfile=dec1.eps vscale=50 hscale=50 voffset=10 hoffset=100}
+\caption{ 
+Node numbering for pentagons $A$, $B$, $C$, $D$, $E$ and $F$. Here we shall use
+the first template in Fig.1.
+}
+\end{figure}
+
+Next we swap to the mirror template, and rotate it through 180$\circ$. We glue
+on five extra pentagons round the edges and fold them down. This forms the 
+upper half of the dodecahedron.
+
+\vspace*{15cm}
+\begin{figure}[htb]
+\special{psfile=dec2.eps vscale=50 hscale=50 voffset=30 hoffset=100}
+\caption{ 
+Node numbering for pentagons $G$, $H$, $I$, $J$, $K$ and $L$. Here we use
+the second "mirror template" in Fig.2.
+}
+\end{figure}
+
+First, we write down the nodes of the first six pentagons labelled $A$ to $F$
+which have the same convention as in Fig.1.
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Pentagon &  Node 1 & Node 2 & Node 3 & Node 4 & Node 5 \\
+\hline
+A & 1 & 2 & 3 & 4 & 5 \\
+B & 6 & 7 & 8 & 2 & 1 \\
+C &  8 & 9 & 10 & 3 & 2 \\
+D & 10 & 11 & 12 & 4 & 3 \\
+E & 12 & 13 & 14 & 5 & 4 \\
+F & 13 & 15 & 6 & 1 & 5 \\
+\hline
+\end{tabular}
+\end{center}
+
+The remaining pentagons $G$ to $L$ are labelled using the mirror image of Fig.2.
+Then the cross product ${\bf e}_1 \times {\bf e}_2$ is always an {\it inward} normal.
+Just reverse for outward normals. Here $\bf e$ stands for an edge vector, and
+ the subscript is just an edge number. Here are the nodes of the upper half
+of the dodecahedron.
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Pentagon &  Node 1 & Node 2 & Node 3 & Node 4 & Node 5 \\
+\hline
+G & 9 & 8 & 7 & 20 & 19 \\
+H & 11 & 10 & 9 & 19 & 18 \\
+I & 13 & 12 & 11 & 18 & 17 \\
+J & 15 & 14 & 13 & 17 & 16 \\
+K & 7 &  6 & 15 & 16  & 20 \\
+L & 16  & 17 & 18 & 19  & 20 \\
+\hline
+\end{tabular}
+\end{center}
+
+Naturally enough, edges 1 to 5 go from nodes 1 to 2, 2 to 3, 3 to 4, 4 to 5, and 5 to 1
+in the template pentagon. We shall tabulate which pentagons are connected to 
+edges 1 to 5 for each pentagon. We shall use subscripts. The subscript number
+matches the edge number in the neighbouring pentagon. For instance
+for pentagon A, the first entry is $B_4$. This means that edge 1 of $A$ is connected
+ to pentagon $B$. The subscript 4 means that this edge in $A$ corresponds to edge 4 in $B$.Note that nodes are swapped in the neighbouring edge. Edge 1 of $A$ connects to edge 4 of
+$B$, but edge 1 in $A$ is $(node 1, node 2)$ while edge 4 in $B$ is $(node 2 node 1)$.
+
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Pentagon &  Edge 1 & Edge 2 & Edge 3 &  Edge 4 & Edge 5 \\
+\hline
+A  & $B_{4}$ & $C_{4}$ & $D_{4}$ & $E_{4}$ & $F_{4}$ \\
+B  & $K_{1}$ & $G_{2}$ & $C_{5}$ & $A_{1}$ & $F_{3}$ \\
+C  & $G_{1}$ & $H_{2}$ & $D_{5}$ & $A_{2}$ & $B_{3}$ \\
+D  & $H_{1}$ & $I_{2}$ & $E_{5}$ & $A_{3}$ & $C_{3}$ \\
+E  & $I_{1}$ & $J_{2}$ & $F_{5}$ & $A_{4}$ & $D_{3}$ \\
+F  & $J_{1}$ & $K_{2}$ & $B_{5}$ & $A_{5}$ & $E_{3}$ \\
+G  & $C_{1}$ & $B_{2}$ & $K_{5}$ & $L_{4}$ & $H_{3}$ \\
+H  & $D_{1}$ & $C_{2}$ & $G_{5}$ & $L_{3}$ & $I_{3}$ \\
+I  & $E_{1}$ & $D_{2}$ & $H_{5}$ & $L_{2}$ & $J_{3}$ \\
+J  & $F_{1}$ & $E_{2}$ & $I_{5}$ & $L_{1}$ & $K_{3}$ \\
+K  & $B_{1}$ & $F_{2}$ & $J_{5}$ & $L_{5}$ & $G_{3}$ \\
+L  & $K_{4}$ & $J_{4}$ & $I_{4}$ & $H_{4}$ & $G_{4}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+We could go on to split the pentagons into triangles, but instead we shall move on to
+the icosahedron.
+
+\section{The Icosahedron}
+
+The Icosahedron is the {\it Platonic Dual} of the dodecahedron. Instead of 20
+vertices and 12 faces there are 12 vertices and 20 faces, each of which is an
+equilateral triangle. The vertices are at the centres of each pentagon of the
+ dodecahedron. In this section, the letters $A$ to $L$ shall represent the position
+vectors of the nodes at the centres of pentagons $A$ to $L$. It should be apparent from
+the context whether $A$ is pentagon or a node. Again, a triangle has nodes
+($N1, N2, N3)$ going  and edges $ (N1,N2), (N2,N3), (N3,N1)$. the cross product
+ $edge 1 \times edge 2$ shall be an {\it inward} pointing normal. Without further ado
+we can tabulate the nodes of the 20 triangles $T_1$ through to $T_20$. (See Figs.3 and 4.)
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | }
+\hline
+Triangle &  Node 1& Node 2 & Node 3  \\
+\hline
+  T1& $A$ & $B$ & $C$  \\
+  T2& $A$ & $C$ & $D$  \\
+  T3& $A$ & $D$ & $E$  \\
+  T4& $A$ & $E$ & $F$  \\
+  T5& $A$ & $F$ & $B$  \\
+  T6& $B$ & $G$ & $C$  \\
+  T7& $C$ & $H$ & $D$  \\
+  T8& $D$ & $I$ & $E$  \\
+  T9& $E$ & $J$ & $F$  \\
+  T10& $F$ & $K$ & $B$  \\
+  T11& $B$ & $G$ & $K$  \\
+  T12& $C$ & $H$ & $G$  \\
+  T13& $D$ & $I$ & $H$  \\
+  T14& $E$ & $J$ & $I$  \\
+  T15& $F$ & $K$ & $J$  \\
+  T16& $L$ & $J$ & $I$  \\
+  T17& $L$ & $K$ & $J$  \\
+  T18& $L$ & $G$ & $K$  \\
+  T19& $L$ & $H$ & $G$  \\
+  T20& $L$ & $I$ & $H$  \\
+\hline
+\end{tabular}
+\end{center}
+
+We shall also write down how the triangles are connected. In the following, an
+entry such as $T_8(3)$ means edge 3 of triangle 8. Any minus sign indicates that the 
+nodes of the are swapped. So, in the table below, edge 1 of triangle one connects
+to edge 2 of the triangle 5, but the nodes are the opposite way round. Here is
+the full list.
+\begin{center}
+\begin{tabular}{| c | c | c | c | }
+\hline
+Triangle &  Edge 1& Edge 2 & Edge 43  \\
+\hline
+  T1& $-T5(3)$ & $-T6(3)$ & $-T2(1)$  \\
+  T2& $-T1(3)$ & $-T7(3)$ & $-T3(1)$  \\
+  T3& $-T2(3)$ & $-T8(3)$ & $-T4(1)$  \\
+  T4& $-T3(3)$ & $-T9(3)$ & $-T5(1)$  \\
+  T5& $-T4(3)$ & $-T10(3)$ & $-T1(1)$  \\
+  T6& $T11(1)$ & $T12(3)$ & $-T1(2)$  \\
+  T7& $T12(1)$ & $T13(3)$ & $-T2(2)$  \\
+  T8& $T13(1)$ & $T14(3)$ & $-T3(2)$  \\
+  T9& $T14(1)$ & $T15(3)$ & $-T4(2)$  \\
+  T10& $T15(1)$ & $T11(3)$ & $-T5(2)$  \\
+  T11& $T6(1)$ & $T18(2)$ & $T10(2)$  \\
+  T12& $T7(1)$ & $T19(2)$ & $T6(2)$  \\
+  T13& $T8(1)$ & $T20(2)$ & $T7(2)$  \\
+  T14& $T9(1)$ & $T16(2)$ & $T8(2)$  \\
+  T15& $T10(1)$ & $T17(2)$ & $T9(2)$  \\
+  T16& $-T17(3)$ & $T14(2)$ & $-T20(1)$  \\
+  T17& $-T18(3)$ & $T15(2)$ & $-T16(1)$  \\
+  T18& $-T19(3)$ & $T11(2)$ & $-T17(1)$  \\
+  T19& $-T20(3)$ & $T12(2)$ & $-T18(1)$  \\
+  T20& $-T16(3)$ & $T13(2)$ & $-T19(1)$  \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Buckminster!}
+
+Now, we shall want to construct a truncated icosahedron. There are five "spokes"
+at each node. If we go to any node, and then mark off one third of the length
+of the spokes from that node, we have the nodes of small pentagon. For instance,
+ node $A$ in the icosahedron is at the centre of pentagon $A$ in the original
+dodecahedron. The spokes radiating from node $A$ radiate to nodes $B$ through to $F$.
+If we mark off these one third lengths, we have the nodes of a pentagon which
+looks like the template pentagon rotated through 180$^circ$ but smaller.
+
+We shall abuse notation a little here for the sake of brevity. By pentagon
+$A^\prime$ = nodes $B$, $C$, $D$, $E$ $F$ we mean that node 1 is
+ $\stackrel{\longrightarrow}{A}+1/3 \stackrel{\longrightarrow}{AB}$. That is, the
+prime denotes the centre, and the letter denotes the node toward which the
+spoke is pointing to. The divisions by 3 shall still be there, but they shall be
+implicit. The 60 nodes of these twelve smaller pentagons are {\it all} of the nodes
+of the truncated icosahedron. This happens to be the structure of the $C60$ molecule,
+which is also known as Buckminsterfullerene after the architect Buckminster who
+utilised the such structures in geodesic domes. These are 20 hexagons sharing these nodes. Each pentagon
+shares edges with five hexagons, and each hexagon shares nodes with three pentagons
+and three other hexagons.
+The twelve pentagons, using the notation just described are given next.
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Pentagon &  Node 1& Node 2 & Node 3  & Node 4 & Node 5 \\
+\hline
+A$^\prime$ & B  & C & D & E & F \\
+B$^\prime$ & A  & F & K & G & C \\
+C$^\prime$ & A  & B & G & H & D \\
+D$^\prime$ & A  & C & H & I & E \\
+E$^\prime$ & A  & D & I & J & F \\
+F$^\prime$ & A  & E & J & K & B \\
+G$^\prime$ & L  & H & C & B & K \\
+H$^\prime$ & L  & I & D & C & G \\
+I$^\prime$ & L  & J & E & D & H \\
+J$^\prime$ & L  & K & F & E & I \\
+K$^\prime$ & L  & G & B & F & J \\
+L$^\prime$ & K  & J & I & H & G \\
+\hline
+\end{tabular}
+\end{center}
+
+We use the node listings above to define edges 1 to 5 of each pentagon in the truncated icosahedron. That is
+edge 1 consists of nodes 1 and 2, edge 2 consists of nodes 2 and 3, up until edge 5
+which consists of nodes 5 and 1. We go back to the lower half of the dodecahedron in
+Fig.3. Fig.4 below shows a rough sketch of pentagons $A$, $B$ and $C$. Within each
+of these is a smaller pentagon which is part of the truncated icosahedron, as marked
+by the prime. Triangle $T_1$ is shown. The three primed pentagons "shave off" the edges
+of $T_1$ to form the hexagon shown in the thicker line. Each triangle in the icosahedron
+is now a hexagon in the truncated icosahedron. We will want to list which edge
+of which pentagon corresponds to which edge of which hexagon.
+
+\vspace*{10cm}
+\begin{figure}[htb]
+\special{psfile=Hex1.eps vscale=50 hscale=50 voffset=10 hoffset=100}
+\caption{ 
+Triangle $T_1$ is formed by the centres of pentagons $A$, $B$, and $C$. 
+These spokes between the pentagon centres define the pentagons $A^\prime$,
+ $B^\prime$, and $C^\prime$. One edge of each of these pentagons define the hexagon in
+$T_1$.
+}
+\end{figure}
+
+It is natural to start off by defining the hexagons in terms of the pentagons listed above.We proceed by defining a hexagon in terms of three pentagon edges. (A different pentagon for each edges. We shall denote these as hexagon edges 1, 3, and 5.  The edges
+numbered 2, 4, and 6 follow automatically. The nodes and edges of a hexagon in some
+triangle $X, Y, Z$ are depicted in Fig.6.
+\vspace*{10cm}
+\begin{figure}[htb]
+\special{psfile=Hex2.eps vscale=50 hscale=50 voffset=10 hoffset=100}
+\caption{ 
+The hexagon nodes and edges in a triangle with nodes $(X,Y,Z)$ are defined.
+}
+\end{figure}
+
+In this way, we define the twenty hexagons below. To make the notation clear,
+the first line means that edge 1 of hexagon 1 is an edge in pentagon $A^\prime$
+In $A^prime$ it is consists of the node pair $(C,B)$ which is edge 1, but in
+reverse order, so it is given a minus sign. We shall split the tables up into four 
+groups of five
+
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Hexagon  & edge & Pentagon & Node 1 & Node 2 & edge \\
+\hline
+H1 &  e1  & $A^\prime$ &  C  & B &  -e1 \\
+   &  e3  & $B^\prime$ &  A  & C &  -e5 \\
+   &  e5  & $C^\prime$ &  A  & B &  +e1 \\
+\hline
+H2 &  e1  & $A^\prime$ &  D  & C &  -e2 \\
+   &  e3  & $C^\prime$ &  A  & D &  -e5 \\
+   &  e5  & $D^\prime$ &  A  & C &  +e1 \\
+\hline
+H3 &  e1  & $A^\prime$ &  E  & D &  -e3 \\
+   &  e3  & $D^\prime$ &  A  & E &  -e5 \\
+   &  e5  & $E^\prime$ &  A  & D &  +e1 \\
+\hline
+H4 &  e1  & $A^\prime$ &  F  & E &  -e4 \\
+   &  e3  & $E^\prime$ &  A  & F &  -e5 \\
+   &  e5  & $F^\prime$ &  A  & E &  +e1 \\
+\hline
+H5 &  e1  & $A^\prime$ &  B  & F &  -e5 \\
+   &  e3  & $F^\prime$ &  A  & B &  -e5 \\
+   &  e5  & $B^\prime$ &  A  & F &  +e1 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Hexagon  & edge & Pentagon & Node 1 & Node 2 & edge \\
+\hline
+H6 &  e1  & $B^\prime$ &  C  & G &  -e4 \\
+   &  e3  & $G^\prime$ &  B  & C &  -e3 \\
+   &  e5  & $C^\prime$ &  B  & G &  +e2 \\
+\hline
+H7 &  e1  & $C^\prime$ &  D  & H &  -e4 \\
+   &  e3  & $H^\prime$ &  C  & D &  -e3 \\
+   &  e5  & $D^\prime$ &  C  & H &  +e2 \\
+\hline
+H8 &  e1  & $D^\prime$ &  E  & I &  -e4 \\
+   &  e3  & $I^\prime$ &  D  & E &  -e3 \\
+   &  e5  & $E^\prime$ &  D  & I &  +e2 \\
+\hline
+H9 &  e1  & $E^\prime$ &  F  & J &  -e4 \\
+   &  e3  & $J^\prime$ &  E  & F &  -e3 \\
+   &  e5  & $F^\prime$ &  E  & J &  +e2 \\
+\hline
+H10 &  e1  & $F^\prime$ &  B  & K &  -e4 \\
+   &  e3  & $K^\prime$ &  F  & B &  -e3 \\
+   &  e5  & $B^\prime$ &  F  & K &  +e2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Hexagon  & edge & Pentagon & Node 1 & Node 2 & edge \\
+\hline
+H11 &  e1  & $B^\prime$ &  G  & B &  -e2 \\
+   &  e3  & $G^\prime$ &  K  & B &  -e4 \\
+   &  e5  & $K^\prime$ &  G  & K &  -e3 \\
+\hline
+H12 &  e1  & $C^\prime$ &  C  & H &  -e2 \\
+   &  e3  & $H^\prime$ &  G  & C &  -e4 \\
+   &  e5  & $G^\prime$ &  H  & G &  -e3 \\
+\hline
+H13 &  e1  & $D^\prime$ &  D  & I &  -e2 \\
+   &  e3  & $I^\prime$ &  H  & D &  -e4 \\
+   &  e5  & $H^\prime$ &  I  & H &  -e3 \\
+\hline
+H14 &  e1  & $E^\prime$ &  E  & J &  -e2 \\
+   &  e3  & $J^\prime$ &  I  & E &  -e4 \\
+   &  e5  & $I^\prime$ &  J  & I &  -e2 \\
+\hline
+H15 &  e1  & $F^\prime$ &  F  & K &  -e2 \\
+   &  e3  & $K^\prime$ &  J  & F &  -e4 \\
+   &  e5  & $J^\prime$ &  K  & J &  -e3 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Hexagon  & edge & Pentagon & Node 1 & Node 2 & edge \\
+\hline
+H16 &  e1  & $L^\prime$ &  I  & J &  +e3 \\
+   &  e3  & $J^\prime$ &  L  & I &  -e5 \\
+   &  e5  & $I^\prime$ &  L  & J &  +e1 \\
+\hline
+H17 &  e1  & $L^\prime$ &  J  & K &  +e4 \\
+   &  e3  & $K^\prime$ &  L  & J &  -e5 \\
+   &  e5  & $J^\prime$ &  L  & K &  +e1 \\
+\hline
+H18 &  e1  & $L^\prime$ &  K  & G &  +e5 \\
+   &  e3  & $G^\prime$ &  L  & K &  -e5 \\
+   &  e5  & $K^\prime$ &  L  & G &  +e1 \\
+\hline
+H19 &  e1  & $L^\prime$ &  G  & H &  +e1 \\
+   &  e3  & $H^\prime$ &  L  & G &  -e5 \\
+   &  e5  & $G^\prime$ &  L  & H &  +e1 \\
+\hline
+H20 &  e1  & $L^\prime$ &  H  & I &  +e2 \\
+   &  e3  & $I^\prime$ &  L  & H &  -e5 \\
+   &  e5  & $H^\prime$ &  L  & I &  +e1 \\
+\hline
+\end{tabular}
+\end{center}
+
+We can write down the inverse table, which tells us which hexagon lies
+across any edge of any pentagon, and what the corresponding  edge number and edge
+orientation is in the hexagon. 
+
+
+The question as to how the connectivity between the hexagons has already
+been done. The connections are the same as for the triangles in the icosahedron
+ section, except that triangle edges 1, 2, and 3, are now hexagon edges 2, 4, and 5.
+So we have the nodes of the truncated icosahedron, the nodes of each pentagon and
+connection, how the pentagons and hexagons fit to each other, and how the hexagons
+fit with each other.
+
+
+
+\end{document}
+

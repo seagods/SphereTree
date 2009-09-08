@@ -1,0 +1,1 @@
+LD_PRELOAD=/usr/lib/libXaw.so.7 xfig

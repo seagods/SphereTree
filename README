@@ -1,0 +1,6 @@
+ I just thought I would like to share these spherical
+ quadtree data structures. They are based on a paper
+ by Goodchild and Shirena, and the basis for them
+ can be found in the Spheres documentation directory here.
+ I have not yet added binary encoding.
+
