@@ -2,7 +2,7 @@ TARGET		=Sphere
 
 $(TARGET):	Sphere.o  gl2ps.o 
 	g++ -g -o $(TARGET) Sphere.o  gl2ps.o  \
-	 `sdl-config --libs` -lGL -lGLU -lgltt -lttf  -lm
+	 `sdl-config --libs` -lGL -lGLU -lm
 
 Sphere.o:   
 	g++ -g  -c Sphere.cpp `sdl-config --cflags`
