@@ -1,14 +1,17 @@
-TARGET		=Sphere 
+TARGET		=Sphere.exe
 
-$(TARGET):	Sphere.o  gl2ps.o 
-	g++ -g -o $(TARGET) Sphere.o  gl2ps.o  \
-	 `sdl-config --libs` -lGL -lGLU -lm
-
-Sphere.o:   
-	g++ -g  -c Sphere.cpp `sdl-config --cflags`
+$(TARGET):	SphereMSwin.o   gl2ps.o 
+	g++ -g -o $(TARGET) SphereMSwin.o gl2ps.o \
+		-LC:/MinGW/lib  -lmingw32  -lSDLmain -lSDL \
+                -lOGLFT -lfreetype -lgle -lpng -lz -lglu32 -lopengl32 -lseagods -lgfortran -mwindows
+	
+SphereMSwin.o:
+	g++ -g  -c  SphereMSwin.cpp -IC:/MinGW/include/SDL  -D_GNU_SOURCE=1 -Dmain=SDL_main \
+                -IC:/MinGW/include/oglft
+                
 
 gl2ps.o:
-	cc -g -c gl2ps.c 
+	gcc -g -c gl2ps.c 
 
 clean:
 	rm -f $(TARGET) *.o  core

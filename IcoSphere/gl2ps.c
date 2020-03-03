@@ -54,7 +54,7 @@
 #include <stdarg.h>
 #include <time.h>
 #include <float.h>
-#include "gl2ps.h"
+#include "C:\myIncludez\XFILeSwin32\gl2ps.h"
 
 /********************************************************************* 
  *
