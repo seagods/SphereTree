@@ -955,40 +955,110 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 void RenderScene(CCam& Camera1)
 {
 
-       glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
-       glLoadIdentity();
+      glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
+      glMatrixMode(GL_MODELVIEW);
+      glLoadIdentity();
+      glPushMatrix();
 
-       //
-       //camera  pos      view     up vector
+      LIGHTS=true;
+
+      if(LIGHTS)
+	      glEnable(GL_LIGHTING);
+      else
+	      glDisable(GL_LIGHTING);
+
+     int il=0; //light number
+
+     float ambient[4]={RedL[il][0], GreenL[il][0], BlueL[il][0], AlphaL[il][0]}; 
+     float diffuse[4]={RedL[il][1], GreenL[il][1], BlueL[il][1], AlphaL[il][1]}; 
+     float specular[4]={RedL[il][2], GreenL[il][2], BlueL[il][2], AlphaL[il][2]}; 
+
+//   sets light colours
+         glLightfv(MYLIGHTS[il],GL_AMBIENT,ambient);
+         glLightfv(MYLIGHTS[il],GL_DIFFUSE,diffuse);
+         glLightfv(MYLIGHTS[il],GL_SPECULAR,specular);
 
 
-       if(exwhyzed){
-       gluLookAt(
-        Camera1.CamPos.GetX(),   Camera1.CamPos.GetY(),  Camera1.CamPos.GetZ(),
-        Camera1.CamView.GetX(), Camera1.CamView.GetY(), Camera1.CamView.GetZ(),
-        Camera1.jay.GetX(),   Camera1.jay.GetY(),   Camera1.jay.GetZ());   
+
+/*
+         gLightPosition[0]=1.0;  //light from pos  openGL x 
+         gLightPosition[1]=0.0;
+         gLightPosition[2]=0.0; 
+         //looks like light from gl (1,0,0) (at beginning of <---->)
+
+
+         gLightPosition[0]=0.0;  //light from pos  openGL y
+         gLightPosition[1]=0.0;
+         gLightPosition[2]=1.0; 
+         //looks like light from gl (0,0,1) (at beginning of <---->)
+
+
+         gLightPosition[0]=0.0;  //light from pos  openGL y
+         gLightPosition[1]=1.0;
+         gLightPosition[2]=0.0; 
+         //looks like light from gl (0,0,1) (at beginning of <---->)
+*/
+         double lightsx,lightsy,lightsz,lightsnorm;
+
+         lightsx=Camera1.CamPos.GetX(); 
+         lightsy=Camera1.CamPos.GetY();
+         lightsz=Camera1.CamPos.GetZ();
+
+         if( lightsnorm>1.e-6){  //makes no difference but do it anyway
+           lightsnorm=sqrt(lightsx*lightsx+lightsy*lightsy+lightsz*lightsz);
+           lightsx=lightsx/lightsnorm;
+           lightsy=lightsy/lightsnorm;
+           lightsz=lightsz/lightsnorm;
+         }
+
+
+
+//       This light is always behind you, so nothing in shadow!
+         gLightPosition[0]=(float)lightsx;
+         gLightPosition[1]=(float)lightsy;
+         gLightPosition[2]=(float)lightsz;
+
+
+        //Now lets set some stuff for gluLookat
+        
+        float eye[3],stare[3],up[3];
+
+        eye[0]=(float)Camera1.CamPos.GetX();
+        eye[1]=(float)Camera1.CamPos.GetY();
+        eye[2]=(float)Camera1.CamPos.GetZ();
+
+        stare[0]=(float)Camera1.CamView.GetX();
+        stare[1]=(float)Camera1.CamView.GetY();
+        stare[2]=(float)Camera1.CamView.GetZ();
+
+        if(boom){
+          if(exwhyzed){
+             up[0]=Camera1.jay.GetX();
+             up[1]=Camera1.jay.GetY();
+             up[2]=Camera1.jay.GetZ();
+           }
+           else{
+             up[0]=Camera1.jprime.GetX();
+             up[1]=Camera1.jprime.GetY();
+             up[2]=Camera1.jprime.GetZ();
+           }
         }
-       if(boom || aeroplane){
-        gluLookAt(
-        Camera1.CamPos.GetX(),   Camera1.CamPos.GetY(),  Camera1.CamPos.GetZ(),
-        Camera1.CamView.GetX(), Camera1.CamView.GetY(), Camera1.CamView.GetZ(),
-        Camera1.jprime.GetX(),   Camera1.jprime.GetY(),   Camera1.jprime.GetZ());   
-        }
+
+        gluLookAt(eye[0],eye[1],eye[2],
+                  stare[0],stare[1],stare[2],
+                  up[0],up[1],up[2]);
+
+
+        gLightPosition[3]=0.0; //zero sets it as directional
+
+         glLightfv(MYLIGHTS[il],GL_POSITION,gLightPosition);
+                   //  need glLightfv AFTER gluLookat.
+
+
+        //  Examples light at (0,0,1) on openGL k axis
 
 
 
-      //create fonts here
-      //Check in Camera.h
-      //Camera at (0,0,-5000)
-      // stare at (0,0,0)
-
-      //camera angle is 45 degees
-      //camera 5000 away
-      //-2000. is where xmin will be
-      //+2000. is where xmax will be
-      //
-      //bounding box
- 
        double exmin, whymin, zedmin;
        double exmax, whymax, zedmax;
        double exrange, whyrange,zedrange;
@@ -1035,81 +1105,37 @@ void RenderScene(CCam& Camera1)
 
       double xvals[3],yvals[3],zvals[3];
 
+      float fxvals[3],fyvals[3],fzvals[3];
+
 
       cout <<"Loop Triangles from istart to istop " << istart << "  " << istop << endl;
 
       for(int i=istart; i< istop; i++){
-                float scalethis=1.0;
-
-         //   cout << "i=" << i << "  " <<istart+13 << " istop=" << istop <<endl;
-
-          //  cout << "I am Getting 1,2,3\n";
 
 		 int mi,mj,mk;
 		 mi=Triangles[i].Get1();
 		 mj=Triangles[i].Get2();
 		 mk=Triangles[i].Get3();
-        //    cout << "Getting X,Y,Zs\n";
+
 
                  int j=0;
-                 xvals[j]=NodeV[ Triangles[i].Get1()].GetX();
-                 yvals[j]=NodeV[ Triangles[i].Get1()].GetY();
-                 zvals[j]=NodeV[ Triangles[i].Get1()].GetZ();
-
-/*
-                xvals[j]=xvals[j]/scalethis;
-                yvals[j]=xvals[j]/scalethis;
-                zvals[j]=xvals[j]/scalethis;
-*/
-          
-         //  cout << "Done vals at Node " << Triangles[i].Get1();
-
-	if(i==istart+13){
-                cout <<"Norm of NodeV\n";
-                cout << "x=" << xvals[j] << endl;
-                cout << "x=" << yvals[j] << endl;
-                cout << "x=" << zvals[j] << endl;
-                 cout << Triangles[i].Get1() << "  "
-                 << xvals[j]*xvals[j]
-                 + yvals[j]*yvals[j]
-                 + zvals[j]*zvals[j] << endl; 
-                     }
-
-
+                 xvals[j]=NodeV[mi].GetX();
+                 yvals[j]=NodeV[mi].GetY();
+                 zvals[j]=NodeV[mi].GetZ();
+                 fxvals[j]=(float)xvals[j];fyvals[j]=(float)yvals[j];fzvals[j]=(float)zvals[j];
 
 		 j=1;
-                 xvals[j]=NodeV[ Triangles[i].Get2()].GetX();
-                 yvals[j]=NodeV[ Triangles[i].Get2()].GetY();
-                 zvals[j]=NodeV[ Triangles[i].Get2()].GetZ();
-/*
-                xvals[j]=xvals[j]/scalethis;
-                yvals[j]=xvals[j]/scalethis;
-                zvals[j]=xvals[j]/scalethis;
-*/
-
-	if(i==istart+13) {
-                 cout << Triangles[i].Get2() << "  "
-                 << xvals[j]*xvals[j]
-                 + yvals[j]*yvals[j]
-                 + zvals[j]*zvals[j] << endl; 
-                 }
+                 xvals[j]=NodeV[mj].GetX();
+                 yvals[j]=NodeV[mj].GetY();
+                 zvals[j]=NodeV[mj].GetZ();
+                 fxvals[j]=(float)xvals[j];fyvals[j]=(float)yvals[j];fzvals[j]=(float)zvals[j];
 
 		 j=2;
-                 xvals[j]=NodeV[ Triangles[i].Get3()].GetX();
-                 yvals[j]=NodeV[ Triangles[i].Get3()].GetY();
-                 zvals[j]=NodeV[ Triangles[i].Get3()].GetZ();
-/*
-                xvals[j]=xvals[j]/scalethis;
-                yvals[j]=xvals[j]/scalethis;
-                zvals[j]=xvals[j]/scalethis;
-*/
+                 xvals[j]=NodeV[mk].GetX();
+                 yvals[j]=NodeV[mk].GetY();
+                 zvals[j]=NodeV[mk].GetZ();
+                 fxvals[j]=(float)xvals[j];fyvals[j]=(float)yvals[j];fzvals[j]=(float)zvals[j];
 
-         if(i==istart+13) {
-                 cout << Triangles[i].Get3() << "  "
-                 << xvals[j]*xvals[j]
-                 + yvals[j]*yvals[j]
-                 + zvals[j]*zvals[j] << endl; 
-              }
 	      D3Dvec edge1, edge2,cross,normal;
 	      edge1.SetX(xvals[1]-xvals[0]);
 	      edge1.SetY(yvals[1]-yvals[0]);
@@ -1118,24 +1144,31 @@ void RenderScene(CCam& Camera1)
 	      edge2.SetY(yvals[2]-yvals[0]);
 	      edge2.SetZ(zvals[2]-zvals[0]);
 
+//   our original coordinates are in "standard cartesians|"
+//   openGL uses another right handed system 
+//   x'=x, y'=z, z'=-y
+
 	      cross=edge1*edge2;
 	      Normalise(cross);
-	      glNormal3f( (float)cross.GetX(), cross.GetY(),cross.GetZ());
+	      glNormal3f( (float)cross.GetX(), (float)cross.GetZ(), -(float)cross.GetY());
 
+          //    Camera1 at (0,0,3000), icosahedron on unit shere
+              float scaleit=1000.0;
 
-              float scaleit=3000.0;
-
+//    first draw triangles
       glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat_amb);
-      if(i==myplotz)glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat_amb2);
       glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_spec);
       glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, mat_diff);
       glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, mat_shine);
               glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
 	      glBegin(GL_TRIANGLES);
-          	glVertex3f( scaleit*xvals[0], scaleit*zvals[0], -scaleit*yvals[0] );
-          	glVertex3f( scaleit*xvals[1], scaleit*zvals[1], -scaleit*yvals[1] );
-          	glVertex3f( scaleit*xvals[2], scaleit*zvals[2], -scaleit*yvals[2] );
+          	glVertex3f( scaleit*fxvals[0], scaleit*fzvals[0], -scaleit*fyvals[0] );
+          	glVertex3f( scaleit*fxvals[1], scaleit*fzvals[1], -scaleit*fyvals[1] );
+          	glVertex3f( scaleit*fxvals[2], scaleit*fzvals[2], -scaleit*fyvals[2] );
              glEnd(); 
+
+
+//    Now draw grid
       glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, line_spec);
       glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, line_amb);
       glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, line_spec);
@@ -1143,12 +1176,17 @@ void RenderScene(CCam& Camera1)
 
               glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
 	      glBegin(GL_TRIANGLES);
-          	glVertex3f( scaleit*xvals[0], scaleit*zvals[0], -scaleit*yvals[0] );
-          	glVertex3f( scaleit*xvals[1], scaleit*zvals[1], -scaleit*yvals[1] );
-          	glVertex3f( scaleit*xvals[2], scaleit*zvals[2], -scaleit*yvals[2] );
+          	glVertex3f( scaleit*fxvals[0], scaleit*fzvals[0], -scaleit*fyvals[0] );
+          	glVertex3f( scaleit*fxvals[1], scaleit*fzvals[1], -scaleit*fyvals[1] );
+          	glVertex3f( scaleit*fxvals[2], scaleit*fzvals[2], -scaleit*fyvals[2] );
              glEnd(); 
       }
+
+
+      glPopMatrix();
 
       SDL_GL_SwapBuffers();
 
 }
+
+

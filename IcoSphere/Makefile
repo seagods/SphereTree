@@ -1,4 +1,4 @@
-TARGET		=Sphere.exe
+TARGET		=Sphere
 
 $(TARGET):	SphereMSwin.o   gl2ps.o 
 	g++ -g -o $(TARGET) SphereMSwin.o gl2ps.o \
