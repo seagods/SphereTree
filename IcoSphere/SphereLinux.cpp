@@ -26,13 +26,13 @@
 
 #include "SphereLinux.h"
 
-#include "/usr/local/include/XFILESlinux/TrueType.h"
-#include "/usr/local/include/XFILESlinux/SetUp.h"
-#include "/usr/local/include/XFILESlinux/Controls.h"
-#include "/usr/local/include/XFILESlinux/DrawTextMove.h"
-#include "/usr/local/include/XFILESlinux/DrawCurveCol.h"
-#include "/usr/local/include/XFILESlinux/DrawLegend.h"
-#include "/usr/local/include/XFILESlinux/DrawLogicBox.h"
+#include "/usr/local/include/XFILES/TrueType.h"
+#include "/usr/local/include/XFILES/SetUp.h"
+#include "/usr/local/include/XFILES/Controls.h"
+#include "/usr/local/include/XFILES/DrawTextMove.h"
+#include "/usr/local/include/XFILES/DrawCurveCol.h"
+#include "/usr/local/include/XFILES/DrawLegend.h"
+#include "/usr/local/include/XFILES/DrawLogicBox.h"
 
 //  We shall be using OpenGL's Quadric function
 //  GLU_FILL means that it won't be wire frame
@@ -67,7 +67,7 @@ int width=1024;
 int height=768;
 
 
-#include "/usr/local/include/XFILESlinux/Init.cpp"
+#include "/usr/local/include/XFILES/Init.cpp"
 
 void EventLoop()
 {
@@ -84,7 +84,7 @@ void EventLoop()
  //   f_stream opens for both
  //
  // Camera1 position and stare at point have defaults
- // in /usr/local/include/XFILESlinux/.
+ // in /usr/local/include/XFILES/.
  // CamPos is in OpenGL y=0 plane, at x=0, z=-3000,
  // stare at origin. Also jprime=OpenGL j, iprime=OpenGL i
  // and kprime=OpenGL k.
@@ -260,11 +260,6 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 // Go to Render Scene for graphics bit
 
     bool exitnow=false;
-
-    double X,Y,Z;
-    X=-1e32;Y=-1e-32;Z=-1e32;
-    xmax=X; ymax=Y, zmax=Z;
-    xmin=-X; ymin=-Y, zmin=-Z;
 
     double xunit,yunit,zunit;
     xunit=1.0;yunit=1.0;zunit=1.0;
@@ -896,11 +891,7 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 
 
     }
-	    cout <<"Number of nodes is " << n_nodes+1 << endl;
 
-    //exit(0);
-
- 
  while(!quitit){
         
        while(SDL_PollEvent(&event)){
@@ -1055,35 +1046,7 @@ void RenderScene(CCam& Camera1)
                    //  need glLightfv AFTER gluLookat.
 
 
-        //  Examples light at (0,0,1) on openGL k axis
-
-
-
-       double exmin, whymin, zedmin;
-       double exmax, whymax, zedmax;
-       double exrange, whyrange,zedrange;
-       exrange=xrange; whyrange=yrange; zedrange=zrange; 
-       exmin=xmin, whymin=ymin; zedmin=zmin;
-
-
-         double Halfscreen=3000.0;
-         double Screen=2.*Halfscreen;
-         double maxrange;
-         maxrange=exrange;
-         if(maxrange < whyrange)maxrange=whyrange;
-         if(maxrange < zedrange)maxrange=zedrange;
-
-         double Halfscreenx,Halfscreeny,Halfscreenz;
-         Halfscreenx=Halfscreen*exrange/maxrange;
-         Halfscreeny=Halfscreen*whyrange/maxrange;
-         Halfscreenz=Halfscreen*zedrange/maxrange;
-     
-
-	 double x1,y1,z1;
-	 double x2,y2,z2;
-	 double x3,y3,z3;
-	 double x4,y4,z4;
-	 
+        //  Examples light at (0,0,1) on openGL k axi
 
       // materials
       float mat_spec[]={1.0, 0.0, 0.0, 0.0};  //polygon's ref of specular light

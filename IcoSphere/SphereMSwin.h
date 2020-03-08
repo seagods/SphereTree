@@ -37,16 +37,15 @@
 
 
 //include declarations and prototypes --- needed or not!
-//#include "CamSettings.h"
 /***********************************************************************************/
 #include <GL/gl.h>
 #include <GL/glu.h>
 
 #include <SDL/SDL.h>
-#include "C:\myIncludez\XFILESwin32\D3Dvec.h"
-#include "C:\myIncludez\XFILESwin32\D2Dvec.h"
-#include "C:\myIncludez\XFILESwin32\Triangle.h"
-#include "C:\myIncludez\XFILESwin32/throwcatch.h"
+#include "C:\myIncludez\XFILES\D3Dvec.h"
+#include "C:\myIncludez\XFILES\D2Dvec.h"
+#include "C:\myIncludez\XFILES\Triangle.h"
+#include "C:\myIncludez\XFILES\throwcatch.h"
 
 double speed=50.0, angspeed=0.05;
 
@@ -127,8 +126,8 @@ D3Dvec* edges1;
 D3Dvec* edges2;
 D3Dvec* Normals;
 D3Dvec* NormalsG;
-#include "C:\myIncludez\XFILESwin32\List.h"
-#include "C:\myIncludez\XFILESwin32\Node1.h"
+#include "C:\myIncludez\XFILES\List.h"
+#include "C:\myIncludez\XFILES\Node1.h"
 typedef CMyNode1<int>  ListNode;
 typedef CMyNode1<char>  ListNode_char;
 typedef CMyLinkedList<ListNode> intList;
@@ -142,8 +141,8 @@ int const MD=4;  //MAXIMUM DEPTH OF TREE (depth ranges from 0 to MD
 
 
 
-#include "C:\myIncludez\XFILESwin32\TriOctNode.h"
-#include "C:\myIncludez\XFILESwin32\TriOctTree.h"
+#include "C:\myIncludez\XFILES\TriOctNode.h"
+#include "C:\myIncludez\XFILES\TriOctTree.h"
 typedef CMyOctNode <D3Dvec> ONode; //An ONode shall hold a vector
                                    //describing the compare point
 				   // and a list of integers
@@ -151,8 +150,8 @@ typedef CMyOctNode <D3Dvec> ONode; //An ONode shall hold a vector
 typedef CMyTriOctTree<ONode> OTree;   //OctTree consists of nodes
         OTree* CollideTree;
 /**********************************************************************/
-#include "C:\myIncludez\XFILESwin32\Dmatrix.h"
-//#include "C:\myIncludez\XFILESwin32\Solver.h"
+#include "C:\myIncludez\XFILES\Dmatrix.h"
+//#include "C:\myIncludez\XFILES\Solver.h"
 /**********************************************************************/
 //void Solver(int &dim, double &maxerr, Dmatrix& Matrix, Dvector& rhs, Dvector& SolveVec);
 int myGaussElim(int& dimen , double** Matr , double* VexRhs, double* VexLhs );
@@ -162,8 +161,8 @@ D3Dvec RealCamPos;  //periodic boundary conditions
                     //CamPos thinks it  wanders in infinite space
 		    //But RealCamPos knows about the pbc.
 double X1, X2, Y1, Y2, Z1, Z2;
-#include "C:\myIncludez\XFILESwin32\Camera.h"
-#include "C:\myIncludez\XFILESwin32\gl2ps.h"
+#include "C:\myIncludez\XFILES\Camera.h"
+#include "C:\myIncludez\XFILES\gl2ps.h"
 
 extern int VideoFlags;
 extern SDL_Surface * MainWindow;
@@ -229,7 +228,7 @@ void DrawScene(CCam &, bool);
 int arg_count;
 char **arg_list;
 
-#include "C:\myIncludez\XFILESwin32\Init.h"
+#include "C:\myIncludez\XFILES\Init.h"
 
 int nplots;   
 const int nplotsmax=40;
@@ -297,5 +296,5 @@ bool LegendExists;
 string *LegendStrings;
 
 
-#include "C:\myIncludez\XFILESwin32\numbers_xyz.h"
+#include "C:\myIncludez\XFILES\numbers_xyz.h"
 

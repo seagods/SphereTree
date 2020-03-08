@@ -23,8 +23,16 @@
 // GODSALVE HAS NO OBLIGATIONS TO PROVIDE MAINTAINANCE, SUPPORT, UPDATES, 
 // ENHANCEMENTS, OR MODIFICATIONS IF HE CHOOSES NOT TO DO SO.
 //--------------------------------------------------------------------------------
-#include "Sphere.h"
-#include <fstream>
+#include "SphereLinux.h"
+
+
+#include "C:\myIncludez\XFILES\TrueType.h"
+#include "C:\myIncludez\XFILES\SetUp.h"
+#include "C:\myIncludez\XFILES\Controls.h"
+#include "C:\myIncludez\XFILES\DrawTextMove.h"
+#include "C:\myIncludez\XFILES\DrawCurveCol.h"
+#include "C:\myIncludez\XFILES\DrawLegend.h"
+#include "C:\myIncludez\XFILES\DrawLogicBox.h"
 
 //  We shall be using OpenGL's Quadric function
 //  GLU_FILL means that it won't be wire frame
@@ -34,102 +42,199 @@
 
 int g_RenderMode=GLU_LINE;
 
+
+int myplotz;
 int nv,npoly;
 
-const double pi=acos(-1.0);
-//
-D2Dvec *NodeV;  //lat long
-Triangle *Triangles;
-//D2Dvec NodeV[1000000];  //lat long
-//Triangle Triangles[1000000];
-
 int ntri, ntrinew;
-int istart,istop, isplit;
+int istart,istop, isplit, iquad;
 
-
-const int MAX_TEXTURES=300;
-unsigned int gl_Texture[MAX_TEXTURES];
-
-/*  FONTS IN
-HAVE TRUETYPE FONTS IN
-1.  /usr/share/tuxpaint/fonts
-2,  /usr/lib/SunJava2-1.4.2/jre/lib/fonts
-3.  /usr/X11R6/lib/X11/fonts/truetype
-4   plus a few others from games and povray
-*/
+bool   xallpos,xallneg;
+bool   yallpos,yallneg;
+bool   zallpos,zallneg;
 
 int width=1024;
 int height=768;
-const double speed=50;
-const double acceleration=1;
-const double convert=180.0/pi;
-const double twopi=2.0*pi;
-// instantaneous rotation angles
-double angx=0.0, angy=0.0;
-// cumulative versions
-double angxcum=0.0, angycum=0.0;
-
-bool upPressed=false;
-bool downPressed=false;
-bool leftPressed=false;
-bool ctrl_leftPressed=false;
-bool shift_leftPressed=false;
-bool rightPressed=false;
-bool ctrl_rightPressed=false;
-bool shift_rightPressed=false;
-bool p_Pressed=false;
-bool MouseOn=true;
-bool togglez=false;
-
-int iplot=20;
 
 
+#include "C:\myIncludez\XFILES\Init.cpp"
 
-void Init(){
-   InitialiseGL(SCREEN_WIDTH, SCREEN_HEIGHT);
-  // CreateTexture(gl_Texture,"Earth2.bmp",0);
-
-   //lighting  r,b,g,alpha (alpha is for blending)
-   glClearColor(1.,1.,1.,1.); //background colour white
-   glClearColor(0.,0.,0.,1.); //background colour white
-
-     std::cout << " Max Number of Lights=" << GL_MAX_LIGHTS << endl;
-
-     //To specifiy a light we need to name them as follows
-     // from GL_LIGHT0, GL_LIGHT1,GL_LIGHT2,... GL_LIGHTN.
-
-     /* Second Argument can be
-       GL_AMBIENT, GL_DIFFUSE,GL_SPECULAR,GL_POSITION,
-    GL_SPOT_CUTTOFF, GL_SPOT_DIRECTION, GL_SPOT_EXPONENT,
-    GL_CONSTANT_ATTENIATION, GL_LINEAR_ATTENUATION,
-    GL_QUADRATIC_ATTENUATION   */
-    //
-    //colour of the ambient and diffuse light
-     float ambient[4]={0.9, 0.9, 0.9, 0.2}; // light from all over
-     float diffuse[4]={1.0, 1.0, 1.0, 1.0}; // light component reflecting diffusely
-     float specular[4]={1.0, 1.0, 1.0, 1.0}; //light reflecting specularly
-
-     glLightfv(GL_LIGHT0,GL_AMBIENT, ambient);
-     glLightfv(GL_LIGHT0,GL_DIFFUSE, diffuse);
-     glLightfv(GL_LIGHT0,GL_SPECULAR, specular);
-
-     float gLightPosition[4]={-1000.,-1000.,-1000.,0.0};
-  //   float gLightPosition[4]={10000.,0.,0., 1.0};
-     //The last number  tells OpenGL that it's
-     // a light position if it is non zero. 
-     // The first three numbers are the coordinates. If this last entry is zero
-     // OpenGL will treat it as a direction, and will work out
-     // direction cosines from the first three numbers. 
-
-     glLightfv(GL_LIGHT0,GL_POSITION,gLightPosition);
-
-     glEnable( GL_LIGHT0 );
-
-     glEnable( GL_LIGHTING);
-
-}
 void EventLoop(CCam & Camera1)
 {
+
+ LIGHTS=false;
+ CCam Camera1;
+
+//  Go to while(!quitit) to see what happens once data set up
+
+// Go to Render Scene for graphics bit
+
+ //   if_stream opens for input
+ //   of_stream opens for output
+ //   f_stream opens for both
+ //
+ // Camera1 position and stare at point have defaults
+ // in C:\myIncludez\XFILES\.
+ // CamPos is in OpenGL y=0 plane, at x=0, z=-3000,
+ // stare at origin. Also jprime=OpenGL j, iprime=OpenGL i
+ // and kprime=OpenGL k.
+ //
+ // Be careful to adjust iprime jprime, jay, and kprime
+ // if changed here (See Landscape and Camera.h)
+ //
+ // if you use SetPos here
+    if(staked){
+	    Camera1.SetPos(0.0,0.0,0.0);
+	    Camera1.SetView(0.0,0.0,1000.0);
+    }
+
+
+    shift1=0.0;  //  x leftright
+    shift2=0.0;   // in/out
+    shift3=0.0;   // z up/down
+    shift4=150.0;    //  x in/out
+    shift5=150.0;    //  y left/right
+    shift6=-100.0;    //  radial+-
+    shift7=0.0;
+    shift8=0.0;
+    shift9=0.0;
+    shift10=0.0;
+    shift11=0.0;
+    shift12=0.0;
+
+
+
+    int pointsize=45; // for camera coordinates in perspective mode
+ 
+    font1=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
+     if(font1==0 || !font1->isValid()){
+        std::cout << "Font1 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+        std::cout << "Font 1 is fine!" << std::endl;  }
+
+     font2=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegi.ttf",pointsize);
+     if(font2==0 || !font2->isValid()){
+        std::cout << "Font2 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+        std::cout << "Font 2 is fine!" << std::endl;  }
+
+     font3=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegbd.ttf",pointsize);
+     if(font3==0 || !font3->isValid()){
+        std::cout << "Font3 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 3 is fine!" << std::endl;  }
+
+     font4=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegibd.ttf",pointsize);
+     if(font4==0 || !font4->isValid()){
+       std::cout << "Font4 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 4 is fine!" << std::endl;  }
+
+     font5=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/Fonts-Linux/slgrrg__.ttf",pointsize);
+     if(font5==0 || !font5->isValid()){
+       std::cout << "Font5 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 5 is fine!" << std::endl;  }
+
+     font6=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmex10.ttf",pointsize);
+     if(font6==0 || !font6->isValid()){
+       std::cout << "Font6 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 6 is fine!" << std::endl;  }
+
+     font7=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmmi10.ttf",pointsize);
+     if(font7==0 || !font7->isValid()){
+       std::cout << "Font7 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 7 is fine!" << std::endl;  }
+
+     font8=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmr10.ttf",pointsize);
+     if(font8==0 || !font8->isValid()){
+       std::cout << "Font8 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 8 is fine!" << std::endl;  }
+
+     font9=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmsy10.ttf",pointsize);
+     if(font9==0 || !font9->isValid()){
+       std::cout << "Font9 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 9 is fine!" << std::endl;  }
+     
+     //rasterised bitmap font
+     pointsize=12;
+     font10=new OGLFT::Monochrome("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
+
+     if(font10==0 || !font10->isValid()){
+       std::cout << "Font10 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 10 is fine!" << std::endl;  }
+    
+     pointsize=6;  // for orthomode with scalefac 100.
+     font11=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
+     if(font11==0 || !font11->isValid()){
+       std::cout << "Font11 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 11 is fine!" << std::endl;  }
+
+     pointsize=60;   //  other sizes for perspective mode and cam coord system
+     font12=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
+     if(font12==0 || !font12->isValid()){
+       std::cout << "Font12 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 12 is fine!" << std::endl;  }
+
+     pointsize=75;
+     font13=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
+     if(font13==0 || !font13->isValid()){
+       std::cout << "Font13 Failed" << std::endl;
+        exit(1);
+     }
+     else{
+       std::cout << "Font 13 is fine!" << std::endl;  }
+
+
+     font1->setForegroundColor(0.0, 0.0, 0.0);
+     font2->setForegroundColor(0.0, 0.0, 0.0);
+     font3->setForegroundColor(0.0, 0.0, 0.0);
+     font4->setForegroundColor(0.0, 0.0, 0.0);
+     font5->setForegroundColor(0.0, 0.0, 0.0);
+     font6->setForegroundColor(0.0, 0.0, 0.0);
+     font7->setForegroundColor(0.0, 0.0, 0.0);
+     font8->setForegroundColor(0.0, 0.0, 0.0);
+     font9->setForegroundColor(0.0, 0.0, 0.0);
+     font10->setForegroundColor(0.0, 0.0, 0.0);
+     font11->setForegroundColor(0.0, 0.0, 0.0);
+     font12->setForegroundColor(0.0, 0.0, 0.0);
+     font13->setForegroundColor(0.0, 0.0, 0.0);
+
+
+     glPixelStorei( GL_UNPACK_ALIGNMENT, 1);
+
+
  bool quitit=false;
  SDL_Event event;
  SDL_MouseMotionEvent event2;
@@ -139,15 +244,13 @@ void EventLoop(CCam & Camera1)
 int n_nodes;
 bool old1,old2,old3;
 bool case0, case1, case2, case3, case4, case5, case6, case7;
-
 bool  singular;
 double longdiff;
-
 //  Go to while(!quitit) to see what happens once data set up
 
 // Go to Render Scene for graphics bit
 
-    bool exitnow=false;
+     bool exitnow=false;
 
     double xunit,yunit,zunit;
     xunit=1.0;yunit=1.0;zunit=1.0;
@@ -171,11 +274,11 @@ double longdiff;
     Ttotal=20*(int)(pow(4,ndiv+1)-1);
 
     Triangles=(Triangle*)calloc(Ttotal,sizeof(Triangle)); 
-    NodeV=(D2Dvec*)calloc(Ntotal,sizeof(D2Dvec)); 
+    NodeV=(D3Dvec*)calloc(Ntotal,sizeof(D3Dvec)); 
 
     //INITIALISE USING CONDTRUCTOR
     for(int i=0; i < Ntotal; i++){
-	    NodeV[i]=D2Dvec();  }
+	    NodeV[i]=D3Dvec();  }
     for(int i=0; i < Ttotal; i++){
 	    Triangles[i]=Triangle();  }  
 
@@ -186,11 +289,12 @@ double longdiff;
     infile1.open("Node.dat", ios::in);
     infile2.open("Tri.dat", ios::in);
 
-    double lati, longi;
+    double lati, longi, dummy;
 
+    dummy=0.0;
     for(int i=0; i<12; i++){
         infile1 >> lati >> longi;
-        NodeV[i].SetVec(longi,lati);
+        NodeV[i].SetVec(longi,lati,dummy);
     }
 
     int in,jn,kn;
@@ -676,11 +780,11 @@ double longdiff;
 		    }  //endif neighbours unsplit
 	    }  //end loop over tranche of triangles
 
-	    if(idiv==0)*filename="Sphere1.dat";
-	    if(idiv==1)*filename="Sphere2.dat";
-	    if(idiv==2)*filename="Sphere3.dat";
-	    if(idiv==3)*filename="Sphere4.dat";
-	    if(idiv==4)*filename="Sphere5.dat";
+	    if(idiv==0)filename[0]=(char*)"Sphere1.dat";
+	    if(idiv==1)filename[0]=(char*)"Sphere2.dat";
+	    if(idiv==2)filename[0]=(char*)"Sphere3.dat";
+	    if(idiv==3)filename[0]=(char*)"Sphere4.dat";
+	    if(idiv==4)filename[0]=(char*)"Sphere5.dat";
 
     file_out.open(*filename, ios::out);  //can habe ios::app for appending
     file_out << n_nodes+1 <<" "<< ntrinew << endl;
@@ -785,9 +889,6 @@ double longdiff;
 
     }
 
-
-
- 
  while(!quitit){
         
        while(SDL_PollEvent(&event)){
@@ -804,9 +905,19 @@ double longdiff;
                  break;
                  case SDL_MOUSEMOTION:
                   if(mousedown){
-                         if(MouseOn)Camera1.MouseView();}
+                         if(MouseOn)
+                         if(tethered || staked)
+                           Camera1.MouseView();
+                           else
+                           Camera1.MouseLookAt();
+                 }
                   else{
-                         if(MouseOn)Camera1.MouseLookAt(); }
+                         if(MouseOn)
+                            if(tethered || staked)
+                                Camera1.MouseLookAt(); 
+                                else
+                                Camera1.MouseLookAt(); 
+                 } //from PlotGlobe
                  break;  
 
 
@@ -826,40 +937,113 @@ double longdiff;
             } //end of outer loop
 
 }
+}
 void RenderScene(CCam & Camera1)
 {
 
-       glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
-       glLoadIdentity();
+      glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
+      glMatrixMode(GL_MODELVIEW);
+      glLoadIdentity();
+      glPushMatrix();
 
-       //
-       //camera  pos      view     up vector
-       gluLookAt(
-        Camera1.CamPos.GetX(),   Camera1.CamPos.GetY(),  Camera1.CamPos.GetZ(),
-        Camera1.CamView.GetX(), Camera1.CamView.GetY(), Camera1.CamView.GetZ(),
-        Camera1.CamUp.GetX(),   Camera1.CamUp.GetY(),   Camera1.CamUp.GetZ());   
+      LIGHTS=true;
 
+      if(LIGHTS)
+	      glEnable(GL_LIGHTING);
+      else
+	      glDisable(GL_LIGHTING);
 
-      //create fonts here
-      //Check in Camera.h
-      //Camera at (0,0,-5000)
-      // stare at (0,0,0)
+     int il=0; //light number
 
-      //camera angle is 45 degees
-      //camera 5000 away
-      //-2000. is where xmin will be
-      //+2000. is where xmax will be
-      //
+     float ambient[4]={RedL[il][0], GreenL[il][0], BlueL[il][0], AlphaL[il][0]}; 
+     float diffuse[4]={RedL[il][1], GreenL[il][1], BlueL[il][1], AlphaL[il][1]}; 
+     float specular[4]={RedL[il][2], GreenL[il][2], BlueL[il][2], AlphaL[il][2]}; 
 
-         double Halfscreen=3000.0;
-         double Screen=2.*Halfscreen;
+//   sets light colours
+         glLightfv(MYLIGHTS[il],GL_AMBIENT,ambient);
+         glLightfv(MYLIGHTS[il],GL_DIFFUSE,diffuse);
+         glLightfv(MYLIGHTS[il],GL_SPECULAR,specular);
 
 
-	 double x1,y1,z1;
-	 double x2,y2,z2;
-	 double x3,y3,z3;
-	 double x4,y4,z4;
-	 
+
+/*
+         gLightPosition[0]=1.0;  //light from pos  openGL x 
+         gLightPosition[1]=0.0;
+         gLightPosition[2]=0.0; 
+         //looks like light from gl (1,0,0) (at beginning of <---->)
+
+
+         gLightPosition[0]=0.0;  //light from pos  openGL y
+         gLightPosition[1]=0.0;
+         gLightPosition[2]=1.0; 
+         //looks like light from gl (0,0,1) (at beginning of <---->)
+
+
+         gLightPosition[0]=0.0;  //light from pos  openGL y
+         gLightPosition[1]=1.0;
+         gLightPosition[2]=0.0; 
+         //looks like light from gl (0,0,1) (at beginning of <---->)
+*/
+         double lightsx,lightsy,lightsz,lightsnorm;
+
+         lightsx=Camera1.CamPos.GetX(); 
+         lightsy=Camera1.CamPos.GetY();
+         lightsz=Camera1.CamPos.GetZ();
+
+         if( lightsnorm>1.e-6){  //makes no difference but do it anyway
+           lightsnorm=sqrt(lightsx*lightsx+lightsy*lightsy+lightsz*lightsz);
+           lightsx=lightsx/lightsnorm;
+           lightsy=lightsy/lightsnorm;
+           lightsz=lightsz/lightsnorm;
+         }
+
+
+
+//       This light is always behind you, so nothing in shadow!
+         gLightPosition[0]=(float)lightsx;
+         gLightPosition[1]=(float)lightsy;
+         gLightPosition[2]=(float)lightsz;
+
+
+        //Now lets set some stuff for gluLookat
+        
+        float eye[3],stare[3],up[3];
+
+        eye[0]=(float)Camera1.CamPos.GetX();
+        eye[1]=(float)Camera1.CamPos.GetY();
+        eye[2]=(float)Camera1.CamPos.GetZ();
+
+        stare[0]=(float)Camera1.CamView.GetX();
+        stare[1]=(float)Camera1.CamView.GetY();
+        stare[2]=(float)Camera1.CamView.GetZ();
+
+        if(boom){
+          if(exwhyzed){
+             up[0]=Camera1.jay.GetX();
+             up[1]=Camera1.jay.GetY();
+             up[2]=Camera1.jay.GetZ();
+           }
+           else{
+             up[0]=Camera1.jprime.GetX();
+             up[1]=Camera1.jprime.GetY();
+             up[2]=Camera1.jprime.GetZ();
+           }
+        }
+
+        gluLookAt(eye[0],eye[1],eye[2],
+                  stare[0],stare[1],stare[2],
+                  up[0],up[1],up[2]);
+
+
+        gLightPosition[3]=0.0; //zero sets it as directional
+
+         glLightfv(MYLIGHTS[il],GL_POSITION,gLightPosition);
+                   //  need glLightfv AFTER gluLookat.
+
+
+        //  Examples light at (0,0,1) on openGL k axis
+
+
 
       // materials
       float mat_spec[]={1.0, 0.0, 0.0, 0.0};  //polygon's ref of specular light
@@ -881,17 +1065,26 @@ void RenderScene(CCam & Camera1)
 
       double xvals[3],yvals[3],zvals[3];
 
-      for(int i=istart; i<istop; i++){
+      float fxvals[3],fyvals[3],fzvals[3];
 
-		 double lati,longi;
 
-                 int j=0;
+      cout <<"Loop Triangles from istart to istop " << istart << "  " << istop << endl;
+
+      double zvalue=0.0;
+      int j=0;
+      double lati, longi;
+      for(int i=istart; i< istop; i++){
+       
+
+		 j=0;
 		 longi=NodeV[Triangles[i].Get1()].GetX();
 		 lati=NodeV[Triangles[i].Get1()].GetY();
 
                  xvals[j]=cos(lati)*cos(longi);
                  yvals[j]=cos(lati)*sin(longi);
                  zvals[j]=sin(lati);
+
+                 fxvals[j]=(float)xvals[j]; fyvals[j]=(float)yvals[j]; fzvals[j]=(float)zvals[j];
 
 		 j=1;
 		 longi=NodeV[Triangles[i].Get2()].GetX();
@@ -901,6 +1094,8 @@ void RenderScene(CCam & Camera1)
                  yvals[j]=cos(lati)*sin(longi);
                  zvals[j]=sin(lati);
 
+                 fxvals[j]=(float)xvals[j]; fyvals[j]=(float)yvals[j]; fzvals[j]=(float)zvals[j];
+
 		 j=2;
 		 longi=NodeV[Triangles[i].Get3()].GetX();
 		 lati=NodeV[Triangles[i].Get3()].GetY();
@@ -908,6 +1103,8 @@ void RenderScene(CCam & Camera1)
                  xvals[j]=cos(lati)*cos(longi);
                  yvals[j]=cos(lati)*sin(longi);
                  zvals[j]=sin(lati);
+
+                 fxvals[j]=(float)xvals[j]; fyvals[j]=(float)yvals[j]; fzvals[j]=(float)zvals[j];
 
 	      D3Dvec edge1, edge2,cross,normal;
 	      edge1.SetX(xvals[1]-xvals[0]);
@@ -917,41 +1114,28 @@ void RenderScene(CCam & Camera1)
 	      edge2.SetY(yvals[2]-yvals[0]);
 	      edge2.SetZ(zvals[2]-zvals[0]);
 
+
 	      cross=edge1*edge2;
-
-
-	/*      cout << "Triangle  " << i << endl;
-	      cout << "Nodes     "
-		      <<    "    "  <<  
-		      Triangles[i].Get1()
-		      <<    "    "  <<
-		      Triangles[i].Get2()
-		      <<    "    "  <<
-		      Triangles[i].Get3()  << endl;  
-
-	      cout <<  "1=" << xvals[0] << "  " << yvals[0] << "  " << zvals[0] << endl;
-	      cout <<  "2=" << xvals[1] << "  " << yvals[1] << "  " << zvals[1] << endl;
-	      cout <<  "3=" << xvals[2] << "  " << yvals[2] << "  " << zvals[2] << endl;
-
-      */
-
 	      Normalise(cross);
-	      glNormal3f( (float)cross.GetX(), cross.GetY(),cross.GetZ());
+	      glNormal3f( (float)cross.GetX(), (float)cross.GetZ(), -(float)cross.GetY());
 
+          //    Camera1 at (0,0,3000), icosahedron on unit shere
+              float scaleit=1000.0;
 
-              float scaleit=3000.0;
-
+//    first draw triangles
       glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat_amb);
-      if(i==iplot)glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat_amb2);
       glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_spec);
       glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, mat_diff);
       glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, mat_shine);
               glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
 	      glBegin(GL_TRIANGLES);
-          	glVertex3f( scaleit*xvals[0], scaleit*zvals[0], -scaleit*yvals[0] );
-          	glVertex3f( scaleit*xvals[1], scaleit*zvals[1], -scaleit*yvals[1] );
-          	glVertex3f( scaleit*xvals[2], scaleit*zvals[2], -scaleit*yvals[2] );
+          	glVertex3f( scaleit*fxvals[0], scaleit*fzvals[0], -scaleit*fyvals[0] );
+          	glVertex3f( scaleit*fxvals[1], scaleit*fzvals[1], -scaleit*fyvals[1] );
+          	glVertex3f( scaleit*fxvals[2], scaleit*fzvals[2], -scaleit*fyvals[2] );
              glEnd(); 
+
+
+//    Now draw grid
       glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, line_spec);
       glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, line_amb);
       glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, line_spec);
@@ -959,152 +1143,15 @@ void RenderScene(CCam & Camera1)
 
               glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
 	      glBegin(GL_TRIANGLES);
-          	glVertex3f( scaleit*xvals[0], scaleit*zvals[0], -scaleit*yvals[0] );
-          	glVertex3f( scaleit*xvals[1], scaleit*zvals[1], -scaleit*yvals[1] );
-          	glVertex3f( scaleit*xvals[2], scaleit*zvals[2], -scaleit*yvals[2] );
+          	glVertex3f( scaleit*fxvals[0], scaleit*fzvals[0], -scaleit*fyvals[0] );
+          	glVertex3f( scaleit*fxvals[1], scaleit*fzvals[1], -scaleit*fyvals[1] );
+          	glVertex3f( scaleit*fxvals[2], scaleit*fzvals[2], -scaleit*fyvals[2] );
              glEnd(); 
       }
 
+
+      glPopMatrix();
+
       SDL_GL_SwapBuffers();
-
 }
 
-void HandleKeyPress(SDL_keysym *whatkey)
-{ 
-             int igetscreen;
-             float myspeed=speed;
-
-             switch(whatkey->sym)
-             {
-                 case SDLK_F1:
-                   ToggleFullScreen();
-                   break;
-                 case SDLK_F2:
-                   if(MouseOn==true)
-                     {
-                      MouseOn=false;
-                     }
-                     else
-                    {
-                      MouseOn=true;
-                    }
-                    break;
-                 case SDLK_F9:
-                   if(togglez==true)
-                        togglez=false;
-                   else
-                        togglez=true;
-
-                 case SDLK_F10:
-                   igetscreen=Screenshot(MainWindow,"screenshot.bmp");
-                   break;
-                 case SDLK_ESCAPE:
-                   SDL_Quit();
-                   exit(0);
-                   break;
-                 case  SDLK_UP:
-                   upPressed=true;
-                   break;
-		 case  SDLK_DOWN:
-                   downPressed=true;
-                   break;
-                 case SDLK_LEFT:
-                   leftPressed=true;
-                   if( whatkey->mod & KMOD_CTRL)
-                   {
-                   leftPressed =false;
-                   ctrl_leftPressed=true;
-                   }
-                   if( whatkey->mod & KMOD_SHIFT){
-                   leftPressed =false;
-                   shift_leftPressed=true;
-                   }
-                   break;
-                 case SDLK_RIGHT:
-                   rightPressed=true;
-                   if( whatkey->mod & KMOD_CTRL)
-                   {
-                   rightPressed =false;
-                   ctrl_rightPressed=true;
-                   }
-                   if( whatkey->mod & KMOD_SHIFT){
-                   rightPressed =false;
-                   shift_rightPressed=true;
-                   }
-                 default:
-                   break;
-                 case SDLK_p:
-                   p_Pressed=true;
-                   break; 
-                 case SDLK_F12:
-                   iplot++;
-		   cout << " iplot =" <<  iplot << endl;
-                   break;
-             }
-}
-
-void HandleKeyRelease(SDL_keysym *whatkey)
-{ 
-             switch(whatkey->sym)
-             {
-                 case  SDLK_UP:
-                   upPressed=false;
-                   break;
-		 case  SDLK_DOWN:
-                   downPressed=false;
-                   break;
-                 case SDLK_LEFT:
-                   leftPressed=false;
-                   shift_leftPressed=false;
-                   ctrl_leftPressed=false;
-                   break;
-                 case SDLK_RIGHT:
-                   rightPressed=false;
-                   shift_rightPressed=false;
-                   ctrl_rightPressed=false;
-                   break;
-                 default:
-                   break;
-                 case SDLK_p:
-                   p_Pressed=false;
-                   break; 
-             }
-}
-
-void CheckMove(CCam & Camera1)
-{
-    if(downPressed)Camera1.CamMove(-speed);
-    if(upPressed)Camera1.CamMove(speed);
-             
-    if(leftPressed)Camera1.CamRotatePos(-speed/1000);
-    if(rightPressed)Camera1.CamRotatePos(speed/1000);
-
-    //assumes noone does ctrl and shift together!
-    if(shift_leftPressed)Camera1.CamRotateView(-speed/1000);
-    if(shift_rightPressed)Camera1.CamRotateView(speed/1000);
-    if(ctrl_leftPressed)Camera1.CamStrafe(speed);
-    if(ctrl_rightPressed)Camera1.CamStrafe(-speed);
-
-    if(p_Pressed){
-
-    FILE *fp=fopen("MyFileName.ps","wb");
-    GLint buffsize=0;
-    GLint state=GL2PS_OVERFLOW;
-    GLint viewport[4];
-    glGetIntegerv(GL_VIEWPORT, viewport);
-
-    while(state==GL2PS_OVERFLOW){
-       buffsize+=1024*1024;
-//     could use GL2PS_USE_CURRENT_VIEWPORT,
-       int ips=gl2psBeginPage("MyTitle","MyProducer",viewport,
-               GL2PS_PS,GL2PS_BSP_SORT,GL2PS_SILENT | 
-	       GL2PS_SIMPLE_LINE_OFFSET | GL2PS_BEST_ROOT,GL_RGBA,0,NULL,
-               0,0,0,buffsize,fp,"MyFileName.ps");
-       RenderScene(Camera1);
-       state=gl2psEndPage();
-
-       }  //end while loop
-      fclose(fp);
-    } // end p_Pressed
-
-}

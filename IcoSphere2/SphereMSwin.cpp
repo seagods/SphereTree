@@ -26,13 +26,13 @@
 
 #include "SphereMSwin.h"
 
-#include "C:\myIncludez\XFILESwin32\TrueType.h"
-#include "C:\myIncludez\XFILESwin32\SetUp.h"
-#include "C:\myIncludez\XFILESwin32\Controls.h"
-#include "C:\myIncludez\XFILESwin32\DrawTextMove.h"
-#include "C:\myIncludez\XFILESwin32\DrawCurveCol.h"
-#include "C:\myIncludez\XFILESwin32\DrawLegend.h"
-#include "C:\myIncludez\XFILESwin32\DrawLogicBox.h"
+#include "C:\myIncludez\XFILES\TrueType.h"
+#include "C:\myIncludez\XFILES\SetUp.h"
+#include "C:\myIncludez\XFILES\Controls.h"
+#include "C:\myIncludez\XFILES\DrawTextMove.h"
+#include "C:\myIncludez\XFILES\DrawCurveCol.h"
+#include "C:\myIncludez\XFILES\DrawLegend.h"
+#include "C:\myIncludez\XFILES\DrawLogicBox.h"
 
 //  We shall be using OpenGL's Quadric function
 //  GLU_FILL means that it won't be wire frame
@@ -53,21 +53,11 @@ bool   xallpos,xallneg;
 bool   yallpos,yallneg;
 bool   zallpos,zallneg;
 
-
-
-/*  FONTS IN
-HAVE TRUETYPE FONTS IN
-1.  /usr/share/tuxpaint/fonts
-2,  /usr/lib/SunJava2-1.4.2/jre/lib/fonts
-3.  /usr/X11R6/lib/X11/fonts/truetype
-4   plus a few others from games and povray
-*/
-
 int width=1024;
 int height=768;
 
 
-#include "C:\myIncludez\XFILESwin32\Init.cpp"
+#include "C:\myIncludez\XFILES\Init.cpp"
 
 void EventLoop()
 {
@@ -84,7 +74,7 @@ void EventLoop()
  //   f_stream opens for both
  //
  // Camera1 position and stare at point have defaults
- // in C:\myIncludez\XFILESwin32\.
+ // in C:\myIncludez\XFILES\.
  // CamPos is in OpenGL y=0 plane, at x=0, z=-3000,
  // stare at origin. Also jprime=OpenGL j, iprime=OpenGL i
  // and kprime=OpenGL k.
@@ -116,7 +106,7 @@ void EventLoop()
 
     int pointsize=45; // for camera coordinates in perspective mode
  
-    font1=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+    font1=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font1==0 || !font1->isValid()){
         std::cout << "Font1 Failed" << std::endl;
         exit(1);
@@ -124,7 +114,7 @@ void EventLoop()
      else{
         std::cout << "Font 1 is fine!" << std::endl;  }
 
-     font2=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timegi.ttf",pointsize);
+     font2=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegi.ttf",pointsize);
      if(font2==0 || !font2->isValid()){
         std::cout << "Font2 Failed" << std::endl;
         exit(1);
@@ -132,7 +122,7 @@ void EventLoop()
      else{
         std::cout << "Font 2 is fine!" << std::endl;  }
 
-     font3=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timegbd.ttf",pointsize);
+     font3=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegbd.ttf",pointsize);
      if(font3==0 || !font3->isValid()){
         std::cout << "Font3 Failed" << std::endl;
         exit(1);
@@ -140,7 +130,7 @@ void EventLoop()
      else{
        std::cout << "Font 3 is fine!" << std::endl;  }
 
-     font4=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timegibd.ttf",pointsize);
+     font4=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegibd.ttf",pointsize);
      if(font4==0 || !font4->isValid()){
        std::cout << "Font4 Failed" << std::endl;
         exit(1);
@@ -148,7 +138,7 @@ void EventLoop()
      else{
        std::cout << "Font 4 is fine!" << std::endl;  }
 
-     font5=new OGLFT::Filled("C:/myIncludez/Fonts/Fonts-Linux/slgrrg__.ttf",pointsize);
+     font5=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/Fonts-Linux/slgrrg__.ttf",pointsize);
      if(font5==0 || !font5->isValid()){
        std::cout << "Font5 Failed" << std::endl;
         exit(1);
@@ -156,7 +146,7 @@ void EventLoop()
      else{
        std::cout << "Font 5 is fine!" << std::endl;  }
 
-     font6=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmex10.ttf",pointsize);
+     font6=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmex10.ttf",pointsize);
      if(font6==0 || !font6->isValid()){
        std::cout << "Font6 Failed" << std::endl;
         exit(1);
@@ -164,7 +154,7 @@ void EventLoop()
      else{
        std::cout << "Font 6 is fine!" << std::endl;  }
 
-     font7=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmmi10.ttf",pointsize);
+     font7=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmmi10.ttf",pointsize);
      if(font7==0 || !font7->isValid()){
        std::cout << "Font7 Failed" << std::endl;
         exit(1);
@@ -172,7 +162,7 @@ void EventLoop()
      else{
        std::cout << "Font 7 is fine!" << std::endl;  }
 
-     font8=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmr10.ttf",pointsize);
+     font8=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmr10.ttf",pointsize);
      if(font8==0 || !font8->isValid()){
        std::cout << "Font8 Failed" << std::endl;
         exit(1);
@@ -180,7 +170,7 @@ void EventLoop()
      else{
        std::cout << "Font 8 is fine!" << std::endl;  }
 
-     font9=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmsy10.ttf",pointsize);
+     font9=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmsy10.ttf",pointsize);
      if(font9==0 || !font9->isValid()){
        std::cout << "Font9 Failed" << std::endl;
         exit(1);
@@ -190,7 +180,7 @@ void EventLoop()
      
      //rasterised bitmap font
      pointsize=12;
-     font10=new OGLFT::Monochrome("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font10=new OGLFT::Monochrome("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
 
      if(font10==0 || !font10->isValid()){
        std::cout << "Font10 Failed" << std::endl;
@@ -200,7 +190,7 @@ void EventLoop()
        std::cout << "Font 10 is fine!" << std::endl;  }
     
      pointsize=6;  // for orthomode with scalefac 100.
-     font11=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font11=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font11==0 || !font11->isValid()){
        std::cout << "Font11 Failed" << std::endl;
         exit(1);
@@ -209,7 +199,7 @@ void EventLoop()
        std::cout << "Font 11 is fine!" << std::endl;  }
 
      pointsize=60;   //  other sizes for perspective mode and cam coord system
-     font12=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font12=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font12==0 || !font12->isValid()){
        std::cout << "Font12 Failed" << std::endl;
         exit(1);
@@ -218,7 +208,7 @@ void EventLoop()
        std::cout << "Font 12 is fine!" << std::endl;  }
 
      pointsize=75;
-     font13=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font13=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font13==0 || !font13->isValid()){
        std::cout << "Font13 Failed" << std::endl;
         exit(1);
@@ -254,64 +244,70 @@ void EventLoop()
 int n_nodes;
 bool old1,old2,old3;
 bool case0, case1, case2, case3, case4, case5, case6, case7;
-
+bool  singular;
+double longdiff;
 //  Go to while(!quitit) to see what happens once data set up
 
 // Go to Render Scene for graphics bit
 
-    bool exitnow=false;
-
-    double X,Y,Z;
-    X=-1e32;Y=-1e-32;Z=-1e32;
-    xmax=X; ymax=Y, zmax=Z;
-    xmin=-X; ymin=-Y, zmin=-Z;
+     bool exitnow=false;
 
     double xunit,yunit,zunit;
     xunit=1.0;yunit=1.0;zunit=1.0;
 
-    fstream infile1,infile2;
+
+ //   if_stream opens for input
+ //   of_stream opens for output
+ //   f_stream opens for both
+ //
+    double x,y;   //actually lat long
+ // position vectors for basic octahedron 
+    double pi=acos(-1.0);
+    double piover2=pi/2.0;
+
+    int ndiv, Ntotal, Ttotal;
+    ndiv=4;
+
+    Ntotal=(int)pow(2,2*ndiv);
+    Ntotal=10*Ntotal+2;
+
+    Ttotal=20*(int)(pow(4,ndiv+1)-1);
+
+    Triangles=(Triangle*)calloc(Ttotal,sizeof(Triangle)); 
+    NodeV=(D3Dvec*)calloc(Ntotal,sizeof(D3Dvec)); 
+
+    //INITIALISE USING CONDTRUCTOR
+    for(int i=0; i < Ntotal; i++){
+	    NodeV[i]=D3Dvec();  }
+    for(int i=0; i < Ttotal; i++){
+	    Triangles[i]=Triangle();  }  
+
+
+
+    fstream infile1, infile2;
 
     infile1.open("Node.dat", ios::in);
     infile2.open("Tri.dat", ios::in);
 
-    double lati, longi;
-    double x,y,z;
-    int Ttotal, Ntotal, ndiv;
-    ndiv=4;
-    Ttotal=20*(int)(pow(4,ndiv+1)-1);
-    Ntotal=(int)(pow(2,2*ndiv));
-    Ntotal=10*Ntotal+2;
+    double lati, longi, dummy;
 
-
-    Triangles=(Triangle*)calloc(Ttotal, sizeof(Triangle));
-    NodeV=(D3Dvec*)calloc(Ntotal, sizeof(D3Dvec));
-
-    //INITIALISE USING CONSTRUCTOR
-    for(int i=0; i< Ttotal; i++){
-            Triangles[i]=Triangle();  }
-    for(int i=0; i< Ntotal; i++){
-            NodeV[i]=D3Dvec();  }  
-
- // position vectors for basic icosahedron
-    for(int i=0; i< 12; i++){
-	    infile1 >> lati >> longi;
-	    x=cos(lati)*cos(longi);
-	    y=cos(lati)*sin(longi);
-	    z=sin(lati);
-	    NodeV[i].SetVec(x,y,z);
+    dummy=0.0;
+    for(int i=0; i<12; i++){
+        infile1 >> lati >> longi;
+        NodeV[i].SetVec(longi,lati,dummy);
     }
-
 
     int in,jn,kn;
     char quad, otherquad;
 
-    for(int i=0; i< 20; i++){  //20 facts of Icosahedron
-      infile2 >> in >> jn >> kn;
-      in=in-1; jn=jn-1; kn=kn-1;
-      Triangles[i].SetTri(in, jn, kn);
-      quad=i;
-      Triangles[i].SetQuad(quad);
+    for(int i=0; i<20; i++){
+        infile2 >> in >> jn >> kn;
+        in=in-1;  jn=jn-1; kn=kn-1;
+        Triangles[i].SetTri(in, jn, kn);
+	quad=i;
+        Triangles[i].SetQuad(quad);
     }
+
 
     //Neighbours for each edge of each triangle
     //Triangle edges in triangle are the edge number
@@ -385,11 +381,11 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
     Triangles[19].SetNeighb(in, jn, kn);
     // *********************************************
 
-    ntri=20; n_nodes=12; ntrinew=0;   //we have 20 triangles and 6 nodes for Icosahedron
-
+    n_nodes=12;
+    ntri=20;
 
     ofstream file_out;
-    file_out.open("Sphere0.dat", ios::out);  //can have ios::app for appending
+    file_out.open("Sphere0.dat", ios::out);  //can habe ios::app for appending
     file_out << n_nodes <<" "<< ntri <<   "  number of nodes, number of triangles"  <<  endl;
 
     //output triangle number, 3 node numbers, and quadrant id
@@ -399,15 +395,16 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 	       	<<" "<<  Triangles[i].GetQuad() <<" "<<  endl;
     }
     //output triangle neighbours on edges 1 2 and 3.
+    istop=0;
     for(int i=0; i<ntri; i++){
        file_out << Triangles[i].GetN1()-istop <<" "<<  Triangles[i].GetN2()-istop 
                 <<" "<<  Triangles[i].GetN3()-istop  << endl;
     }
-    //output x,y,z coordinates of nodes.
+    //output lat long  coordinates of nodes.
 
     for(int  i=0; i< n_nodes;  i++){
       file_out <<  i <<" "<<   NodeV[i].GetX()  <<" "<< 
-	      NodeV[i].GetY() <<" "<<  NodeV[i].GetZ() << endl;
+	      NodeV[i].GetY() << endl;
     }
 
     file_out.close();
@@ -430,6 +427,8 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
     istart=0;
     istop=20;
 
+    int iquad;
+
       // split all triangles at this level if the neighbours 
       // are on the same level. Then every split triangle
       // has an unsplit neighbour and vice versa
@@ -437,7 +436,7 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 	    //recursive subdivision
 	    //
 	    char* filename[5];
-	    for(int idiv=0; idiv < ndiv; idiv++){
+	    for(int idiv=0; idiv <ndiv; idiv++){
 		 ntrinew=0;
 	    for(int itri=istart;itri<istop;itri++){
 		    if( Triangles[itri].GetN() ){
@@ -470,16 +469,15 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 
                     old1=false; old2=false; old3=false;
 		    // nodes of internal triangle to current replacement
-		    // in current leve;
+		    // in current level;
 		    if(NodeExists1){
 			    // split exists on edge 3 of current T
-			   quad=Triangles[itri].GetQuad();
-			   otherquad=Triangles[in3].GetQuad();
+			    quad=Triangles[itri].GetQuad();
+			    otherquad=Triangles[in3].GetQuad();
+                              
+			    iquad=(int)quad;
+                 	    if(iquad > 4 && iquad < 15)otherquad=quad;
 
-			   iquad=(int)quad;
-			   if(iquad > 4 &&  iquad <15)otherquad=quad;
-
-			    
                            if(quad != otherquad){
 			    oldnode1=
 			    Triangles[Triangles[in3].GetS2()].Get3();}
@@ -494,8 +492,8 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 			    quad=Triangles[itri].GetQuad();
 			    otherquad=Triangles[in2].GetQuad();
 
-			   iquad=(int)quad;
-			   if(iquad > 4 &&  iquad <15)otherquad=quad;
+			    iquad=(int)quad;
+                            if(iquad > 4 && iquad < 15)otherquad=quad;
 
 			    if(quad != otherquad){
 			    oldnode2=
@@ -512,16 +510,29 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 			    Triangles[Triangles[in1].GetS2()].Get2();
 			    old3=true;
 		    }
+		    singular=false;
+		    //poles where longitude undefined
+		    // radiate lines of constant longitude
+		    if(Triangles[itri].Get3()==0)singular=true;
+		    if(Triangles[itri].Get3()==11)singular=true;
 
 		    if(oldnode1 < 0){
 		       n_nodes++;
+		       if(!singular){
+			longdiff=NodeV[ Triangles[itri].Get3() ].GetX()
+				-NodeV[ Triangles[itri].Get2() ].GetX();
+				if(longdiff < -pi)longdiff=longdiff+twopi;
+				if(longdiff > pi)longdiff=longdiff-twopi;
 		       NodeV[n_nodes].SetX( 
 				NodeV[ Triangles[itri].Get2() ].GetX()
-			       +(
-				NodeV[ Triangles[itri].Get3() ].GetX()
-				-NodeV[ Triangles[itri].Get2() ].GetX()
-				)/2.0
+				+longdiff/2.0
 				);
+		       }
+		       else
+		       {
+			     NodeV[n_nodes].SetX(
+				   NodeV[Triangles[itri].Get2()].GetX());
+		       }
 
 		       NodeV[n_nodes].SetY( 
 				NodeV[ Triangles[itri].Get2() ].GetY()
@@ -530,25 +541,26 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 				-NodeV[ Triangles[itri].Get2() ].GetY()
 				)/2.0
 				);
-		       NodeV[n_nodes].SetZ( 
-				NodeV[ Triangles[itri].Get2() ].GetZ()
-			       +(
-				NodeV[ Triangles[itri].Get3() ].GetZ()
-				-NodeV[ Triangles[itri].Get2() ].GetZ()
-				)/2.0
-				);
 		    }
 
 
 		    if(oldnode2 < 0){
 		       n_nodes++;
+		       if(!singular){
+		longdiff=NodeV[ Triangles[itri].Get3() ].GetX()
+				-NodeV[ Triangles[itri].Get1() ].GetX();
+				if(longdiff < -pi)longdiff=longdiff+twopi;
+				if(longdiff > pi)longdiff=longdiff-twopi;
 		       NodeV[n_nodes].SetX( 
 				NodeV[ Triangles[itri].Get1() ].GetX()
-			       +(
-				NodeV[ Triangles[itri].Get3() ].GetX()
-				-NodeV[ Triangles[itri].Get1() ].GetX()
-				)/2.0
+				+longdiff/2.0
 				);
+		       }
+		       else
+		       {
+                       NodeV[n_nodes].SetX(
+			         NodeV[Triangles[itri].Get1()].GetX());
+		       }
 		       NodeV[n_nodes].SetY( 
 				NodeV[ Triangles[itri].Get1() ].GetY()
 			       +(
@@ -556,35 +568,23 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 				-NodeV[ Triangles[itri].Get1() ].GetY()
 				)/2.0
 				);
-		       NodeV[n_nodes].SetZ( 
-				NodeV[ Triangles[itri].Get1() ].GetZ()
-			       +(
-				NodeV[ Triangles[itri].Get3() ].GetZ()
-				-NodeV[ Triangles[itri].Get1() ].GetZ()
-				)/2.0
-				);
 		    }
                     if(oldnode3 < 0){
 		       n_nodes++;
+		       longdiff=NodeV[ Triangles[itri].Get2() ].GetX()
+				-NodeV[ Triangles[itri].Get1() ].GetX();
+				if(longdiff < -pi)longdiff=longdiff+twopi;
+				if(longdiff > pi)longdiff=longdiff-twopi;
 		       NodeV[n_nodes].SetX( 
 				NodeV[ Triangles[itri].Get1() ].GetX()
-			       +(
-				NodeV[ Triangles[itri].Get2() ].GetX()
-				-NodeV[ Triangles[itri].Get1() ].GetX()
-				)/2.0
+				+longdiff/2.0
 				);
+
 		       NodeV[n_nodes].SetY( 
 				NodeV[ Triangles[itri].Get1() ].GetY()
 			       +(
 				NodeV[ Triangles[itri].Get2() ].GetY()
 				-NodeV[ Triangles[itri].Get1() ].GetY()
-				)/2.0
-				);
-		       NodeV[n_nodes].SetZ( 
-				NodeV[ Triangles[itri].Get1() ].GetZ()
-			       +(
-				NodeV[ Triangles[itri].Get2() ].GetZ()
-				-NodeV[ Triangles[itri].Get1() ].GetZ()
 				)/2.0
 				);
 	    }
@@ -720,9 +720,8 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 			      quad=Triangles[itri].GetQuad();
 			      otherquad=Triangles[in2].GetQuad();
 
-	   		   iquad=(int)quad;
-			   if(iquad > 4 &&  iquad <15)otherquad=quad;
-
+			      iquad=(int)quad;
+                              if(iquad > 4 && iquad < 15)otherquad=quad;
 
 			      if(quad != otherquad){
 			      is1=Triangles[in2].GetS3();
@@ -750,8 +749,8 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 			      quad=Triangles[itri].GetQuad();
 			      otherquad=Triangles[in3].GetQuad();
 
-                              iquad=(int)quad;
-	    	              if(iquad > 4 &&  iquad <15)otherquad=quad;
+			      iquad=(int)quad;
+                              if(iquad > 4 && iquad < 15)otherquad=quad;
 
                               if(quad != otherquad){
 			      is1=Triangles[in3].GetS2();
@@ -787,7 +786,7 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 	    if(idiv==3)filename[0]=(char*)"Sphere4.dat";
 	    if(idiv==4)filename[0]=(char*)"Sphere5.dat";
 
-    file_out.open(*filename, ios::out);  //can have ios::app for appending
+    file_out.open(*filename, ios::out);  //can habe ios::app for appending
     file_out << n_nodes+1 <<" "<< ntrinew << endl;
 
     //output triangle number, 3 node numbers, and quadrant id
@@ -802,16 +801,11 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
                 <<" "<<  Triangles[i].GetN3()-istop << endl;
     }
 
-    //  n_nodes runs from 0  to n_nodes, so there are actually n_nodes+1 nodes!
-	      for(int i=0; i<n_nodes+1;i++){
-	//	      cout << "Normalising i=" << i << endl;
-		      Normalise(NodeV[i]);
-	      }
     //output x,y,z coordinates of nodes.
 
     for(int  i=0; i< n_nodes+1;  i++){
       file_out <<  NodeV[i].GetX()  <<" "<< 
-	      NodeV[i].GetY() <<" "<<  NodeV[i].GetZ() << endl;
+	      NodeV[i].GetY() << endl;
     }
 
     file_out.close();
@@ -848,9 +842,8 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 		  quad=Triangles[itri].GetQuad();
 		  otherquad=Triangles[in2].GetQuad();
 
-                  iquad=(int)quad;
-		  if(iquad > 4 &&  iquad <15)otherquad=quad;
-
+		  iquad=(int)quad;
+                  if(iquad > 4 && iquad < 15)otherquad=quad;
 
 		  if(quad != otherquad){
 		  ie3=Triangles[in2].Get3();
@@ -874,9 +867,8 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 		  quad=Triangles[itri].GetQuad();
 		  otherquad=Triangles[in3].GetQuad();
 
-                  iquad=(int)quad;
-		  if(iquad > 4 &&  iquad <15)otherquad=quad;
-
+		  iquad=(int)quad;
+                  if(iquad > 4 && iquad < 15)otherquad=quad;
 
 		  if(quad != otherquad){
 		  ie3=Triangles[in3].Get3();     // Same directions
@@ -896,11 +888,7 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 
 
     }
-	    cout <<"Number of nodes is " << n_nodes+1 << endl;
 
-    //exit(0);
-
- 
  while(!quitit){
         
        while(SDL_PollEvent(&event)){
@@ -1059,32 +1047,6 @@ void RenderScene(CCam& Camera1)
 
 
 
-       double exmin, whymin, zedmin;
-       double exmax, whymax, zedmax;
-       double exrange, whyrange,zedrange;
-       exrange=xrange; whyrange=yrange; zedrange=zrange; 
-       exmin=xmin, whymin=ymin; zedmin=zmin;
-
-
-         double Halfscreen=3000.0;
-         double Screen=2.*Halfscreen;
-         double maxrange;
-         maxrange=exrange;
-         if(maxrange < whyrange)maxrange=whyrange;
-         if(maxrange < zedrange)maxrange=zedrange;
-
-         double Halfscreenx,Halfscreeny,Halfscreenz;
-         Halfscreenx=Halfscreen*exrange/maxrange;
-         Halfscreeny=Halfscreen*whyrange/maxrange;
-         Halfscreenz=Halfscreen*zedrange/maxrange;
-     
-
-	 double x1,y1,z1;
-	 double x2,y2,z2;
-	 double x3,y3,z3;
-	 double x4,y4,z4;
-	 
-
       // materials
       float mat_spec[]={1.0, 0.0, 0.0, 0.0};  //polygon's ref of specular light
       float mat_diff[]={1.0, 0.0, 0.0, 0.0};  //polygon's ref of diffuse light
@@ -1110,31 +1072,41 @@ void RenderScene(CCam& Camera1)
 
       cout <<"Loop Triangles from istart to istop " << istart << "  " << istop << endl;
 
+      double zvalue=0.0;
+      int j=0;
+      double lati, longi;
       for(int i=istart; i< istop; i++){
+       
 
-		 int mi,mj,mk;
-		 mi=Triangles[i].Get1();
-		 mj=Triangles[i].Get2();
-		 mk=Triangles[i].Get3();
+		 j=0;
+		 longi=NodeV[Triangles[i].Get1()].GetX();
+		 lati=NodeV[Triangles[i].Get1()].GetY();
 
+                 xvals[j]=cos(lati)*cos(longi);
+                 yvals[j]=cos(lati)*sin(longi);
+                 zvals[j]=sin(lati);
 
-                 int j=0;
-                 xvals[j]=NodeV[mi].GetX();
-                 yvals[j]=NodeV[mi].GetY();
-                 zvals[j]=NodeV[mi].GetZ();
-                 fxvals[j]=(float)xvals[j];fyvals[j]=(float)yvals[j];fzvals[j]=(float)zvals[j];
+                 fxvals[j]=(float)xvals[j]; fyvals[j]=(float)yvals[j]; fzvals[j]=(float)zvals[j];
 
 		 j=1;
-                 xvals[j]=NodeV[mj].GetX();
-                 yvals[j]=NodeV[mj].GetY();
-                 zvals[j]=NodeV[mj].GetZ();
-                 fxvals[j]=(float)xvals[j];fyvals[j]=(float)yvals[j];fzvals[j]=(float)zvals[j];
+		 longi=NodeV[Triangles[i].Get2()].GetX();
+		 lati=NodeV[Triangles[i].Get2()].GetY();
+
+                 xvals[j]=cos(lati)*cos(longi);
+                 yvals[j]=cos(lati)*sin(longi);
+                 zvals[j]=sin(lati);
+
+                 fxvals[j]=(float)xvals[j]; fyvals[j]=(float)yvals[j]; fzvals[j]=(float)zvals[j];
 
 		 j=2;
-                 xvals[j]=NodeV[mk].GetX();
-                 yvals[j]=NodeV[mk].GetY();
-                 zvals[j]=NodeV[mk].GetZ();
-                 fxvals[j]=(float)xvals[j];fyvals[j]=(float)yvals[j];fzvals[j]=(float)zvals[j];
+		 longi=NodeV[Triangles[i].Get3()].GetX();
+		 lati=NodeV[Triangles[i].Get3()].GetY();
+
+                 xvals[j]=cos(lati)*cos(longi);
+                 yvals[j]=cos(lati)*sin(longi);
+                 zvals[j]=sin(lati);
+
+                 fxvals[j]=(float)xvals[j]; fyvals[j]=(float)yvals[j]; fzvals[j]=(float)zvals[j];
 
 	      D3Dvec edge1, edge2,cross,normal;
 	      edge1.SetX(xvals[1]-xvals[0]);
@@ -1144,9 +1116,6 @@ void RenderScene(CCam& Camera1)
 	      edge2.SetY(yvals[2]-yvals[0]);
 	      edge2.SetZ(zvals[2]-zvals[0]);
 
-//   our original coordinates are in "standard cartesians|"
-//   openGL uses another right handed system 
-//   x'=x, y'=z, z'=-y
 
 	      cross=edge1*edge2;
 	      Normalise(cross);

@@ -41,10 +41,10 @@
 #include <GL/glu.h>
 
 #include "/usr/include/SDL/SDL.h"
-#include "/usr/local/include/XFILESlinuxD3Dvec.h"
-#include "/usr/local/include/XFILESlinuxD2Dvec.h"
-#include "/usr/local/include/XFILESlinuxTriangle.h"
-#include "/usr/local/include/XFILESlinuxthrowcatch.h"
+#include "/usr/local/include/XFILES/D3Dvec.h"
+#include "/usr/local/include/XFILES/D2Dvec.h"
+#include "/usr/local/include/XFILES/Triangle.h"
+#include "/usr/local/include/XFILES/throwcatch.h"
 
 double speed=50.0, angspeed=0.05;
 
@@ -125,8 +125,8 @@ D3Dvec* edges1;
 D3Dvec* edges2;
 D3Dvec* Normals;
 D3Dvec* NormalsG;
-#include "/usr/local/include/XFILESlinuxList.h"
-#include "/usr/local/include/XFILESlinuxNode1.h"
+#include "/usr/local/include/XFILES/List.h"
+#include "/usr/local/include/XFILES/Node1.h"
 typedef CMyNode1<int>  ListNode;
 typedef CMyNode1<char>  ListNode_char;
 typedef CMyLinkedList<ListNode> intList;
@@ -140,8 +140,8 @@ int const MD=4;  //MAXIMUM DEPTH OF TREE (depth ranges from 0 to MD
 
 
 
-#include "/usr/local/include/XFILESlinuxTriOctNode.h"
-#include "/usr/local/include/XFILESlinuxTriOctTree.h"
+#include "/usr/local/include/XFILES/TriOctNode.h"
+#include "/usr/local/include/XFILES/TriOctTree.h"
 typedef CMyOctNode <D3Dvec> ONode; //An ONode shall hold a vector
                                    //describing the compare point
 				   // and a list of integers
@@ -149,8 +149,8 @@ typedef CMyOctNode <D3Dvec> ONode; //An ONode shall hold a vector
 typedef CMyTriOctTree<ONode> OTree;   //OctTree consists of nodes
         OTree* CollideTree;
 /**********************************************************************/
-#include "/usr/local/include/XFILESlinuxDmatrix.h"
-//#include "/usr/local/include/XFILESlinuxSolver.h"
+#include "/usr/local/include/XFILES/Dmatrix.h"
+//#include "/usr/local/include/XFILES/Solver.h"
 /**********************************************************************/
 //void Solver(int &dim, double &maxerr, Dmatrix& Matrix, Dvector& rhs, Dvector& SolveVec);
 int myGaussElim(int& dimen , double** Matr , double* VexRhs, double* VexLhs );
@@ -160,8 +160,8 @@ D3Dvec RealCamPos;  //periodic boundary conditions
                     //CamPos thinks it  wanders in infinite space
 		    //But RealCamPos knows about the pbc.
 double X1, X2, Y1, Y2, Z1, Z2;
-#include "/usr/local/include/XFILESlinuxCamera.h"
-#include "/usr/local/include/XFILESlinuxgl2ps.h"
+#include "/usr/local/include/XFILES/Camera.h"
+#include "/usr/local/include/XFILES/gl2ps.h"
 
 extern int VideoFlags;
 extern SDL_Surface * MainWindow;
@@ -228,7 +228,7 @@ void DrawScene(CCam &, bool);
 int arg_count;
 char **arg_list;
 
-#include "/usr/local/include/XFILESlinuxInit.h"
+#include "/usr/local/include/XFILES/Init.h"
 
 int nplots;   
 const int nplotsmax=40;
@@ -296,7 +296,7 @@ bool LegendExists;
 string *LegendStrings;
 
 
-#include "/usr/local/include/XFILESlinuxnumbers_xyz.h"
+#include "/usr/local/include/XFILES/numbers_xyz.h"
 
 
 

@@ -1,0 +1,31 @@
+Arrived in Main
+Hardware not Available, using software
+height=600  width=800
+height=600  width=800
+Call event loop with argc=1
+Creating Camera CCam 
+Font 1 is fine!
+Font 2 is fine!
+Font 3 is fine!
+Font 4 is fine!
+Font 5 is fine!
+Font 6 is fine!
+Font 7 is fine!
+Font 8 is fine!
+Font 9 is fine!
+Font 10 is fine!
+Font 11 is fine!
+Font 12 is fine!
+Font 13 is fine!
+ new istart=8
+new istop=40
+ISTART  ISTOP 8  40
+ new istart=40
+new istop=168
+ISTART  ISTOP 40  168
+ new istart=168
+new istop=680
+ISTART  ISTOP 168  680
+ new istart=680
+new istop=2728
+ISTART  ISTOP 680  2728

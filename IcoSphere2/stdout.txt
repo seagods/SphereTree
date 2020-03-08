@@ -1,0 +1,279 @@
+Arrived in Main
+Hardware not Available, using software
+height=600  width=800
+height=600  width=800
+Call event loop with argc=1
+Creating Camera CCam 
+Font 1 is fine!
+Font 2 is fine!
+Font 3 is fine!
+Font 4 is fine!
+Font 5 is fine!
+Font 6 is fine!
+Font 7 is fine!
+Font 8 is fine!
+Font 9 is fine!
+Font 10 is fine!
+Font 11 is fine!
+Font 12 is fine!
+Font 13 is fine!
+ new istart=20
+new istop=100
+ISTART  ISTOP 20  100
+ new istart=100
+new istop=420
+ISTART  ISTOP 100  420
+ new istart=420
+new istop=1700
+ISTART  ISTOP 420  1700
+ new istart=1700
+new istop=6820
+ISTART  ISTOP 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820
+Loop Triangles from istart to istop 1700  6820

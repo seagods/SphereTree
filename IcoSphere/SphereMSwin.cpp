@@ -26,13 +26,13 @@
 
 #include "SphereMSwin.h"
 
-#include "C:\myIncludez\XFILESwin32\TrueType.h"
-#include "C:\myIncludez\XFILESwin32\SetUp.h"
-#include "C:\myIncludez\XFILESwin32\Controls.h"
-#include "C:\myIncludez\XFILESwin32\DrawTextMove.h"
-#include "C:\myIncludez\XFILESwin32\DrawCurveCol.h"
-#include "C:\myIncludez\XFILESwin32\DrawLegend.h"
-#include "C:\myIncludez\XFILESwin32\DrawLogicBox.h"
+#include "C:\myIncludez\XFILES\TrueType.h"
+#include "C:\myIncludez\XFILES\SetUp.h"
+#include "C:\myIncludez\XFILES\Controls.h"
+#include "C:\myIncludez\XFILES\DrawTextMove.h"
+#include "C:\myIncludez\XFILES\DrawCurveCol.h"
+#include "C:\myIncludez\XFILES\DrawLegend.h"
+#include "C:\myIncludez\XFILES\DrawLogicBox.h"
 
 //  We shall be using OpenGL's Quadric function
 //  GLU_FILL means that it won't be wire frame
@@ -67,7 +67,7 @@ int width=1024;
 int height=768;
 
 
-#include "C:\myIncludez\XFILESwin32\Init.cpp"
+#include "C:\myIncludez\XFILES\Init.cpp"
 
 void EventLoop()
 {
@@ -84,7 +84,7 @@ void EventLoop()
  //   f_stream opens for both
  //
  // Camera1 position and stare at point have defaults
- // in C:\myIncludez\XFILESwin32\.
+ // in C:\myIncludez\XFILES\.
  // CamPos is in OpenGL y=0 plane, at x=0, z=-3000,
  // stare at origin. Also jprime=OpenGL j, iprime=OpenGL i
  // and kprime=OpenGL k.
@@ -116,7 +116,7 @@ void EventLoop()
 
     int pointsize=45; // for camera coordinates in perspective mode
  
-    font1=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+    font1=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font1==0 || !font1->isValid()){
         std::cout << "Font1 Failed" << std::endl;
         exit(1);
@@ -124,7 +124,7 @@ void EventLoop()
      else{
         std::cout << "Font 1 is fine!" << std::endl;  }
 
-     font2=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timegi.ttf",pointsize);
+     font2=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegi.ttf",pointsize);
      if(font2==0 || !font2->isValid()){
         std::cout << "Font2 Failed" << std::endl;
         exit(1);
@@ -132,7 +132,7 @@ void EventLoop()
      else{
         std::cout << "Font 2 is fine!" << std::endl;  }
 
-     font3=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timegbd.ttf",pointsize);
+     font3=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegbd.ttf",pointsize);
      if(font3==0 || !font3->isValid()){
         std::cout << "Font3 Failed" << std::endl;
         exit(1);
@@ -140,7 +140,7 @@ void EventLoop()
      else{
        std::cout << "Font 3 is fine!" << std::endl;  }
 
-     font4=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timegibd.ttf",pointsize);
+     font4=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timegibd.ttf",pointsize);
      if(font4==0 || !font4->isValid()){
        std::cout << "Font4 Failed" << std::endl;
         exit(1);
@@ -148,7 +148,7 @@ void EventLoop()
      else{
        std::cout << "Font 4 is fine!" << std::endl;  }
 
-     font5=new OGLFT::Filled("C:/myIncludez/Fonts/Fonts-Linux/slgrrg__.ttf",pointsize);
+     font5=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/Fonts-Linux/slgrrg__.ttf",pointsize);
      if(font5==0 || !font5->isValid()){
        std::cout << "Font5 Failed" << std::endl;
         exit(1);
@@ -156,7 +156,7 @@ void EventLoop()
      else{
        std::cout << "Font 5 is fine!" << std::endl;  }
 
-     font6=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmex10.ttf",pointsize);
+     font6=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmex10.ttf",pointsize);
      if(font6==0 || !font6->isValid()){
        std::cout << "Font6 Failed" << std::endl;
         exit(1);
@@ -164,7 +164,7 @@ void EventLoop()
      else{
        std::cout << "Font 6 is fine!" << std::endl;  }
 
-     font7=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmmi10.ttf",pointsize);
+     font7=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmmi10.ttf",pointsize);
      if(font7==0 || !font7->isValid()){
        std::cout << "Font7 Failed" << std::endl;
         exit(1);
@@ -172,7 +172,7 @@ void EventLoop()
      else{
        std::cout << "Font 7 is fine!" << std::endl;  }
 
-     font8=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmr10.ttf",pointsize);
+     font8=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmr10.ttf",pointsize);
      if(font8==0 || !font8->isValid()){
        std::cout << "Font8 Failed" << std::endl;
         exit(1);
@@ -180,7 +180,7 @@ void EventLoop()
      else{
        std::cout << "Font 8 is fine!" << std::endl;  }
 
-     font9=new OGLFT::Filled("C:/myIncludez/Fonts/texcm/cmsy10.ttf",pointsize);
+     font9=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/texcm/cmsy10.ttf",pointsize);
      if(font9==0 || !font9->isValid()){
        std::cout << "Font9 Failed" << std::endl;
         exit(1);
@@ -190,7 +190,7 @@ void EventLoop()
      
      //rasterised bitmap font
      pointsize=12;
-     font10=new OGLFT::Monochrome("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font10=new OGLFT::Monochrome("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
 
      if(font10==0 || !font10->isValid()){
        std::cout << "Font10 Failed" << std::endl;
@@ -200,7 +200,7 @@ void EventLoop()
        std::cout << "Font 10 is fine!" << std::endl;  }
     
      pointsize=6;  // for orthomode with scalefac 100.
-     font11=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font11=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font11==0 || !font11->isValid()){
        std::cout << "Font11 Failed" << std::endl;
         exit(1);
@@ -209,7 +209,7 @@ void EventLoop()
        std::cout << "Font 11 is fine!" << std::endl;  }
 
      pointsize=60;   //  other sizes for perspective mode and cam coord system
-     font12=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font12=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font12==0 || !font12->isValid()){
        std::cout << "Font12 Failed" << std::endl;
         exit(1);
@@ -218,7 +218,7 @@ void EventLoop()
        std::cout << "Font 12 is fine!" << std::endl;  }
 
      pointsize=75;
-     font13=new OGLFT::Filled("C:/myIncludez/Fonts/times/Timeg.ttf",pointsize);
+     font13=new OGLFT::Filled("C:/myIncludez/XFILES/Fonts/times/Timeg.ttf",pointsize);
      if(font13==0 || !font13->isValid()){
        std::cout << "Font13 Failed" << std::endl;
         exit(1);
@@ -261,10 +261,6 @@ bool case0, case1, case2, case3, case4, case5, case6, case7;
 
     bool exitnow=false;
 
-    double X,Y,Z;
-    X=-1e32;Y=-1e-32;Z=-1e32;
-    xmax=X; ymax=Y, zmax=Z;
-    xmin=-X; ymin=-Y, zmin=-Z;
 
     double xunit,yunit,zunit;
     xunit=1.0;yunit=1.0;zunit=1.0;
@@ -1056,14 +1052,6 @@ void RenderScene(CCam& Camera1)
 
 
         //  Examples light at (0,0,1) on openGL k axis
-
-
-
-       double exmin, whymin, zedmin;
-       double exmax, whymax, zedmax;
-       double exrange, whyrange,zedrange;
-       exrange=xrange; whyrange=yrange; zedrange=zrange; 
-       exmin=xmin, whymin=ymin; zedmin=zmin;
 
 
          double Halfscreen=3000.0;
