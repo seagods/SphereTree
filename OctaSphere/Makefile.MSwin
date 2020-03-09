@@ -1,12 +1,12 @@
 TARGET		=Sphere
 
-$(TARGET):	SphereMSwin.o   gl2ps.o 
-	g++ -g -o $(TARGET) SphereMSwin.o gl2ps.o \
+$(TARGET):	OctaSphereMSwin.o   gl2ps.o 
+	g++ -g -o $(TARGET) OctaSphereMSwin.o gl2ps.o \
 		-LC:/MinGW/lib  -lmingw32  -lSDLmain -lSDL \
                 -lOGLFT -lfreetype -lgle -lpng -lz -lglu32 -lopengl32 -lseagods -lgfortran -mwindows
 	
-SphereMSwin.o:
-	g++ -g  -c  SphereMSwin.cpp -IC:/MinGW/include/SDL  -D_GNU_SOURCE=1 -Dmain=SDL_main \
+OctaSphereMSwin.o:
+	g++ -g  -c  OctaSphereMSwin.cpp -IC:/MinGW/include/SDL  -D_GNU_SOURCE=1 -Dmain=SDL_main \
                 -IC:/MinGW/include/oglft
                 
 

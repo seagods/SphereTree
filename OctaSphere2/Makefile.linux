@@ -1,11 +1,11 @@
 TARGET		=Sphere 
 
-$(TARGET):	Sphere.o  gl2ps.o 
-	g++ -g -o $(TARGET) Sphere.o  gl2ps.o  \
+$(TARGET):	OctaSphere2Linux.o  gl2ps.o 
+	g++ -g -o $(TARGET) OctaSphere2Linux.o  gl2ps.o  \
 	 `sdl-config --libs` -lGL -lGLU -lm
 
-Sphere.o:   
-	g++ -g  -c Sphere.cpp `sdl-config --cflags`
+OctaSphere2Linux.o:   
+	g++ -g  -c OctaSphere2.cpp `sdl-config --cflags`
 
 gl2ps.o:
 	cc -g -c gl2ps.c 

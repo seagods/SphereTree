@@ -1,11 +1,11 @@
 TARGET		=Sphere 
 
-$(TARGET):	Sphere.o  gl2ps.o 
-	g++ -g -o $(TARGET) SphereLinux.o  gl2ps.o  \
+$(TARGET):	IcoSphereLinux.o  gl2ps.o 
+	g++ -g -o $(TARGET) IcoSphereLinux.o  gl2ps.o  \
 	 `sdl-config --libs` -lGL -lGLU -lm
 
-SphereLinux.o:   
-	g++ -g  -c SphereLinux.cpp `sdl-config --cflags`
+IcoSphereLinux.o:   
+	g++ -g  -c IcoSphereLinux.cpp `sdl-config --cflags`
 
 gl2ps.o:
 	cc -g -c gl2ps.c 

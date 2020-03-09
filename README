@@ -4,6 +4,7 @@
  can be found in the Spheres documentation directory here.
  I have not yet added binary encoding.
 
- Note the graphics have an old version of Camera.h
- and are independent of the XFiles in seagods:Plotfiles.git
+
+We now have them plugged into XFILES headers rather than local version.
+We have Nicrosoft Windows and Linux versions
 

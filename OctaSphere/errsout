@@ -1,0 +1,2976 @@
+In file included from OctaSphereMSwin.h:45,
+                 from OctaSphereMSwin.cpp:27:
+C:/myIncludez/XFILES/Camera.h: In constructor 'CCam::CCam()':
+C:/myIncludez/XFILES/Camera.h:72:8: error: 'exwhyzed' was not declared in this scope
+     if(exwhyzed){
+        ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:77:8: error: 'boom' was not declared in this scope
+     if(boom){
+        ^~~~
+C:/myIncludez/XFILES/Camera.h:77:8: note: suggested alternative: 'bool'
+     if(boom){
+        ^~~~
+        bool
+C:/myIncludez/XFILES/Camera.h:85:8: error: 'flight' was not declared in this scope
+     if(flight || wander ){
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:85:8: note: suggested alternative: 'glLighti'
+     if(flight || wander ){
+        ^~~~~~
+        glLighti
+C:/myIncludez/XFILES/Camera.h:85:18: error: 'wander' was not declared in this scope
+     if(flight || wander ){
+                  ^~~~~~
+C:/myIncludez/XFILES/Camera.h:85:18: note: suggested alternative: 'rand'
+     if(flight || wander ){
+                  ^~~~~~
+                  rand
+C:/myIncludez/XFILES/Camera.h: In member function 'void CCam::CamStrafe(double)':
+C:/myIncludez/XFILES/Camera.h:133:5: error: 'ix' was not declared in this scope
+     ix=(int)(xp/xside);
+     ^~
+C:/myIncludez/XFILES/Camera.h:133:17: error: 'xside' was not declared in this scope
+     ix=(int)(xp/xside);
+                 ^~~~~
+C:/myIncludez/XFILES/Camera.h:133:17: note: suggested alternative: 'fwide'
+     ix=(int)(xp/xside);
+                 ^~~~~
+                 fwide
+C:/myIncludez/XFILES/Camera.h:134:5: error: 'iz' was not declared in this scope
+     iz=(int)(zp/xside);
+     ^~
+C:/myIncludez/XFILES/Camera.h:135:5: error: 'ixold' was not declared in this scope
+     ixold=ix;
+     ^~~~~
+C:/myIncludez/XFILES/Camera.h:136:5: error: 'izold' was not declared in this scope
+     izold=iz;
+     ^~~~~
+C:/myIncludez/XFILES/Camera.h:148:10: error: 'periodic_xz' was not declared in this scope
+       if(periodic_xz){
+          ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:154:11: error: 'twodee' was not declared in this scope
+       if(!twodee)ryp=ryp-speed*iprime.GetY();
+           ^~~~~~
+C:/myIncludez/XFILES/Camera.h:154:11: note: suggested alternative: 'twopi'
+       if(!twodee)ryp=ryp-speed*iprime.GetY();
+           ^~~~~~
+           twopi
+C:/myIncludez/XFILES/Camera.h:157:15: error: 'ihalfside' was not declared in this scope
+       if(rxp<-ihalfside*xside)rxp=rxp+xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:157:39: error: 'xlength' was not declared in this scope
+       if(rxp<-ihalfside*xside)rxp=rxp+xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:158:15: error: 'ihalfside' was not declared in this scope
+       if(rxp >ihalfside*xside)rxp=rxp-xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:158:39: error: 'xlength' was not declared in this scope
+       if(rxp >ihalfside*xside)rxp=rxp-xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:159:15: error: 'ihalfside' was not declared in this scope
+       if(rzp<-ihalfside*xside)rzp=rzp+xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:159:39: error: 'xlength' was not declared in this scope
+       if(rzp<-ihalfside*xside)rzp=rzp+xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:160:15: error: 'ihalfside' was not declared in this scope
+       if(rzp >ihalfside*xside)rzp=rzp-xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:160:39: error: 'xlength' was not declared in this scope
+       if(rzp >ihalfside*xside)rzp=rzp-xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:166:10: error: 'collisiontest' was not declared in this scope
+       if(collisiontest){
+          ^~~~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:174:10: error: 'periodic_xz' was not declared in this scope
+       if(periodic_xz){
+          ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:195:7: error: 'intList' was not declared in this scope
+       intList* Local;
+       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:195:7: note: suggested alternative: 'int64_t'
+       intList* Local;
+       ^~~~~~~
+       int64_t
+C:/myIncludez/XFILES/Camera.h:195:16: error: 'Local' was not declared in this scope
+       intList* Local;
+                ^~~~~
+C:/myIncludez/XFILES/Camera.h:195:16: note: suggested alternative: '_scalb'
+       intList* Local;
+                ^~~~~
+                _scalb
+C:/myIncludez/XFILES/Camera.h:196:7: error: 'ListNode' was not declared in this scope
+       ListNode* Head;
+       ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:196:7: note: suggested alternative: 'wcstod'
+       ListNode* Head;
+       ^~~~~~~~
+       wcstod
+C:/myIncludez/XFILES/Camera.h:196:17: error: 'Head' was not declared in this scope
+       ListNode* Head;
+                 ^~~~
+C:/myIncludez/XFILES/Camera.h:196:17: note: suggested alternative: 'fread'
+       ListNode* Head;
+                 ^~~~
+                 fread
+C:/myIncludez/XFILES/Camera.h:197:17: error: 'Tail' was not declared in this scope
+       ListNode* Tail;
+                 ^~~~
+C:/myIncludez/XFILES/Camera.h:197:17: note: suggested alternative: 'tanl'
+       ListNode* Tail;
+                 ^~~~
+                 tanl
+C:/myIncludez/XFILES/Camera.h:208:7: error: 'Dmatrix' was not declared in this scope
+       Dmatrix Matrix(dim,dim);
+       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:209:7: error: 'Dvector' was not declared in this scope
+       Dvector RHS(dim);
+       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:210:14: error: expected ';' before 'LHS'
+       Dvector LHS(dim);
+              ^~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:211:14: error: expected ';' before 'CheckPos'
+       Dvector CheckPos(dim);
+              ^~~~~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:212:14: error: expected ';' before 'ORIG'
+       Dvector ORIG(dim);
+              ^~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:213:14: error: expected ';' before 'EDGE1'
+       Dvector EDGE1(dim);
+              ^~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:214:14: error: expected ';' before 'EDGE2'
+       Dvector EDGE2(dim);
+              ^~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:215:14: error: expected ';' before 'NORMAL'
+       Dvector NORMAL(dim);
+              ^~~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:225:26: error: 'MD' was not declared in this scope
+       for(int i=0; i< 8*(MD+1); i++)
+                          ^~
+C:/myIncludez/XFILES/Camera.h:225:26: note: suggested alternative: 'D'
+       for(int i=0; i< 8*(MD+1); i++)
+                          ^~
+                          D
+C:/myIncludez/XFILES/Camera.h:226:8: error: 'CollideTri' was not declared in this scope
+        CollideTri[i]=NULL;
+        ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:228:7: error: 'nlists' was not declared in this scope
+       nlists=0;
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:228:7: note: suggested alternative: 'lst7'
+       nlists=0;
+       ^~~~~~
+       lst7
+C:/myIncludez/XFILES/Camera.h:229:7: error: 'CollideTree' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+       ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:229:28: error: 'CollideTri' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                            ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:229:43: error: 'X1' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                           ^~
+C:/myIncludez/XFILES/Camera.h:229:43: note: suggested alternative: 'X'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                           ^~
+                                           X
+C:/myIncludez/XFILES/Camera.h:229:46: error: 'X2' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                              ^~
+C:/myIncludez/XFILES/Camera.h:229:46: note: suggested alternative: 'X'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                              ^~
+                                              X
+C:/myIncludez/XFILES/Camera.h:229:49: error: 'Y1' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                 ^~
+C:/myIncludez/XFILES/Camera.h:229:49: note: suggested alternative: 'Y'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                 ^~
+                                                 Y
+C:/myIncludez/XFILES/Camera.h:229:52: error: 'Y2' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                    ^~
+C:/myIncludez/XFILES/Camera.h:229:52: note: suggested alternative: 'Y'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                    ^~
+                                                    Y
+C:/myIncludez/XFILES/Camera.h:229:55: error: 'Z1' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                       ^~
+C:/myIncludez/XFILES/Camera.h:229:55: note: suggested alternative: 'Z'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                       ^~
+                                                       Z
+C:/myIncludez/XFILES/Camera.h:229:58: error: 'Z2' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                          ^~
+C:/myIncludez/XFILES/Camera.h:229:58: note: suggested alternative: 'Z'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                          ^~
+                                                          Z
+C:/myIncludez/XFILES/Camera.h:255:9: error: 'Triangles' was not declared in this scope
+   inode=Triangles[testtri].Get1();
+         ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:255:9: note: suggested alternative: 'Triangle'
+   inode=Triangles[testtri].Get1();
+         ^~~~~~~~~
+         Triangle
+C:/myIncludez/XFILES/Camera.h:256:10: error: 'NodeV' was not declared in this scope
+   Origin=NodeV[inode];
+          ^~~~~
+C:/myIncludez/XFILES/Camera.h:256:10: note: suggested alternative: 'mode_t'
+   Origin=NodeV[inode];
+          ^~~~~
+          mode_t
+C:/myIncludez/XFILES/Camera.h:257:9: error: 'edges1' was not declared in this scope
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+         ^~~~~~
+C:/myIncludez/XFILES/Camera.h:257:9: note: suggested alternative: 'edge1'
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+         ^~~~~~
+         edge1
+C:/myIncludez/XFILES/Camera.h:257:32: error: 'edges2' was not declared in this scope
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                ^~~~~~
+C:/myIncludez/XFILES/Camera.h:257:32: note: suggested alternative: 'edge2'
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                ^~~~~~
+                                edge2
+C:/myIncludez/XFILES/Camera.h:257:56: error: 'Normals' was not declared in this scope
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                                        ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:257:56: note: suggested alternative: 'Normalise'
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                                        ^~~~~~~
+                                                        Normalise
+C:/myIncludez/XFILES/Camera.h:260:3: error: 'RHS' was not declared in this scope
+   RHS(p)=Pos.GetX()-Origin.GetX();
+   ^~~
+C:/myIncludez/XFILES/Camera.h:260:3: note: suggested alternative: 'THIS'
+   RHS(p)=Pos.GetX()-Origin.GetX();
+   ^~~
+   THIS
+C:/myIncludez/XFILES/Camera.h:264:3: error: 'ORIG' was not declared in this scope
+   ORIG(p)=Origin.GetX(); ORIG(q)=Origin.GetY(); ORIG(r)=Origin.GetZ();
+   ^~~~
+C:/myIncludez/XFILES/Camera.h:265:3: error: 'EDGE1' was not declared in this scope
+   EDGE1(p)=edge1.GetX(); EDGE1(q)=edge1.GetY(); EDGE1(r)=edge1.GetZ();
+   ^~~~~
+C:/myIncludez/XFILES/Camera.h:266:3: error: 'EDGE2' was not declared in this scope
+   EDGE2(p)=edge2.GetX(); EDGE2(q)=edge2.GetY(); EDGE2(r)=edge2.GetZ();
+   ^~~~~
+C:/myIncludez/XFILES/Camera.h:267:3: error: 'NORMAL' was not declared in this scope
+   NORMAL(p)=normal.GetX();NORMAL(q)=normal.GetY();NORMAL(r)=normal.GetZ();
+   ^~~~~~
+C:/myIncludez/XFILES/Camera.h:267:3: note: suggested alternative: 'DI_NORMAL'
+   NORMAL(p)=normal.GetX();NORMAL(q)=normal.GetY();NORMAL(r)=normal.GetZ();
+   ^~~~~~
+   DI_NORMAL
+C:/myIncludez/XFILES/Camera.h:269:3: error: 'Matrix' was not declared in this scope
+   Matrix.SetCol(EDGE1,p);
+   ^~~~~~
+C:/myIncludez/XFILES/Camera.h:269:3: note: suggested alternative: 'atoi'
+   Matrix.SetCol(EDGE1,p);
+   ^~~~~~
+   atoi
+C:/myIncludez/XFILES/Camera.h:284:22: error: 'LHS' was not declared in this scope
+                 lhsV=LHS.GetV();
+                      ^~~
+C:/myIncludez/XFILES/Camera.h:284:22: note: suggested alternative: 'THIS'
+                 lhsV=LHS.GetV();
+                      ^~~
+                      THIS
+C:/myIncludez/XFILES/Camera.h:286:24: error: 'myGaussElim' was not declared in this scope
+                 ierror=myGaussElim(dim, Matpp, rhsV, lhsV);
+                        ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:292:3: error: 'CheckPos' was not declared in this scope
+   CheckPos=ORIG+EDGE1*alpha+EDGE2*beta+NORMAL*gamma;
+   ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:292:3: note: suggested alternative: 'CamPos'
+   CheckPos=ORIG+EDGE1*alpha+EDGE2*beta+NORMAL*gamma;
+   ^~~~~~~~
+   CamPos
+C:/myIncludez/XFILES/Camera.h:311:8: error: 'periodic_xz' was not declared in this scope
+     if(periodic_xz){
+        ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:314:5: error: 'diffx' was not declared in this scope
+     diffx=ix-ixold; diffz=iz-izold;
+     ^~~~~
+C:/myIncludez/XFILES/Camera.h:314:21: error: 'diffz' was not declared in this scope
+     diffx=ix-ixold; diffz=iz-izold;
+                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:318:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:318:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:319:17: error: 'diffoldx' was not declared in this scope
+      if(diffx !=diffoldx && diffoldx !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:321:9: error: 'xshiftedge' was not declared in this scope
+         xshiftedge=xshiftedge-1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:324:21: error: 'iside' was not declared in this scope
+          xshiftedge=iside-1;
+                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:324:21: note: suggested alternative: 'fwide'
+          xshiftedge=iside-1;
+                     ^~~~~
+                     fwide
+C:/myIncludez/XFILES/Camera.h:329:9: error: 'xshiftedge' was not declared in this scope
+      if(xshiftedge !=-10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:330:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:330:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:331:7: error: 'xshift' was not declared in this scope
+       xshift[xshiftedge][i]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:331:7: note: suggested alternative: 'short'
+       xshift[xshiftedge][i]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:332:29: error: 'xlength' was not declared in this scope
+       xshift[xshiftedge][i]-xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:335:35: error: 'iside' was not declared in this scope
+      if(xshiftedge <0 )xshiftedge=iside-1;
+                                   ^~~~~
+C:/myIncludez/XFILES/Camera.h:335:35: note: suggested alternative: 'fwide'
+      if(xshiftedge <0 )xshiftedge=iside-1;
+                                   ^~~~~
+                                   fwide
+C:/myIncludez/XFILES/Camera.h:339:10: error: 'startoffx' was not declared in this scope
+       if(startoffx){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:339:10: note: suggested alternative: 'strtof'
+       if(startoffx){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:342:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:342:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:343:8: error: 'xshift' was not declared in this scope
+        xshift[iside-1][i]=-xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:343:8: note: suggested alternative: 'short'
+        xshift[iside-1][i]=-xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:343:28: error: 'xlength' was not declared in this scope
+        xshift[iside-1][i]=-xlength;
+                            ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:345:18: error: 'iside' was not declared in this scope
+       xshiftedge=iside-2;
+                  ^~~~~
+C:/myIncludez/XFILES/Camera.h:345:18: note: suggested alternative: 'fwide'
+       xshiftedge=iside-2;
+                  ^~~~~
+                  fwide
+C:/myIncludez/XFILES/Camera.h:351:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:351:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:352:17: error: 'diffoldx' was not declared in this scope
+      if(diffx !=diffoldx &&  diffoldx !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:354:9: error: 'xshiftedge' was not declared in this scope
+         xshiftedge=xshiftedge+1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:355:24: error: 'iside' was not declared in this scope
+         if(xshiftedge==iside){
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:355:24: note: suggested alternative: 'fwide'
+         if(xshiftedge==iside){
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:362:9: error: 'xshiftedge' was not declared in this scope
+      if(xshiftedge != -10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:363:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:363:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:364:7: error: 'xshift' was not declared in this scope
+       xshift[xshiftedge][i]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:364:7: note: suggested alternative: 'short'
+       xshift[xshiftedge][i]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:365:29: error: 'xlength' was not declared in this scope
+       xshift[xshiftedge][i]+xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:368:23: error: 'iside' was not declared in this scope
+      if(xshiftedge == iside)xshiftedge=0;
+                       ^~~~~
+C:/myIncludez/XFILES/Camera.h:368:23: note: suggested alternative: 'fwide'
+      if(xshiftedge == iside)xshiftedge=0;
+                       ^~~~~
+                       fwide
+C:/myIncludez/XFILES/Camera.h:372:10: error: 'startoffx' was not declared in this scope
+       if(startoffx){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:372:10: note: suggested alternative: 'strtof'
+       if(startoffx){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:375:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:375:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:376:8: error: 'xshift' was not declared in this scope
+        xshift[0][i]=xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:376:8: note: suggested alternative: 'short'
+        xshift[0][i]=xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:376:21: error: 'xlength' was not declared in this scope
+        xshift[0][i]=xlength;
+                     ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:387:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:387:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:388:17: error: 'diffoldz' was not declared in this scope
+      if(diffz !=diffoldz  &&  diffoldz !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:390:9: error: 'yshiftedge' was not declared in this scope
+         yshiftedge=yshiftedge+1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:391:24: error: 'iside' was not declared in this scope
+         if(yshiftedge==iside){
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:391:24: note: suggested alternative: 'fwide'
+         if(yshiftedge==iside){
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:399:9: error: 'yshiftedge' was not declared in this scope
+      if(yshiftedge != -10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:400:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:400:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:401:7: error: 'yshift' was not declared in this scope
+       yshift[i][yshiftedge]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:401:7: note: suggested alternative: 'short'
+       yshift[i][yshiftedge]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:402:29: error: 'xlength' was not declared in this scope
+       yshift[i][yshiftedge]+xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:405:23: error: 'iside' was not declared in this scope
+      if(yshiftedge == iside)yshiftedge=0;
+                       ^~~~~
+C:/myIncludez/XFILES/Camera.h:405:23: note: suggested alternative: 'fwide'
+      if(yshiftedge == iside)yshiftedge=0;
+                       ^~~~~
+                       fwide
+C:/myIncludez/XFILES/Camera.h:409:10: error: 'startoffy' was not declared in this scope
+       if(startoffy){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:409:10: note: suggested alternative: 'strtof'
+       if(startoffy){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:412:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:412:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:413:8: error: 'yshift' was not declared in this scope
+        yshift[i][0]=xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:413:8: note: suggested alternative: 'short'
+        yshift[i][0]=xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:413:21: error: 'xlength' was not declared in this scope
+        yshift[i][0]=xlength;
+                     ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:421:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:421:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:422:17: error: 'diffoldz' was not declared in this scope
+      if(diffz !=diffoldz  && diffoldz !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:425:9: error: 'yshiftedge' was not declared in this scope
+         yshiftedge=yshiftedge-1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:426:24: error: 'iside' was not declared in this scope
+         if(yshiftedge==iside){
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:426:24: note: suggested alternative: 'fwide'
+         if(yshiftedge==iside){
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:434:9: error: 'yshiftedge' was not declared in this scope
+      if(yshiftedge != -10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:435:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:435:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:436:7: error: 'yshift' was not declared in this scope
+       yshift[i][yshiftedge]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:436:7: note: suggested alternative: 'short'
+       yshift[i][yshiftedge]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:437:29: error: 'xlength' was not declared in this scope
+       yshift[i][yshiftedge]-xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:440:35: error: 'iside' was not declared in this scope
+      if(yshiftedge < 0)yshiftedge=iside-1;
+                                   ^~~~~
+C:/myIncludez/XFILES/Camera.h:440:35: note: suggested alternative: 'fwide'
+      if(yshiftedge < 0)yshiftedge=iside-1;
+                                   ^~~~~
+                                   fwide
+C:/myIncludez/XFILES/Camera.h:444:10: error: 'startoffy' was not declared in this scope
+       if(startoffy){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:444:10: note: suggested alternative: 'strtof'
+       if(startoffy){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:447:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:447:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:448:8: error: 'yshift' was not declared in this scope
+        yshift[i][iside-1]=-xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:448:8: note: suggested alternative: 'short'
+        yshift[i][iside-1]=-xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:448:28: error: 'xlength' was not declared in this scope
+        yshift[i][iside-1]=-xlength;
+                            ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:450:18: error: 'iside' was not declared in this scope
+       yshiftedge=iside-2;
+                  ^~~~~
+C:/myIncludez/XFILES/Camera.h:450:18: note: suggested alternative: 'fwide'
+       yshiftedge=iside-2;
+                  ^~~~~
+                  fwide
+C:/myIncludez/XFILES/Camera.h:456:37: error: 'iside' was not declared in this scope
+       if(diffz !=0 && fabs(diffz) !=iside-1)diffoldz=diffz;
+                                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:456:37: note: suggested alternative: 'fwide'
+       if(diffz !=0 && fabs(diffz) !=iside-1)diffoldz=diffz;
+                                     ^~~~~
+                                     fwide
+C:/myIncludez/XFILES/Camera.h:456:45: error: 'diffoldz' was not declared in this scope
+       if(diffz !=0 && fabs(diffz) !=iside-1)diffoldz=diffz;
+                                             ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:457:37: error: 'iside' was not declared in this scope
+       if(diffx !=0 && fabs(diffz) !=iside-1)diffoldx=diffx;
+                                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:457:37: note: suggested alternative: 'fwide'
+       if(diffx !=0 && fabs(diffz) !=iside-1)diffoldx=diffx;
+                                     ^~~~~
+                                     fwide
+C:/myIncludez/XFILES/Camera.h:457:45: error: 'diffoldx' was not declared in this scope
+       if(diffx !=0 && fabs(diffz) !=iside-1)diffoldx=diffx;
+                                             ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:458:24: error: 'iside' was not declared in this scope
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:458:24: note: suggested alternative: 'fwide'
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:458:56: error: 'launch' was not declared in this scope
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                                                        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:458:56: note: suggested alternative: 'truncl'
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                                                        ^~~~~~
+                                                        truncl
+C:/myIncludez/XFILES/Camera.h: In member function 'void CCam::CamMove(double)':
+C:/myIncludez/XFILES/Camera.h:520:5: error: 'ix' was not declared in this scope
+     ix=(int)(xp/xside);
+     ^~
+C:/myIncludez/XFILES/Camera.h:520:17: error: 'xside' was not declared in this scope
+     ix=(int)(xp/xside);
+                 ^~~~~
+C:/myIncludez/XFILES/Camera.h:520:17: note: suggested alternative: 'fwide'
+     ix=(int)(xp/xside);
+                 ^~~~~
+                 fwide
+C:/myIncludez/XFILES/Camera.h:521:5: error: 'iz' was not declared in this scope
+     iz=(int)(zp/xside);
+     ^~
+C:/myIncludez/XFILES/Camera.h:522:5: error: 'ixold' was not declared in this scope
+     ixold=ix;
+     ^~~~~
+C:/myIncludez/XFILES/Camera.h:523:5: error: 'izold' was not declared in this scope
+     izold=iz;
+     ^~~~~
+C:/myIncludez/XFILES/Camera.h:529:8: error: 'twodee' was not declared in this scope
+     if(twodee) norm=
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:529:8: note: suggested alternative: 'twopi'
+     if(twodee) norm=
+        ^~~~~~
+        twopi
+C:/myIncludez/XFILES/Camera.h:539:11: error: 'twodee' was not declared in this scope
+       if(!twodee)yp=yp+Vel.GetY();
+           ^~~~~~
+C:/myIncludez/XFILES/Camera.h:539:11: note: suggested alternative: 'twopi'
+       if(!twodee)yp=yp+Vel.GetY();
+           ^~~~~~
+           twopi
+C:/myIncludez/XFILES/Camera.h:543:11: error: 'twodee' was not declared in this scope
+       if(!twodee)yv=yv+Vel.GetY();
+           ^~~~~~
+C:/myIncludez/XFILES/Camera.h:543:11: note: suggested alternative: 'twopi'
+       if(!twodee)yv=yv+Vel.GetY();
+           ^~~~~~
+           twopi
+C:/myIncludez/XFILES/Camera.h:548:10: error: 'periodic_xz' was not declared in this scope
+       if(periodic_xz){
+          ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:554:11: error: 'twodee' was not declared in this scope
+       if(!twodee)ryp=ryp+Vel.GetY();
+           ^~~~~~
+C:/myIncludez/XFILES/Camera.h:554:11: note: suggested alternative: 'twopi'
+       if(!twodee)ryp=ryp+Vel.GetY();
+           ^~~~~~
+           twopi
+C:/myIncludez/XFILES/Camera.h:557:15: error: 'ihalfside' was not declared in this scope
+       if(rxp<-ihalfside*xside)rxp=rxp+xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:557:39: error: 'xlength' was not declared in this scope
+       if(rxp<-ihalfside*xside)rxp=rxp+xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:558:15: error: 'ihalfside' was not declared in this scope
+       if(rxp >ihalfside*xside)rxp=rxp-xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:558:39: error: 'xlength' was not declared in this scope
+       if(rxp >ihalfside*xside)rxp=rxp-xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:559:15: error: 'ihalfside' was not declared in this scope
+       if(rzp<-ihalfside*xside)rzp=rzp+xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:559:39: error: 'xlength' was not declared in this scope
+       if(rzp<-ihalfside*xside)rzp=rzp+xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:560:15: error: 'ihalfside' was not declared in this scope
+       if(rzp >ihalfside*xside)rzp=rzp-xlength;
+               ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:560:39: error: 'xlength' was not declared in this scope
+       if(rzp >ihalfside*xside)rzp=rzp-xlength;
+                                       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:567:10: error: 'collisiontest' was not declared in this scope
+       if(collisiontest){
+          ^~~~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:575:10: error: 'periodic_xz' was not declared in this scope
+       if(periodic_xz){
+          ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:596:7: error: 'intList' was not declared in this scope
+       intList* Local;
+       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:596:7: note: suggested alternative: 'int64_t'
+       intList* Local;
+       ^~~~~~~
+       int64_t
+C:/myIncludez/XFILES/Camera.h:596:16: error: 'Local' was not declared in this scope
+       intList* Local;
+                ^~~~~
+C:/myIncludez/XFILES/Camera.h:596:16: note: suggested alternative: '_scalb'
+       intList* Local;
+                ^~~~~
+                _scalb
+C:/myIncludez/XFILES/Camera.h:597:7: error: 'ListNode' was not declared in this scope
+       ListNode* Head;
+       ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:597:7: note: suggested alternative: 'wcstod'
+       ListNode* Head;
+       ^~~~~~~~
+       wcstod
+C:/myIncludez/XFILES/Camera.h:597:17: error: 'Head' was not declared in this scope
+       ListNode* Head;
+                 ^~~~
+C:/myIncludez/XFILES/Camera.h:597:17: note: suggested alternative: 'fread'
+       ListNode* Head;
+                 ^~~~
+                 fread
+C:/myIncludez/XFILES/Camera.h:598:17: error: 'Tail' was not declared in this scope
+       ListNode* Tail;
+                 ^~~~
+C:/myIncludez/XFILES/Camera.h:598:17: note: suggested alternative: 'tanl'
+       ListNode* Tail;
+                 ^~~~
+                 tanl
+C:/myIncludez/XFILES/Camera.h:609:7: error: 'Dmatrix' was not declared in this scope
+       Dmatrix Matrix(dim,dim);
+       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:610:7: error: 'Dvector' was not declared in this scope
+       Dvector RHS(dim);
+       ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:611:14: error: expected ';' before 'LHS'
+       Dvector LHS(dim);
+              ^~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:612:14: error: expected ';' before 'CheckPos'
+       Dvector CheckPos(dim);
+              ^~~~~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:613:14: error: expected ';' before 'ORIG'
+       Dvector ORIG(dim);
+              ^~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:614:14: error: expected ';' before 'EDGE1'
+       Dvector EDGE1(dim);
+              ^~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:615:14: error: expected ';' before 'EDGE2'
+       Dvector EDGE2(dim);
+              ^~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:616:14: error: expected ';' before 'NORMAL'
+       Dvector NORMAL(dim);
+              ^~~~~~~
+              ;
+C:/myIncludez/XFILES/Camera.h:624:26: error: 'MD' was not declared in this scope
+       for(int i=0; i< 8*(MD+1); i++)
+                          ^~
+C:/myIncludez/XFILES/Camera.h:624:26: note: suggested alternative: 'D'
+       for(int i=0; i< 8*(MD+1); i++)
+                          ^~
+                          D
+C:/myIncludez/XFILES/Camera.h:625:8: error: 'CollideTri' was not declared in this scope
+        CollideTri[i]=NULL;
+        ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:627:7: error: 'nlists' was not declared in this scope
+       nlists=0;
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:627:7: note: suggested alternative: 'lst7'
+       nlists=0;
+       ^~~~~~
+       lst7
+C:/myIncludez/XFILES/Camera.h:628:7: error: 'CollideTree' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+       ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:628:28: error: 'CollideTri' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                            ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:628:43: error: 'X1' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                           ^~
+C:/myIncludez/XFILES/Camera.h:628:43: note: suggested alternative: 'X'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                           ^~
+                                           X
+C:/myIncludez/XFILES/Camera.h:628:46: error: 'X2' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                              ^~
+C:/myIncludez/XFILES/Camera.h:628:46: note: suggested alternative: 'X'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                              ^~
+                                              X
+C:/myIncludez/XFILES/Camera.h:628:49: error: 'Y1' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                 ^~
+C:/myIncludez/XFILES/Camera.h:628:49: note: suggested alternative: 'Y'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                 ^~
+                                                 Y
+C:/myIncludez/XFILES/Camera.h:628:52: error: 'Y2' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                    ^~
+C:/myIncludez/XFILES/Camera.h:628:52: note: suggested alternative: 'Y'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                    ^~
+                                                    Y
+C:/myIncludez/XFILES/Camera.h:628:55: error: 'Z1' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                       ^~
+C:/myIncludez/XFILES/Camera.h:628:55: note: suggested alternative: 'Z'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                       ^~
+                                                       Z
+C:/myIncludez/XFILES/Camera.h:628:58: error: 'Z2' was not declared in this scope
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                          ^~
+C:/myIncludez/XFILES/Camera.h:628:58: note: suggested alternative: 'Z'
+       CollideTree->GetList(CollideTri,Pos,X1,X2,Y1,Y2,Z1,Z2,deep);
+                                                          ^~
+                                                          Z
+C:/myIncludez/XFILES/Camera.h:655:9: error: 'Triangles' was not declared in this scope
+   inode=Triangles[testtri].Get1();
+         ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:655:9: note: suggested alternative: 'Triangle'
+   inode=Triangles[testtri].Get1();
+         ^~~~~~~~~
+         Triangle
+C:/myIncludez/XFILES/Camera.h:656:10: error: 'NodeV' was not declared in this scope
+   Origin=NodeV[inode];
+          ^~~~~
+C:/myIncludez/XFILES/Camera.h:656:10: note: suggested alternative: 'mode_t'
+   Origin=NodeV[inode];
+          ^~~~~
+          mode_t
+C:/myIncludez/XFILES/Camera.h:657:9: error: 'edges1' was not declared in this scope
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+         ^~~~~~
+C:/myIncludez/XFILES/Camera.h:657:9: note: suggested alternative: 'edge1'
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+         ^~~~~~
+         edge1
+C:/myIncludez/XFILES/Camera.h:657:32: error: 'edges2' was not declared in this scope
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                ^~~~~~
+C:/myIncludez/XFILES/Camera.h:657:32: note: suggested alternative: 'edge2'
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                ^~~~~~
+                                edge2
+C:/myIncludez/XFILES/Camera.h:657:56: error: 'Normals' was not declared in this scope
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                                        ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:657:56: note: suggested alternative: 'Normalise'
+   edge1=edges1[testtri]; edge2=edges2[testtri], normal=Normals[testtri];
+                                                        ^~~~~~~
+                                                        Normalise
+C:/myIncludez/XFILES/Camera.h:660:3: error: 'RHS' was not declared in this scope
+   RHS(p)=Pos.GetX()-Origin.GetX();
+   ^~~
+C:/myIncludez/XFILES/Camera.h:660:3: note: suggested alternative: 'THIS'
+   RHS(p)=Pos.GetX()-Origin.GetX();
+   ^~~
+   THIS
+C:/myIncludez/XFILES/Camera.h:664:3: error: 'ORIG' was not declared in this scope
+   ORIG(p)=Origin.GetX(); ORIG(q)=Origin.GetY(); ORIG(r)=Origin.GetZ();
+   ^~~~
+C:/myIncludez/XFILES/Camera.h:665:3: error: 'EDGE1' was not declared in this scope
+   EDGE1(p)=edge1.GetX(); EDGE1(q)=edge1.GetY(); EDGE1(r)=edge1.GetZ();
+   ^~~~~
+C:/myIncludez/XFILES/Camera.h:666:3: error: 'EDGE2' was not declared in this scope
+   EDGE2(p)=edge2.GetX(); EDGE2(q)=edge2.GetY(); EDGE2(r)=edge2.GetZ();
+   ^~~~~
+C:/myIncludez/XFILES/Camera.h:667:3: error: 'NORMAL' was not declared in this scope
+   NORMAL(p)=normal.GetX();NORMAL(q)=normal.GetY();NORMAL(r)=normal.GetZ();
+   ^~~~~~
+C:/myIncludez/XFILES/Camera.h:667:3: note: suggested alternative: 'DI_NORMAL'
+   NORMAL(p)=normal.GetX();NORMAL(q)=normal.GetY();NORMAL(r)=normal.GetZ();
+   ^~~~~~
+   DI_NORMAL
+C:/myIncludez/XFILES/Camera.h:669:3: error: 'Matrix' was not declared in this scope
+   Matrix.SetCol(EDGE1,p);
+   ^~~~~~
+C:/myIncludez/XFILES/Camera.h:669:3: note: suggested alternative: 'atoi'
+   Matrix.SetCol(EDGE1,p);
+   ^~~~~~
+   atoi
+C:/myIncludez/XFILES/Camera.h:680:22: error: 'LHS' was not declared in this scope
+                 lhsV=LHS.GetV();
+                      ^~~
+C:/myIncludez/XFILES/Camera.h:680:22: note: suggested alternative: 'THIS'
+                 lhsV=LHS.GetV();
+                      ^~~
+                      THIS
+C:/myIncludez/XFILES/Camera.h:685:24: error: 'myGaussElim' was not declared in this scope
+                 ierror=myGaussElim(dim, Matpp, rhsV, lhsV);
+                        ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:694:3: error: 'CheckPos' was not declared in this scope
+   CheckPos=ORIG+EDGE1*alpha+EDGE2*beta+NORMAL*gamma;
+   ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:694:3: note: suggested alternative: 'CamPos'
+   CheckPos=ORIG+EDGE1*alpha+EDGE2*beta+NORMAL*gamma;
+   ^~~~~~~~
+   CamPos
+C:/myIncludez/XFILES/Camera.h:728:8: error: 'periodic_xz' was not declared in this scope
+     if(periodic_xz){
+        ^~~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:731:5: error: 'diffx' was not declared in this scope
+     diffx=ix-ixold; diffz=iz-izold;
+     ^~~~~
+C:/myIncludez/XFILES/Camera.h:731:21: error: 'diffz' was not declared in this scope
+     diffx=ix-ixold; diffz=iz-izold;
+                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:735:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:735:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:736:17: error: 'diffoldx' was not declared in this scope
+      if(diffx !=diffoldx && diffoldx !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:738:9: error: 'xshiftedge' was not declared in this scope
+         xshiftedge=xshiftedge-1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:741:21: error: 'iside' was not declared in this scope
+          xshiftedge=iside-1;
+                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:741:21: note: suggested alternative: 'fwide'
+          xshiftedge=iside-1;
+                     ^~~~~
+                     fwide
+C:/myIncludez/XFILES/Camera.h:746:9: error: 'xshiftedge' was not declared in this scope
+      if(xshiftedge !=-10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:747:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:747:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:748:7: error: 'xshift' was not declared in this scope
+       xshift[xshiftedge][i]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:748:7: note: suggested alternative: 'short'
+       xshift[xshiftedge][i]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:749:29: error: 'xlength' was not declared in this scope
+       xshift[xshiftedge][i]-xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:752:35: error: 'iside' was not declared in this scope
+      if(xshiftedge <0 )xshiftedge=iside-1;
+                                   ^~~~~
+C:/myIncludez/XFILES/Camera.h:752:35: note: suggested alternative: 'fwide'
+      if(xshiftedge <0 )xshiftedge=iside-1;
+                                   ^~~~~
+                                   fwide
+C:/myIncludez/XFILES/Camera.h:756:10: error: 'startoffx' was not declared in this scope
+       if(startoffx){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:756:10: note: suggested alternative: 'strtof'
+       if(startoffx){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:759:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:759:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:760:8: error: 'xshift' was not declared in this scope
+        xshift[iside-1][i]=-xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:760:8: note: suggested alternative: 'short'
+        xshift[iside-1][i]=-xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:760:28: error: 'xlength' was not declared in this scope
+        xshift[iside-1][i]=-xlength;
+                            ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:762:18: error: 'iside' was not declared in this scope
+       xshiftedge=iside-2;
+                  ^~~~~
+C:/myIncludez/XFILES/Camera.h:762:18: note: suggested alternative: 'fwide'
+       xshiftedge=iside-2;
+                  ^~~~~
+                  fwide
+C:/myIncludez/XFILES/Camera.h:768:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:768:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:769:17: error: 'diffoldx' was not declared in this scope
+      if(diffx !=diffoldx &&  diffoldx !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:771:9: error: 'xshiftedge' was not declared in this scope
+         xshiftedge=xshiftedge+1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:772:24: error: 'iside' was not declared in this scope
+         if(xshiftedge==iside){
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:772:24: note: suggested alternative: 'fwide'
+         if(xshiftedge==iside){
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:779:9: error: 'xshiftedge' was not declared in this scope
+      if(xshiftedge != -10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:780:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:780:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:781:7: error: 'xshift' was not declared in this scope
+       xshift[xshiftedge][i]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:781:7: note: suggested alternative: 'short'
+       xshift[xshiftedge][i]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:782:29: error: 'xlength' was not declared in this scope
+       xshift[xshiftedge][i]+xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:785:23: error: 'iside' was not declared in this scope
+      if(xshiftedge == iside)xshiftedge=0;
+                       ^~~~~
+C:/myIncludez/XFILES/Camera.h:785:23: note: suggested alternative: 'fwide'
+      if(xshiftedge == iside)xshiftedge=0;
+                       ^~~~~
+                       fwide
+C:/myIncludez/XFILES/Camera.h:789:10: error: 'startoffx' was not declared in this scope
+       if(startoffx){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:789:10: note: suggested alternative: 'strtof'
+       if(startoffx){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:792:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:792:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:793:8: error: 'xshift' was not declared in this scope
+        xshift[0][i]=xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:793:8: note: suggested alternative: 'short'
+        xshift[0][i]=xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:793:21: error: 'xlength' was not declared in this scope
+        xshift[0][i]=xlength;
+                     ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:804:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:804:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:805:17: error: 'diffoldz' was not declared in this scope
+      if(diffz !=diffoldz  &&  diffoldz !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:807:9: error: 'yshiftedge' was not declared in this scope
+         yshiftedge=yshiftedge+1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:808:24: error: 'iside' was not declared in this scope
+         if(yshiftedge==iside){
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:808:24: note: suggested alternative: 'fwide'
+         if(yshiftedge==iside){
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:816:9: error: 'yshiftedge' was not declared in this scope
+      if(yshiftedge != -10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:817:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:817:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:818:7: error: 'yshift' was not declared in this scope
+       yshift[i][yshiftedge]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:818:7: note: suggested alternative: 'short'
+       yshift[i][yshiftedge]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:819:29: error: 'xlength' was not declared in this scope
+       yshift[i][yshiftedge]+xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:822:23: error: 'iside' was not declared in this scope
+      if(yshiftedge == iside)yshiftedge=0;
+                       ^~~~~
+C:/myIncludez/XFILES/Camera.h:822:23: note: suggested alternative: 'fwide'
+      if(yshiftedge == iside)yshiftedge=0;
+                       ^~~~~
+                       fwide
+C:/myIncludez/XFILES/Camera.h:826:10: error: 'startoffy' was not declared in this scope
+       if(startoffy){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:826:10: note: suggested alternative: 'strtof'
+       if(startoffy){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:829:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:829:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:830:8: error: 'yshift' was not declared in this scope
+        yshift[i][0]=xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:830:8: note: suggested alternative: 'short'
+        yshift[i][0]=xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:830:21: error: 'xlength' was not declared in this scope
+        yshift[i][0]=xlength;
+                     ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:838:10: error: 'launch' was not declared in this scope
+      if(!launch){
+          ^~~~~~
+C:/myIncludez/XFILES/Camera.h:838:10: note: suggested alternative: 'truncl'
+      if(!launch){
+          ^~~~~~
+          truncl
+C:/myIncludez/XFILES/Camera.h:839:17: error: 'diffoldz' was not declared in this scope
+      if(diffz !=diffoldz  && diffoldz !=0){
+                 ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:842:9: error: 'yshiftedge' was not declared in this scope
+         yshiftedge=yshiftedge-1;
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:843:24: error: 'iside' was not declared in this scope
+         if(yshiftedge==iside){
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:843:24: note: suggested alternative: 'fwide'
+         if(yshiftedge==iside){
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:851:9: error: 'yshiftedge' was not declared in this scope
+      if(yshiftedge != -10){
+         ^~~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:852:22: error: 'iside' was not declared in this scope
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:852:22: note: suggested alternative: 'fwide'
+      for(int i=0; i< iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:853:7: error: 'yshift' was not declared in this scope
+       yshift[i][yshiftedge]=
+       ^~~~~~
+C:/myIncludez/XFILES/Camera.h:853:7: note: suggested alternative: 'short'
+       yshift[i][yshiftedge]=
+       ^~~~~~
+       short
+C:/myIncludez/XFILES/Camera.h:854:29: error: 'xlength' was not declared in this scope
+       yshift[i][yshiftedge]-xlength;
+                             ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:857:35: error: 'iside' was not declared in this scope
+      if(yshiftedge < 0)yshiftedge=iside-1;
+                                   ^~~~~
+C:/myIncludez/XFILES/Camera.h:857:35: note: suggested alternative: 'fwide'
+      if(yshiftedge < 0)yshiftedge=iside-1;
+                                   ^~~~~
+                                   fwide
+C:/myIncludez/XFILES/Camera.h:861:10: error: 'startoffy' was not declared in this scope
+       if(startoffy){
+          ^~~~~~~~~
+C:/myIncludez/XFILES/Camera.h:861:10: note: suggested alternative: 'strtof'
+       if(startoffy){
+          ^~~~~~~~~
+          strtof
+C:/myIncludez/XFILES/Camera.h:864:22: error: 'iside' was not declared in this scope
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+C:/myIncludez/XFILES/Camera.h:864:22: note: suggested alternative: 'fwide'
+       for(int i=0; i<iside; i++){
+                      ^~~~~
+                      fwide
+C:/myIncludez/XFILES/Camera.h:865:8: error: 'yshift' was not declared in this scope
+        yshift[i][iside-1]=-xlength;
+        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:865:8: note: suggested alternative: 'short'
+        yshift[i][iside-1]=-xlength;
+        ^~~~~~
+        short
+C:/myIncludez/XFILES/Camera.h:865:28: error: 'xlength' was not declared in this scope
+        yshift[i][iside-1]=-xlength;
+                            ^~~~~~~
+C:/myIncludez/XFILES/Camera.h:867:18: error: 'iside' was not declared in this scope
+       yshiftedge=iside-2;
+                  ^~~~~
+C:/myIncludez/XFILES/Camera.h:867:18: note: suggested alternative: 'fwide'
+       yshiftedge=iside-2;
+                  ^~~~~
+                  fwide
+C:/myIncludez/XFILES/Camera.h:873:37: error: 'iside' was not declared in this scope
+       if(diffz !=0 && fabs(diffz) !=iside-1)diffoldz=diffz;
+                                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:873:37: note: suggested alternative: 'fwide'
+       if(diffz !=0 && fabs(diffz) !=iside-1)diffoldz=diffz;
+                                     ^~~~~
+                                     fwide
+C:/myIncludez/XFILES/Camera.h:873:45: error: 'diffoldz' was not declared in this scope
+       if(diffz !=0 && fabs(diffz) !=iside-1)diffoldz=diffz;
+                                             ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:874:37: error: 'iside' was not declared in this scope
+       if(diffx !=0 && fabs(diffz) !=iside-1)diffoldx=diffx;
+                                     ^~~~~
+C:/myIncludez/XFILES/Camera.h:874:37: note: suggested alternative: 'fwide'
+       if(diffx !=0 && fabs(diffz) !=iside-1)diffoldx=diffx;
+                                     ^~~~~
+                                     fwide
+C:/myIncludez/XFILES/Camera.h:874:45: error: 'diffoldx' was not declared in this scope
+       if(diffx !=0 && fabs(diffz) !=iside-1)diffoldx=diffx;
+                                             ^~~~~~~~
+C:/myIncludez/XFILES/Camera.h:875:24: error: 'iside' was not declared in this scope
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                        ^~~~~
+C:/myIncludez/XFILES/Camera.h:875:24: note: suggested alternative: 'fwide'
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                        ^~~~~
+                        fwide
+C:/myIncludez/XFILES/Camera.h:875:56: error: 'launch' was not declared in this scope
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                                                        ^~~~~~
+C:/myIncludez/XFILES/Camera.h:875:56: note: suggested alternative: 'truncl'
+       if(fabs(diffx) !=iside-1 && fabs(diffz)!=iside-1)launch=false;
+                                                        ^~~~~~
+                                                        truncl
+C:/myIncludez/XFILES/Camera.h: In member function 'void CCam::CamZoom(double)':
+C:/myIncludez/XFILES/Camera.h:898:4: error: 'twodee' was not declared in this scope
+ if(twodee) norm=
+    ^~~~~~
+C:/myIncludez/XFILES/Camera.h:898:4: note: suggested alternative: 'twopi'
+ if(twodee) norm=
+    ^~~~~~
+    twopi
+C:/myIncludez/XFILES/Camera.h:907:11: error: 'twodee' was not declared in this scope
+       if(!twodee)yp=yp+Vel.GetY();
+           ^~~~~~
+C:/myIncludez/XFILES/Camera.h:907:11: note: suggested alternative: 'twopi'
+       if(!twodee)yp=yp+Vel.GetY();
+           ^~~~~~
+           twopi
+C:/myIncludez/XFILES/Camera.h:918:11: error: 'twodee' was not declared in this scope
+       if(!twodee)yp=yp-Vel.GetY();
+           ^~~~~~
+C:/myIncludez/XFILES/Camera.h:918:11: note: suggested alternative: 'twopi'
+       if(!twodee)yp=yp-Vel.GetY();
+           ^~~~~~
+           twopi
+C:/myIncludez/XFILES/Camera.h: In member function 'void CCam::MouseView()':
+C:/myIncludez/XFILES/Camera.h:1102:9: error: 'WIDTH' was not declared in this scope
+ middlex=WIDTH >> 1;  // ">>" is a binary shift operator
+         ^~~~~
+C:/myIncludez/XFILES/Camera.h:1103:9: error: 'HEIGHT' was not declared in this scope
+ middley=HEIGHT >> 1; // so this is divide by 2!
+         ^~~~~~
+C:/myIncludez/XFILES/Camera.h:1103:9: note: suggested alternative: 'HTRIGHT'
+ middley=HEIGHT >> 1; // so this is divide by 2!
+         ^~~~~~
+         HTRIGHT
+C:/myIncludez/XFILES/Camera.h: In member function 'void CCam::MouseView2()':
+C:/myIncludez/XFILES/Camera.h:1156:9: error: 'WIDTH' was not declared in this scope
+ middlex=WIDTH >> 1;  // ">>" here is a binary shift operator
+         ^~~~~
+C:/myIncludez/XFILES/Camera.h:1157:9: error: 'HEIGHT' was not declared in this scope
+ middley=HEIGHT >> 1; // so this is divide by 2!
+         ^~~~~~
+C:/myIncludez/XFILES/Camera.h:1157:9: note: suggested alternative: 'HTRIGHT'
+ middley=HEIGHT >> 1; // so this is divide by 2!
+         ^~~~~~
+         HTRIGHT
+C:/myIncludez/XFILES/Camera.h: In member function 'void CCam::MouseLookAt()':
+C:/myIncludez/XFILES/Camera.h:1208:9: error: 'WIDTH' was not declared in this scope
+ middlex=WIDTH >> 1;
+         ^~~~~
+C:/myIncludez/XFILES/Camera.h:1209:9: error: 'HEIGHT' was not declared in this scope
+ middley=HEIGHT >> 1;
+         ^~~~~~
+C:/myIncludez/XFILES/Camera.h:1209:9: note: suggested alternative: 'HTRIGHT'
+ middley=HEIGHT >> 1;
+         ^~~~~~
+         HTRIGHT
+In file included from OctaSphereMSwin.h:77,
+                 from OctaSphereMSwin.cpp:27:
+C:/myIncludez/XFILES/Init.h: In function 'int SDL_main(int, char**)':
+C:/myIncludez/XFILES/Init.h:11:5: error: 'arg_count' was not declared in this scope
+     arg_count=argc;
+     ^~~~~~~~~
+C:/myIncludez/XFILES/Init.h:12:5: error: 'arg_list' was not declared in this scope
+     arg_list=argv;
+     ^~~~~~~~
+C:/myIncludez/XFILES/Init.h:12:5: note: suggested alternative: 'va_list'
+     arg_list=argv;
+     ^~~~~~~~
+     va_list
+C:/myIncludez/XFILES/Init.h:18:28: error: 'WIDTH' was not declared in this scope
+     MakeWindow("A Window", WIDTH, HEIGHT, VideoFlags);
+                            ^~~~~
+C:/myIncludez/XFILES/Init.h:18:35: error: 'HEIGHT' was not declared in this scope
+     MakeWindow("A Window", WIDTH, HEIGHT, VideoFlags);
+                                   ^~~~~~
+C:/myIncludez/XFILES/Init.h:18:35: note: suggested alternative: 'HTRIGHT'
+     MakeWindow("A Window", WIDTH, HEIGHT, VideoFlags);
+                                   ^~~~~~
+                                   HTRIGHT
+C:/myIncludez/XFILES/Init.h:22:15: error: too few arguments to function 'void EventLoop(CCam&)'
+     EventLoop();
+               ^
+In file included from OctaSphereMSwin.cpp:27:
+OctaSphereMSwin.h:62:6: note: declared here
+ void EventLoop(CCam  & Camera1);
+      ^~~~~~~~~
+In file included from OctaSphereMSwin.h:77,
+                 from OctaSphereMSwin.cpp:27:
+C:/myIncludez/XFILES/Init.h: In function 'void SetUp()':
+C:/myIncludez/XFILES/Init.h:60:23: error: 'WindowTitle' was not declared in this scope
+     SDL_WM_SetCaption(WindowTitle, 0);
+                       ^~~~~~~~~~~
+C:/myIncludez/XFILES/Init.h:60:23: note: suggested alternative: 'WindowsXP'
+     SDL_WM_SetCaption(WindowTitle, 0);
+                       ^~~~~~~~~~~
+                       WindowsXP
+In file included from OctaSphereMSwin.cpp:31:
+C:\myIncludez\XFILES\Controls.h: In function 'void HandleKeyPress(SDL_keysym*)':
+C:\myIncludez\XFILES\Controls.h:7:26: error: 'picking' was not declared in this scope
+              bool ispick=picking;
+                          ^~~~~~~
+C:\myIncludez\XFILES\Controls.h:106:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:125:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:142:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:159:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:178:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:196:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:213:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:252:17: error: 'hidemousecursor' was not declared in this scope
+              if(hidemousecursor)SDL_ShowCursor(0);
+                 ^~~~~~~~~~~~~~~
+C:\myIncludez\XFILES\Controls.h: In function 'void CheckMove(CCam&)':
+C:\myIncludez\XFILES\Controls.h:339:9: error: 'tethered' was not declared in this scope
+      if(tethered){
+         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:340:9: error: 'exwhyzed' was not declared in this scope
+      if(exwhyzed)Camera1.CamRotatePos1(angspeed); //cam spins left
+         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:340:40: error: 'angspeed' was not declared in this scope
+      if(exwhyzed)Camera1.CamRotatePos1(angspeed); //cam spins left
+                                        ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:340:40: note: suggested alternative: 'speed'
+      if(exwhyzed)Camera1.CamRotatePos1(angspeed); //cam spins left
+                                        ^~~~~~~~
+                                        speed
+C:\myIncludez\XFILES\Controls.h:341:9: error: 'boom' was not declared in this scope
+      if(boom)Camera1.CamRotateBoomPos1(angspeed); //cam spins left
+         ^~~~
+C:\myIncludez\XFILES\Controls.h:341:9: note: suggested alternative: 'bool'
+      if(boom)Camera1.CamRotateBoomPos1(angspeed); //cam spins left
+         ^~~~
+         bool
+C:\myIncludez\XFILES\Controls.h:341:40: error: 'angspeed' was not declared in this scope
+      if(boom)Camera1.CamRotateBoomPos1(angspeed); //cam spins left
+                                        ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:341:40: note: suggested alternative: 'speed'
+      if(boom)Camera1.CamRotateBoomPos1(angspeed); //cam spins left
+                                        ^~~~~~~~
+                                        speed
+C:\myIncludez\XFILES\Controls.h:344:8: error: 'staked' was not declared in this scope
+     if(staked)Camera1.CamRotateView1(-angspeed);
+        ^~~~~~
+C:\myIncludez\XFILES\Controls.h:344:8: note: suggested alternative: 'speed'
+     if(staked)Camera1.CamRotateView1(-angspeed);
+        ^~~~~~
+        speed
+C:\myIncludez\XFILES\Controls.h:344:39: error: 'angspeed' was not declared in this scope
+     if(staked)Camera1.CamRotateView1(-angspeed);
+                                       ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:344:39: note: suggested alternative: 'speed'
+     if(staked)Camera1.CamRotateView1(-angspeed);
+                                       ^~~~~~~~
+                                       speed
+C:\myIncludez\XFILES\Controls.h:346:8: error: 'freedom' was not declared in this scope
+     if(freedom){
+        ^~~~~~~
+C:\myIncludez\XFILES\Controls.h:346:8: note: suggested alternative: 'fread'
+     if(freedom){
+        ^~~~~~~
+        fread
+C:\myIncludez\XFILES\Controls.h:347:9: error: 'wander' was not declared in this scope
+      if(wander){
+         ^~~~~~
+C:\myIncludez\XFILES\Controls.h:347:9: note: suggested alternative: 'linger'
+      if(wander){
+         ^~~~~~
+         linger
+C:\myIncludez\XFILES\Controls.h:348:30: error: 'angspeed' was not declared in this scope
+      Camera1.CamRotateView1(-angspeed);}
+                              ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:348:30: note: suggested alternative: 'speed'
+      Camera1.CamRotateView1(-angspeed);}
+                              ^~~~~~~~
+                              speed
+C:\myIncludez\XFILES\Controls.h:350:16: error: 'flight' was not declared in this scope
+             if(flight){
+                ^~~~~~
+C:\myIncludez\XFILES\Controls.h:350:16: note: suggested alternative: 'ilights'
+             if(flight){
+                ^~~~~~
+                ilights
+C:\myIncludez\XFILES\Controls.h:351:10: error: 'aeroplane' was not declared in this scope
+       if(aeroplane){
+          ^~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:352:30: error: 'angspeed' was not declared in this scope
+        Camera1.CamPlaneRoll(-angspeed);
+                              ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:352:30: note: suggested alternative: 'speed'
+        Camera1.CamPlaneRoll(-angspeed);
+                              ^~~~~~~~
+                              speed
+C:\myIncludez\XFILES\Controls.h:356:32: error: 'angspeed' was not declared in this scope
+        Camera1.CamRotateView1(-angspeed);
+                                ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:356:32: note: suggested alternative: 'speed'
+        Camera1.CamRotateView1(-angspeed);
+                                ^~~~~~~~
+                                speed
+C:\myIncludez\XFILES\Controls.h:363:9: error: 'tethered' was not declared in this scope
+      if(tethered){
+         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:364:9: error: 'exwhyzed' was not declared in this scope
+      if(exwhyzed)Camera1.CamRotatePos1(-angspeed);
+         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:364:41: error: 'angspeed' was not declared in this scope
+      if(exwhyzed)Camera1.CamRotatePos1(-angspeed);
+                                         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:364:41: note: suggested alternative: 'speed'
+      if(exwhyzed)Camera1.CamRotatePos1(-angspeed);
+                                         ^~~~~~~~
+                                         speed
+C:\myIncludez\XFILES\Controls.h:365:9: error: 'boom' was not declared in this scope
+      if(boom)    Camera1.CamRotateBoomPos1(-angspeed);
+         ^~~~
+C:\myIncludez\XFILES\Controls.h:365:9: note: suggested alternative: 'bool'
+      if(boom)    Camera1.CamRotateBoomPos1(-angspeed);
+         ^~~~
+         bool
+C:\myIncludez\XFILES\Controls.h:365:45: error: 'angspeed' was not declared in this scope
+      if(boom)    Camera1.CamRotateBoomPos1(-angspeed);
+                                             ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:365:45: note: suggested alternative: 'speed'
+      if(boom)    Camera1.CamRotateBoomPos1(-angspeed);
+                                             ^~~~~~~~
+                                             speed
+C:\myIncludez\XFILES\Controls.h:368:8: error: 'staked' was not declared in this scope
+     if(staked)Camera1.CamRotateView1(angspeed);
+        ^~~~~~
+C:\myIncludez\XFILES\Controls.h:368:8: note: suggested alternative: 'speed'
+     if(staked)Camera1.CamRotateView1(angspeed);
+        ^~~~~~
+        speed
+C:\myIncludez\XFILES\Controls.h:368:38: error: 'angspeed' was not declared in this scope
+     if(staked)Camera1.CamRotateView1(angspeed);
+                                      ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:368:38: note: suggested alternative: 'speed'
+     if(staked)Camera1.CamRotateView1(angspeed);
+                                      ^~~~~~~~
+                                      speed
+C:\myIncludez\XFILES\Controls.h:370:8: error: 'freedom' was not declared in this scope
+     if(freedom){
+        ^~~~~~~
+C:\myIncludez\XFILES\Controls.h:370:8: note: suggested alternative: 'fread'
+     if(freedom){
+        ^~~~~~~
+        fread
+C:\myIncludez\XFILES\Controls.h:371:9: error: 'wander' was not declared in this scope
+      if(wander)
+         ^~~~~~
+C:\myIncludez\XFILES\Controls.h:371:9: note: suggested alternative: 'linger'
+      if(wander)
+         ^~~~~~
+         linger
+C:\myIncludez\XFILES\Controls.h:372:29: error: 'angspeed' was not declared in this scope
+      Camera1.CamRotateView1(angspeed);
+                             ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:372:29: note: suggested alternative: 'speed'
+      Camera1.CamRotateView1(angspeed);
+                             ^~~~~~~~
+                             speed
+C:\myIncludez\XFILES\Controls.h:374:16: error: 'flight' was not declared in this scope
+             if(flight){
+                ^~~~~~
+C:\myIncludez\XFILES\Controls.h:374:16: note: suggested alternative: 'ilights'
+             if(flight){
+                ^~~~~~
+                ilights
+C:\myIncludez\XFILES\Controls.h:375:10: error: 'aeroplane' was not declared in this scope
+       if(aeroplane){
+          ^~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:376:29: error: 'angspeed' was not declared in this scope
+        Camera1.CamPlaneRoll(angspeed);}
+                             ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:376:29: note: suggested alternative: 'speed'
+        Camera1.CamPlaneRoll(angspeed);}
+                             ^~~~~~~~
+                             speed
+C:\myIncludez\XFILES\Controls.h:378:31: error: 'angspeed' was not declared in this scope
+        Camera1.CamRotateView1(angspeed);
+                               ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:378:31: note: suggested alternative: 'speed'
+        Camera1.CamRotateView1(angspeed);
+                               ^~~~~~~~
+                               speed
+C:\myIncludez\XFILES\Controls.h:385:9: error: 'tethered' was not declared in this scope
+      if(tethered){
+         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:386:12: error: 'exwhyzed' was not declared in this scope
+         if(exwhyzed)Camera1.CamRotatePos2(angspeed);
+            ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:386:43: error: 'angspeed' was not declared in this scope
+         if(exwhyzed)Camera1.CamRotatePos2(angspeed);
+                                           ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:386:43: note: suggested alternative: 'speed'
+         if(exwhyzed)Camera1.CamRotatePos2(angspeed);
+                                           ^~~~~~~~
+                                           speed
+C:\myIncludez\XFILES\Controls.h:387:12: error: 'boom' was not declared in this scope
+         if(boom)    Camera1.CamRotateBoomPos2(angspeed);
+            ^~~~
+C:\myIncludez\XFILES\Controls.h:387:12: note: suggested alternative: 'bool'
+         if(boom)    Camera1.CamRotateBoomPos2(angspeed);
+            ^~~~
+            bool
+C:\myIncludez\XFILES\Controls.h:387:47: error: 'angspeed' was not declared in this scope
+         if(boom)    Camera1.CamRotateBoomPos2(angspeed);
+                                               ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:387:47: note: suggested alternative: 'speed'
+         if(boom)    Camera1.CamRotateBoomPos2(angspeed);
+                                               ^~~~~~~~
+                                               speed
+C:\myIncludez\XFILES\Controls.h:390:16: error: 'staked' was not declared in this scope
+             if(staked)  Camera1.CamRotateView2(-angspeed);
+                ^~~~~~
+C:\myIncludez\XFILES\Controls.h:390:16: note: suggested alternative: 'speed'
+             if(staked)  Camera1.CamRotateView2(-angspeed);
+                ^~~~~~
+                speed
+C:\myIncludez\XFILES\Controls.h:390:49: error: 'angspeed' was not declared in this scope
+             if(staked)  Camera1.CamRotateView2(-angspeed);
+                                                 ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:390:49: note: suggested alternative: 'speed'
+             if(staked)  Camera1.CamRotateView2(-angspeed);
+                                                 ^~~~~~~~
+                                                 speed
+C:\myIncludez\XFILES\Controls.h:393:16: error: 'freedom' was not declared in this scope
+             if(freedom){
+                ^~~~~~~
+C:\myIncludez\XFILES\Controls.h:393:16: note: suggested alternative: 'fread'
+             if(freedom){
+                ^~~~~~~
+                fread
+C:\myIncludez\XFILES\Controls.h:394:9: error: 'wander' was not declared in this scope
+      if(wander){
+         ^~~~~~
+C:\myIncludez\XFILES\Controls.h:394:9: note: suggested alternative: 'linger'
+      if(wander){
+         ^~~~~~
+         linger
+C:\myIncludez\XFILES\Controls.h:399:7: error: 'aeroplane' was not declared in this scope
+    if(aeroplane){
+       ^~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:400:26: error: 'angspeed' was not declared in this scope
+    Camera1.CamPlanePitch(angspeed);}
+                          ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:400:26: note: suggested alternative: 'speed'
+    Camera1.CamPlanePitch(angspeed);}
+                          ^~~~~~~~
+                          speed
+C:\myIncludez\XFILES\Controls.h:402:48: error: 'angspeed' was not declared in this scope
+                         Camera1.CamRotateView2(angspeed);}
+                                                ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:402:48: note: suggested alternative: 'speed'
+                         Camera1.CamRotateView2(angspeed);}
+                                                ^~~~~~~~
+                                                speed
+C:\myIncludez\XFILES\Controls.h:408:9: error: 'tethered' was not declared in this scope
+      if(tethered){
+         ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:409:12: error: 'exwhyzed' was not declared in this scope
+         if(exwhyzed)Camera1.CamRotatePos2(-angspeed);
+            ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:409:44: error: 'angspeed' was not declared in this scope
+         if(exwhyzed)Camera1.CamRotatePos2(-angspeed);
+                                            ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:409:44: note: suggested alternative: 'speed'
+         if(exwhyzed)Camera1.CamRotatePos2(-angspeed);
+                                            ^~~~~~~~
+                                            speed
+C:\myIncludez\XFILES\Controls.h:410:12: error: 'boom' was not declared in this scope
+         if(boom)    Camera1.CamRotateBoomPos2(-angspeed);
+            ^~~~
+C:\myIncludez\XFILES\Controls.h:410:12: note: suggested alternative: 'bool'
+         if(boom)    Camera1.CamRotateBoomPos2(-angspeed);
+            ^~~~
+            bool
+C:\myIncludez\XFILES\Controls.h:410:48: error: 'angspeed' was not declared in this scope
+         if(boom)    Camera1.CamRotateBoomPos2(-angspeed);
+                                                ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:410:48: note: suggested alternative: 'speed'
+         if(boom)    Camera1.CamRotateBoomPos2(-angspeed);
+                                                ^~~~~~~~
+                                                speed
+C:\myIncludez\XFILES\Controls.h:413:16: error: 'staked' was not declared in this scope
+             if(staked)  Camera1.CamRotateView2(angspeed);
+                ^~~~~~
+C:\myIncludez\XFILES\Controls.h:413:16: note: suggested alternative: 'speed'
+             if(staked)  Camera1.CamRotateView2(angspeed);
+                ^~~~~~
+                speed
+C:\myIncludez\XFILES\Controls.h:413:48: error: 'angspeed' was not declared in this scope
+             if(staked)  Camera1.CamRotateView2(angspeed);
+                                                ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:413:48: note: suggested alternative: 'speed'
+             if(staked)  Camera1.CamRotateView2(angspeed);
+                                                ^~~~~~~~
+                                                speed
+C:\myIncludez\XFILES\Controls.h:415:16: error: 'freedom' was not declared in this scope
+             if(freedom){
+                ^~~~~~~
+C:\myIncludez\XFILES\Controls.h:415:16: note: suggested alternative: 'fread'
+             if(freedom){
+                ^~~~~~~
+                fread
+C:\myIncludez\XFILES\Controls.h:416:9: error: 'wander' was not declared in this scope
+      if(wander){
+         ^~~~~~
+C:\myIncludez\XFILES\Controls.h:416:9: note: suggested alternative: 'linger'
+      if(wander){
+         ^~~~~~
+         linger
+C:\myIncludez\XFILES\Controls.h:420:7: error: 'aeroplane' was not declared in this scope
+    if(aeroplane){
+       ^~~~~~~~~
+C:\myIncludez\XFILES\Controls.h:421:27: error: 'angspeed' was not declared in this scope
+    Camera1.CamPlanePitch(-angspeed);}
+                           ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:421:27: note: suggested alternative: 'speed'
+    Camera1.CamPlanePitch(-angspeed);}
+                           ^~~~~~~~
+                           speed
+C:\myIncludez\XFILES\Controls.h:423:49: error: 'angspeed' was not declared in this scope
+                         Camera1.CamRotateView2(-angspeed);}
+                                                 ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:423:49: note: suggested alternative: 'speed'
+                         Camera1.CamRotateView2(-angspeed);}
+                                                 ^~~~~~~~
+                                                 speed
+C:\myIncludez\XFILES\Controls.h:428:8: error: 'staked' was not declared in this scope
+     if(staked){
+        ^~~~~~
+C:\myIncludez\XFILES\Controls.h:428:8: note: suggested alternative: 'speed'
+     if(staked){
+        ^~~~~~
+        speed
+C:\myIncludez\XFILES\Controls.h:434:10: error: 'tethered' was not declared in this scope
+       if(tethered){
+          ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:435:54: error: 'angspeed' was not declared in this scope
+         if(shift_leftPressed)Camera1.CamRotateView1(-angspeed);
+                                                      ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:435:54: note: suggested alternative: 'speed'
+         if(shift_leftPressed)Camera1.CamRotateView1(-angspeed);
+                                                      ^~~~~~~~
+                                                      speed
+C:\myIncludez\XFILES\Controls.h:436:54: error: 'angspeed' was not declared in this scope
+         if(shift_rightPressed)Camera1.CamRotateView1(angspeed);
+                                                      ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:436:54: note: suggested alternative: 'speed'
+         if(shift_rightPressed)Camera1.CamRotateView1(angspeed);
+                                                      ^~~~~~~~
+                                                      speed
+C:\myIncludez\XFILES\Controls.h:437:51: error: 'angspeed' was not declared in this scope
+         if(shift_upPressed)Camera1.CamRotateView2(angspeed);
+                                                   ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:437:51: note: suggested alternative: 'speed'
+         if(shift_upPressed)Camera1.CamRotateView2(angspeed);
+                                                   ^~~~~~~~
+                                                   speed
+C:\myIncludez\XFILES\Controls.h:438:54: error: 'angspeed' was not declared in this scope
+         if(shift_downPressed)Camera1.CamRotateView2(-angspeed);
+                                                      ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:438:54: note: suggested alternative: 'speed'
+         if(shift_downPressed)Camera1.CamRotateView2(-angspeed);
+                                                      ^~~~~~~~
+                                                      speed
+C:\myIncludez\XFILES\Controls.h:442:53: error: 'angspeed' was not declared in this scope
+         if(shift_leftPressed)Camera1.CamRotatePos1(-angspeed);
+                                                     ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:442:53: note: suggested alternative: 'speed'
+         if(shift_leftPressed)Camera1.CamRotatePos1(-angspeed);
+                                                     ^~~~~~~~
+                                                     speed
+C:\myIncludez\XFILES\Controls.h:443:53: error: 'angspeed' was not declared in this scope
+         if(shift_rightPressed)Camera1.CamRotatePos1(angspeed);
+                                                     ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:443:53: note: suggested alternative: 'speed'
+         if(shift_rightPressed)Camera1.CamRotatePos1(angspeed);
+                                                     ^~~~~~~~
+                                                     speed
+C:\myIncludez\XFILES\Controls.h:444:5: error: 'wander' was not declared in this scope
+  if(wander){// up arrow look
+     ^~~~~~
+C:\myIncludez\XFILES\Controls.h:444:5: note: suggested alternative: 'linger'
+  if(wander){// up arrow look
+     ^~~~~~
+     linger
+C:\myIncludez\XFILES\Controls.h:445:52: error: 'angspeed' was not declared in this scope
+         if(shift_upPressed)Camera1.CamRotateView2(-angspeed);
+                                                    ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:445:52: note: suggested alternative: 'speed'
+         if(shift_upPressed)Camera1.CamRotateView2(-angspeed);
+                                                    ^~~~~~~~
+                                                    speed
+C:\myIncludez\XFILES\Controls.h:446:53: error: 'angspeed' was not declared in this scope
+         if(shift_downPressed)Camera1.CamRotateView2(angspeed); }
+                                                     ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:446:53: note: suggested alternative: 'speed'
+         if(shift_downPressed)Camera1.CamRotateView2(angspeed); }
+                                                     ^~~~~~~~
+                                                     speed
+C:\myIncludez\XFILES\Controls.h:447:5: error: 'flight' was not declared in this scope
+  if(flight){// down arrow, joystick back, plane goes up
+     ^~~~~~
+C:\myIncludez\XFILES\Controls.h:447:5: note: suggested alternative: 'ilights'
+  if(flight){// down arrow, joystick back, plane goes up
+     ^~~~~~
+     ilights
+C:\myIncludez\XFILES\Controls.h:448:51: error: 'angspeed' was not declared in this scope
+         if(shift_upPressed)Camera1.CamRotateView2(angspeed);
+                                                   ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:448:51: note: suggested alternative: 'speed'
+         if(shift_upPressed)Camera1.CamRotateView2(angspeed);
+                                                   ^~~~~~~~
+                                                   speed
+C:\myIncludez\XFILES\Controls.h:449:54: error: 'angspeed' was not declared in this scope
+         if(shift_downPressed)Camera1.CamRotateView2(-angspeed); }
+                                                      ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:449:54: note: suggested alternative: 'speed'
+         if(shift_downPressed)Camera1.CamRotateView2(-angspeed); }
+                                                      ^~~~~~~~
+                                                      speed
+C:\myIncludez\XFILES\Controls.h:454:9: error: 'boom' was not declared in this scope
+      if(boom){
+         ^~~~
+C:\myIncludez\XFILES\Controls.h:454:9: note: suggested alternative: 'bool'
+      if(boom){
+         ^~~~
+         bool
+C:\myIncludez\XFILES\Controls.h:455:27: error: 'angspeed' was not declared in this scope
+       Camera1.CamBoomSpin(angspeed);}
+                           ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:455:27: note: suggested alternative: 'speed'
+       Camera1.CamBoomSpin(angspeed);}
+                           ^~~~~~~~
+                           speed
+C:\myIncludez\XFILES\Controls.h:460:9: error: 'boom' was not declared in this scope
+      if(boom){
+         ^~~~
+C:\myIncludez\XFILES\Controls.h:460:9: note: suggested alternative: 'bool'
+      if(boom){
+         ^~~~
+         bool
+C:\myIncludez\XFILES\Controls.h:461:28: error: 'angspeed' was not declared in this scope
+       Camera1.CamBoomSpin(-angspeed);}
+                            ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:461:28: note: suggested alternative: 'speed'
+       Camera1.CamBoomSpin(-angspeed);}
+                            ^~~~~~~~
+                            speed
+C:\myIncludez\XFILES\Controls.h:465:8: error: 'tethered' was not declared in this scope
+     if(tethered){
+        ^~~~~~~~
+C:\myIncludez\XFILES\Controls.h:499:8: error: 'flight' was not declared in this scope
+     if(flight){
+        ^~~~~~
+C:\myIncludez\XFILES\Controls.h:499:8: note: suggested alternative: 'ilights'
+     if(flight){
+        ^~~~~~
+        ilights
+In file included from OctaSphereMSwin.cpp:32:
+C:\myIncludez\XFILES\DrawTextMove.h: In function 'void DrawTextMove(bool)':
+C:\myIncludez\XFILES\DrawTextMove.h:127:10: error: 'ProcessHitsDT' was not declared in this scope
+          ProcessHitsDT(hits, NameBuffer );
+          ^~~~~~~~~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h: In function 'void ProcessHitsDT(int, UINT*)':
+C:\myIncludez\XFILES\DrawTextMove.h:187:42: error: 'WIDTH' was not declared in this scope
+     ex=(double)(mousex-xstart)/( (double)WIDTH);
+                                          ^~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:188:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:188:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+C:\myIncludez\XFILES\DrawTextMove.h:206:29: error: 'shift1' was not declared in this scope
+                    if(k==20)shift1+=10;  if(k==21)shift1-=10;  //all x numbers left-right
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:206:29: note: suggested alternative: 'hits'
+                    if(k==20)shift1+=10;  if(k==21)shift1-=10;  //all x numbers left-right
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:206:51: error: 'shift1' was not declared in this scope
+                    if(k==20)shift1+=10;  if(k==21)shift1-=10;  //all x numbers left-right
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:206:51: note: suggested alternative: 'hits'
+                    if(k==20)shift1+=10;  if(k==21)shift1-=10;  //all x numbers left-right
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:207:29: error: 'shift3' was not declared in this scope
+                    if(k==22)shift3+=10;  if(k==23)shift3-=10;   //upper x axis up/down
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:207:29: note: suggested alternative: 'hits'
+                    if(k==22)shift3+=10;  if(k==23)shift3-=10;   //upper x axis up/down
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:207:51: error: 'shift3' was not declared in this scope
+                    if(k==22)shift3+=10;  if(k==23)shift3-=10;   //upper x axis up/down
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:207:51: note: suggested alternative: 'hits'
+                    if(k==22)shift3+=10;  if(k==23)shift3-=10;   //upper x axis up/down
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:209:29: error: 'shift1' was not declared in this scope
+                    if(k==16)shift1+=10;  if(k==17)shift1-=10;   //all x numbers left/right
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:209:29: note: suggested alternative: 'hits'
+                    if(k==16)shift1+=10;  if(k==17)shift1-=10;   //all x numbers left/right
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:209:51: error: 'shift1' was not declared in this scope
+                    if(k==16)shift1+=10;  if(k==17)shift1-=10;   //all x numbers left/right
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:209:51: note: suggested alternative: 'hits'
+                    if(k==16)shift1+=10;  if(k==17)shift1-=10;   //all x numbers left/right
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:210:29: error: 'shift4' was not declared in this scope
+                    if(k==18)shift4+=10;  if(k==19)shift4-=10;   //lower x numbers up/down
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:210:29: note: suggested alternative: 'hits'
+                    if(k==18)shift4+=10;  if(k==19)shift4-=10;   //lower x numbers up/down
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:210:51: error: 'shift4' was not declared in this scope
+                    if(k==18)shift4+=10;  if(k==19)shift4-=10;   //lower x numbers up/down
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:210:51: note: suggested alternative: 'hits'
+                    if(k==18)shift4+=10;  if(k==19)shift4-=10;   //lower x numbers up/down
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:212:29: error: 'shift5' was not declared in this scope
+                    if(k==12)shift5+=10;  if(k==13)shift5-=10;   //left y numbers left/right
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:212:29: note: suggested alternative: 'hits'
+                    if(k==12)shift5+=10;  if(k==13)shift5-=10;   //left y numbers left/right
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:212:51: error: 'shift5' was not declared in this scope
+                    if(k==12)shift5+=10;  if(k==13)shift5-=10;   //left y numbers left/right
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:212:51: note: suggested alternative: 'hits'
+                    if(k==12)shift5+=10;  if(k==13)shift5-=10;   //left y numbers left/right
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:213:29: error: 'shift2' was not declared in this scope
+                    if(k==14)shift2-=10;  if(k==15)shift2+=10;  //all y numbers up/down
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:213:29: note: suggested alternative: 'hits'
+                    if(k==14)shift2-=10;  if(k==15)shift2+=10;  //all y numbers up/down
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:213:51: error: 'shift2' was not declared in this scope
+                    if(k==14)shift2-=10;  if(k==15)shift2+=10;  //all y numbers up/down
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:213:51: note: suggested alternative: 'hits'
+                    if(k==14)shift2-=10;  if(k==15)shift2+=10;  //all y numbers up/down
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:215:28: error: 'shift6' was not declared in this scope
+                    if(k==8)shift6+=10;  if(k==9)shift6-=10;   //right y numbers left/right
+                            ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:215:28: note: suggested alternative: 'hits'
+                    if(k==8)shift6+=10;  if(k==9)shift6-=10;   //right y numbers left/right
+                            ^~~~~~
+                            hits
+C:\myIncludez\XFILES\DrawTextMove.h:215:49: error: 'shift6' was not declared in this scope
+                    if(k==8)shift6+=10;  if(k==9)shift6-=10;   //right y numbers left/right
+                                                 ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:215:49: note: suggested alternative: 'hits'
+                    if(k==8)shift6+=10;  if(k==9)shift6-=10;   //right y numbers left/right
+                                                 ^~~~~~
+                                                 hits
+C:\myIncludez\XFILES\DrawTextMove.h:216:29: error: 'shift2' was not declared in this scope
+                    if(k==10)shift2-=10;  if(k==11)shift2+=10;   // all y numbers up/down
+                             ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:216:29: note: suggested alternative: 'hits'
+                    if(k==10)shift2-=10;  if(k==11)shift2+=10;   // all y numbers up/down
+                             ^~~~~~
+                             hits
+C:\myIncludez\XFILES\DrawTextMove.h:216:51: error: 'shift2' was not declared in this scope
+                    if(k==10)shift2-=10;  if(k==11)shift2+=10;   // all y numbers up/down
+                                                   ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:216:51: note: suggested alternative: 'hits'
+                    if(k==10)shift2-=10;  if(k==11)shift2+=10;   // all y numbers up/down
+                                                   ^~~~~~
+                                                   hits
+C:\myIncludez\XFILES\DrawTextMove.h:218:28: error: 'shift7' was not declared in this scope
+                    if(k==4)shift7+=10;  if(k==5)shift7-=10;      //xtext
+                            ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:218:28: note: suggested alternative: 'hits'
+                    if(k==4)shift7+=10;  if(k==5)shift7-=10;      //xtext
+                            ^~~~~~
+                            hits
+C:\myIncludez\XFILES\DrawTextMove.h:218:49: error: 'shift7' was not declared in this scope
+                    if(k==4)shift7+=10;  if(k==5)shift7-=10;      //xtext
+                                                 ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:218:49: note: suggested alternative: 'hits'
+                    if(k==4)shift7+=10;  if(k==5)shift7-=10;      //xtext
+                                                 ^~~~~~
+                                                 hits
+C:\myIncludez\XFILES\DrawTextMove.h:219:28: error: 'shift8' was not declared in this scope
+                    if(k==6)shift8-=10;  if(k==7)shift8+=10;
+                            ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:219:28: note: suggested alternative: 'hits'
+                    if(k==6)shift8-=10;  if(k==7)shift8+=10;
+                            ^~~~~~
+                            hits
+C:\myIncludez\XFILES\DrawTextMove.h:219:49: error: 'shift8' was not declared in this scope
+                    if(k==6)shift8-=10;  if(k==7)shift8+=10;
+                                                 ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:219:49: note: suggested alternative: 'hits'
+                    if(k==6)shift8-=10;  if(k==7)shift8+=10;
+                                                 ^~~~~~
+                                                 hits
+C:\myIncludez\XFILES\DrawTextMove.h:223:28: error: 'shift9' was not declared in this scope
+                    if(k==0)shift9-=10;  if(k==1)shift9+=10;    //y text
+                            ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:223:28: note: suggested alternative: 'hits'
+                    if(k==0)shift9-=10;  if(k==1)shift9+=10;    //y text
+                            ^~~~~~
+                            hits
+C:\myIncludez\XFILES\DrawTextMove.h:223:49: error: 'shift9' was not declared in this scope
+                    if(k==0)shift9-=10;  if(k==1)shift9+=10;    //y text
+                                                 ^~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:223:49: note: suggested alternative: 'hits'
+                    if(k==0)shift9-=10;  if(k==1)shift9+=10;    //y text
+                                                 ^~~~~~
+                                                 hits
+C:\myIncludez\XFILES\DrawTextMove.h:224:28: error: 'shift10' was not declared in this scope
+                    if(k==2)shift10-=10;  if(k==3)shift10+=10;
+                            ^~~~~~~
+C:\myIncludez\XFILES\DrawTextMove.h:224:50: error: 'shift10' was not declared in this scope
+                    if(k==2)shift10-=10;  if(k==3)shift10+=10;
+                                                  ^~~~~~~
+In file included from OctaSphereMSwin.cpp:33:
+C:\myIncludez\XFILES\DrawCurveCol.h: In function 'void DrawCurveCol(bool)':
+C:\myIncludez\XFILES\DrawCurveCol.h:89:32: error: 'ncol' was not declared in this scope
+              Top1=Bottom1PC1[*(ncol+iplot)][1]+h2;
+                                ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:89:32: note: suggested alternative: 'tlcol'
+              Top1=Bottom1PC1[*(ncol+iplot)][1]+h2;
+                                ^~~~
+                                tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:350:13: error: 'ntype' was not declared in this scope
+        if(*(ntype+iplot)==0){
+             ^~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:350:13: note: suggested alternative: '_ctype'
+        if(*(ntype+iplot)==0){
+             ^~~~~
+             _ctype
+C:\myIncludez\XFILES\DrawCurveCol.h:372:24: error: aggregate 'std::ostringstream oss' has incomplete type and cannot be defined
+          ostringstream oss; string numberstring;
+                        ^~~
+C:\myIncludez\XFILES\DrawCurveCol.h:379:24: error: aggregate 'std::ostringstream oss' has incomplete type and cannot be defined
+          ostringstream oss; string numberstring;
+                        ^~~
+C:\myIncludez\XFILES\DrawCurveCol.h:380:20: error: 'nstyle' was not declared in this scope
+          oss <<  *(nstyle+iplot);
+                    ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:380:20: note: suggested alternative: 'tstyle'
+          oss <<  *(nstyle+iplot);
+                    ^~~~~~
+                    tstyle
+C:\myIncludez\XFILES\DrawCurveCol.h:386:24: error: aggregate 'std::ostringstream oss' has incomplete type and cannot be defined
+          ostringstream oss; string numberstring;
+                        ^~~
+C:\myIncludez\XFILES\DrawCurveCol.h:387:20: error: 'npoint' was not declared in this scope
+          oss <<  *(npoint+iplot);
+                    ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:387:20: note: suggested alternative: 'qCount'
+          oss <<  *(npoint+iplot);
+                    ^~~~~~
+                    qCount
+C:\myIncludez\XFILES\DrawCurveCol.h:407:10: error: 'ProcessHitsPC1' was not declared in this scope
+          ProcessHitsPC1(hits, NameBuffer );
+          ^~~~~~~~~~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:407:10: note: suggested alternative: 'ProcessHitsDT'
+          ProcessHitsPC1(hits, NameBuffer );
+          ^~~~~~~~~~~~~~
+          ProcessHitsDT
+C:\myIncludez\XFILES\DrawCurveCol.h: In function 'void ProcessHitsPC1(int, UINT*)':
+C:\myIncludez\XFILES\DrawCurveCol.h:477:42: error: 'WIDTH' was not declared in this scope
+     ex=(double)(mousex-xstart)/( (double)WIDTH);
+                                          ^~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:478:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:478:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+C:\myIncludez\XFILES\DrawCurveCol.h:509:32: error: 'ncol' was not declared in this scope
+      RedPC1Start=RedPC1slide[*(ncol+iplot)][1];
+                                ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:509:32: note: suggested alternative: 'tlcol'
+      RedPC1Start=RedPC1slide[*(ncol+iplot)][1];
+                                ^~~~
+                                tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:512:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:512:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+C:\myIncludez\XFILES\DrawCurveCol.h:514:19: error: 'ncol' was not declared in this scope
+     RedPC1slide[*(ncol+iplot)][1]=RedPC1Start
+                   ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:514:19: note: suggested alternative: 'tlcol'
+     RedPC1slide[*(ncol+iplot)][1]=RedPC1Start
+                   ^~~~
+                   tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:536:36: error: 'ncol' was not declared in this scope
+      GreenPC1Start=GreenPC1slide[*(ncol+iplot)][1];
+                                    ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:536:36: note: suggested alternative: 'tlcol'
+      GreenPC1Start=GreenPC1slide[*(ncol+iplot)][1];
+                                    ^~~~
+                                    tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:539:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:539:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+C:\myIncludez\XFILES\DrawCurveCol.h:541:21: error: 'ncol' was not declared in this scope
+     GreenPC1slide[*(ncol+iplot)][1]=GreenPC1Start
+                     ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:541:21: note: suggested alternative: 'tlcol'
+     GreenPC1slide[*(ncol+iplot)][1]=GreenPC1Start
+                     ^~~~
+                     tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:563:34: error: 'ncol' was not declared in this scope
+      BluePC1Start=BluePC1slide[*(ncol+iplot)][1];
+                                  ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:563:34: note: suggested alternative: 'tlcol'
+      BluePC1Start=BluePC1slide[*(ncol+iplot)][1];
+                                  ^~~~
+                                  tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:566:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:566:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+C:\myIncludez\XFILES\DrawCurveCol.h:570:20: error: 'ncol' was not declared in this scope
+     BluePC1slide[*(ncol+iplot)][1]=BluePC1Start
+                    ^~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:570:20: note: suggested alternative: 'tlcol'
+     BluePC1slide[*(ncol+iplot)][1]=BluePC1Start
+                    ^~~~
+                    tlcol
+C:\myIncludez\XFILES\DrawCurveCol.h:589:17: error: 'nplots' was not declared in this scope
+     if(iplot >= nplots)iplot=nplots-1;
+                 ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:589:17: note: suggested alternative: 'iplot'
+     if(iplot >= nplots)iplot=nplots-1;
+                 ^~~~~~
+                 iplot
+C:\myIncludez\XFILES\DrawCurveCol.h:599:7: error: 'nstyle' was not declared in this scope
+     *(nstyle+iplot)+=1;   //imat =0, mats-1
+       ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:599:7: note: suggested alternative: 'tstyle'
+     *(nstyle+iplot)+=1;   //imat =0, mats-1
+       ^~~~~~
+       tstyle
+C:\myIncludez\XFILES\DrawCurveCol.h:604:7: error: 'nstyle' was not declared in this scope
+     *(nstyle+iplot)-=1;
+       ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:604:7: note: suggested alternative: 'tstyle'
+     *(nstyle+iplot)-=1;
+       ^~~~~~
+       tstyle
+C:\myIncludez\XFILES\DrawCurveCol.h:609:7: error: 'npoint' was not declared in this scope
+     *(npoint+iplot)+=1;   //imat =0, mats-1
+       ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:609:7: note: suggested alternative: 'qCount'
+     *(npoint+iplot)+=1;   //imat =0, mats-1
+       ^~~~~~
+       qCount
+C:\myIncludez\XFILES\DrawCurveCol.h:614:7: error: 'npoint' was not declared in this scope
+     *(npoint+iplot)-=1;
+       ^~~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:614:7: note: suggested alternative: 'qCount'
+     *(npoint+iplot)-=1;
+       ^~~~~~
+       qCount
+C:\myIncludez\XFILES\DrawCurveCol.h:620:21: error: 'ntype' was not declared in this scope
+                if(*(ntype+iplot)==0){
+                     ^~~~~
+C:\myIncludez\XFILES\DrawCurveCol.h:620:21: note: suggested alternative: '_ctype'
+                if(*(ntype+iplot)==0){
+                     ^~~~~
+                     _ctype
+In file included from OctaSphereMSwin.cpp:34:
+C:\myIncludez\XFILES\DrawLegend.h: In function 'void DrawLegend(bool)':
+C:\myIncludez\XFILES\DrawLegend.h:57:10: error: 'nplots' was not declared in this scope
+       h1=nplots*.2;
+          ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:57:10: note: suggested alternative: 'iplot'
+       h1=nplots*.2;
+          ^~~~~~
+          iplot
+C:\myIncludez\XFILES\DrawLegend.h:123:44: error: 'ncol' was not declared in this scope
+              glColor3ub((int)(255*RedPC1[*(ncol+i)][1]),
+                                            ^~~~
+C:\myIncludez\XFILES\DrawLegend.h:123:44: note: suggested alternative: 'tlcol'
+              glColor3ub((int)(255*RedPC1[*(ncol+i)][1]),
+                                            ^~~~
+                                            tlcol
+C:\myIncludez\XFILES\DrawLegend.h:127:32: error: 'npoint' was not declared in this scope
+           glLineWidth((float)*(npoint+i));
+                                ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:127:32: note: suggested alternative: 'qCount'
+           glLineWidth((float)*(npoint+i));
+                                ^~~~~~
+                                qCount
+C:\myIncludez\XFILES\DrawLegend.h:130:16: error: 'ntype' was not declared in this scope
+           if(*(ntype+i)==0){ //plot lines
+                ^~~~~
+C:\myIncludez\XFILES\DrawLegend.h:130:16: note: suggested alternative: '_ctype'
+           if(*(ntype+i)==0){ //plot lines
+                ^~~~~
+                _ctype
+C:\myIncludez\XFILES\DrawLegend.h:133:16: error: 'nstyle' was not declared in this scope
+           if(*(nstyle+i)==0)glLineStipple(1,LINE0);
+                ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:133:16: note: suggested alternative: 'tstyle'
+           if(*(nstyle+i)==0)glLineStipple(1,LINE0);
+                ^~~~~~
+                tstyle
+C:\myIncludez\XFILES\DrawLegend.h:134:16: error: 'nstyle' was not declared in this scope
+           if(*(nstyle+i)==1)glLineStipple(1,LINE1);
+                ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:134:16: note: suggested alternative: 'tstyle'
+           if(*(nstyle+i)==1)glLineStipple(1,LINE1);
+                ^~~~~~
+                tstyle
+C:\myIncludez\XFILES\DrawLegend.h:135:16: error: 'nstyle' was not declared in this scope
+           if(*(nstyle+i)==2)glLineStipple(1,LINE2);
+                ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:135:16: note: suggested alternative: 'tstyle'
+           if(*(nstyle+i)==2)glLineStipple(1,LINE2);
+                ^~~~~~
+                tstyle
+C:\myIncludez\XFILES\DrawLegend.h:136:16: error: 'nstyle' was not declared in this scope
+           if(*(nstyle+i)==3)glLineStipple(1,LINE3);
+                ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:136:16: note: suggested alternative: 'tstyle'
+           if(*(nstyle+i)==3)glLineStipple(1,LINE3);
+                ^~~~~~
+                tstyle
+C:\myIncludez\XFILES\DrawLegend.h:137:16: error: 'nstyle' was not declared in this scope
+           if(*(nstyle+i)==4)glLineStipple(1,LINE4);
+                ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:137:16: note: suggested alternative: 'tstyle'
+           if(*(nstyle+i)==4)glLineStipple(1,LINE4);
+                ^~~~~~
+                tstyle
+C:\myIncludez\XFILES\DrawLegend.h:155:13: error: 'ntype' was not declared in this scope
+        if(*(ntype+i)==1){ //plot points
+             ^~~~~
+C:\myIncludez\XFILES\DrawLegend.h:155:13: note: suggested alternative: '_ctype'
+        if(*(ntype+i)==1){ //plot points
+             ^~~~~
+             _ctype
+C:\myIncludez\XFILES\DrawLegend.h:192:22: error: 'LegendStrings' was not declared in this scope
+         font11->draw(LegendStrings[i].c_str());
+                      ^~~~~~~~~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:192:22: note: suggested alternative: 'mciSendStringW'
+         font11->draw(LegendStrings[i].c_str());
+                      ^~~~~~~~~~~~~
+                      mciSendStringW
+C:\myIncludez\XFILES\DrawLegend.h:211:10: error: 'ProcessHitsLeg' was not declared in this scope
+          ProcessHitsLeg(hits, NameBuffer );
+          ^~~~~~~~~~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:211:10: note: suggested alternative: 'ProcessHitsPC1'
+          ProcessHitsLeg(hits, NameBuffer );
+          ^~~~~~~~~~~~~~
+          ProcessHitsPC1
+C:\myIncludez\XFILES\DrawLegend.h: In function 'void ProcessHitsLeg(int, UINT*)':
+C:\myIncludez\XFILES\DrawLegend.h:239:42: error: 'WIDTH' was not declared in this scope
+     ex=(double)(mousex-xstart)/( (double)WIDTH);
+                                          ^~~~~
+C:\myIncludez\XFILES\DrawLegend.h:240:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawLegend.h:240:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+In file included from OctaSphereMSwin.cpp:35:
+C:\myIncludez\XFILES\DrawLogicBox.h: In function 'void DrawLogicBox(bool)':
+C:\myIncludez\XFILES\DrawLogicBox.h:47:24: error: 'WIDTH' was not declared in this scope
+       w1=716./((double)WIDTH);
+                        ^~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:48:24: error: 'HEIGHT' was not declared in this scope
+       h1=499./((double)HEIGHT);
+                        ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:48:24: note: suggested alternative: 'HTRIGHT'
+       h1=499./((double)HEIGHT);
+                        ^~~~~~
+                        HTRIGHT
+C:\myIncludez\XFILES\DrawLogicBox.h:81:11: error: 'freedom' was not declared in this scope
+        if(freedom){
+           ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:81:11: note: suggested alternative: 'fread'
+        if(freedom){
+           ^~~~~~~
+           fread
+C:\myIncludez\XFILES\DrawLogicBox.h:101:11: error: 'tethered' was not declared in this scope
+        if(tethered){
+           ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:121:11: error: 'staked' was not declared in this scope
+        if(staked){
+           ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:121:11: note: suggested alternative: 'speed'
+        if(staked){
+           ^~~~~~
+           speed
+C:\myIncludez\XFILES\DrawLogicBox.h:141:11: error: 'wander' was not declared in this scope
+        if(wander){
+           ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:141:11: note: suggested alternative: 'linger'
+        if(wander){
+           ^~~~~~
+           linger
+C:\myIncludez\XFILES\DrawLogicBox.h:161:11: error: 'flight' was not declared in this scope
+        if(flight){
+           ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:161:11: note: suggested alternative: 'Right'
+        if(flight){
+           ^~~~~~
+           Right
+C:\myIncludez\XFILES\DrawLogicBox.h:181:11: error: 'aeroplane' was not declared in this scope
+        if(aeroplane){
+           ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:201:11: error: 'exwhyzed' was not declared in this scope
+        if(exwhyzed){
+           ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:220:11: error: 'boom' was not declared in this scope
+        if(boom){
+           ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:220:11: note: suggested alternative: 'bool'
+        if(boom){
+           ^~~~
+           bool
+C:\myIncludez\XFILES\DrawLogicBox.h:239:11: error: 'Picking' was not declared in this scope
+        if(Picking){
+           ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:273:10: error: 'ProcessHitsLB' was not declared in this scope
+          ProcessHitsLB(hits, NameBuffer );
+          ^~~~~~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:273:10: note: suggested alternative: 'ProcessHitsLeg'
+          ProcessHitsLB(hits, NameBuffer );
+          ^~~~~~~~~~~~~
+          ProcessHitsLeg
+C:\myIncludez\XFILES\DrawLogicBox.h: In function 'void ProcessHitsLB(int, UINT*)':
+C:\myIncludez\XFILES\DrawLogicBox.h:334:42: error: 'WIDTH' was not declared in this scope
+     ex=(double)(mousex-xstart)/( (double)WIDTH);
+                                          ^~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:335:43: error: 'HEIGHT' was not declared in this scope
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:335:43: note: suggested alternative: 'HTRIGHT'
+     why=(double)(mousey-ystart)/( (double)HEIGHT);
+                                           ^~~~~~
+                                           HTRIGHT
+C:\myIncludez\XFILES\DrawLogicBox.h:352:8: error: 'freedom' was not declared in this scope
+     if(freedom){
+        ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:352:8: note: suggested alternative: 'fread'
+     if(freedom){
+        ^~~~~~~
+        fread
+C:\myIncludez\XFILES\DrawLogicBox.h:353:6: error: 'tethered' was not declared in this scope
+      tethered=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:353:6: note: suggested alternative: 'checktethered'
+      tethered=true;
+      ^~~~~~~~
+      checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:356:6: error: 'staked' was not declared in this scope
+      staked=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:356:6: note: suggested alternative: 'speed'
+      staked=false;
+      ^~~~~~
+      speed
+C:\myIncludez\XFILES\DrawLogicBox.h:357:6: error: 'wander' was not declared in this scope
+      wander=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:357:6: note: suggested alternative: 'linger'
+      wander=false;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:358:6: error: 'aeroplane' was not declared in this scope
+      aeroplane=false;
+      ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:358:6: note: suggested alternative: 'checkaeroplane'
+      aeroplane=false;
+      ^~~~~~~~~
+      checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:359:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:359:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:360:6: error: 'boom' was not declared in this scope
+      boom=false;
+      ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:360:6: note: suggested alternative: 'bool'
+      boom=false;
+      ^~~~
+      bool
+C:\myIncludez\XFILES\DrawLogicBox.h:365:6: error: 'tethered' was not declared in this scope
+      tethered=false;   //set all defaults
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:365:6: note: suggested alternative: 'checktethered'
+      tethered=false;   //set all defaults
+      ^~~~~~~~
+      checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:367:6: error: 'staked' was not declared in this scope
+      staked=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:367:6: note: suggested alternative: 'speed'
+      staked=false;
+      ^~~~~~
+      speed
+C:\myIncludez\XFILES\DrawLogicBox.h:368:6: error: 'wander' was not declared in this scope
+      wander=true;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:368:6: note: suggested alternative: 'linger'
+      wander=true;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:369:6: error: 'aeroplane' was not declared in this scope
+      aeroplane=false;
+      ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:369:6: note: suggested alternative: 'checkaeroplane'
+      aeroplane=false;
+      ^~~~~~~~~
+      checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:370:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:370:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:371:6: error: 'boom' was not declared in this scope
+      boom=false;
+      ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:371:6: note: suggested alternative: 'bool'
+      boom=false;
+      ^~~~
+      bool
+C:\myIncludez\XFILES\DrawLogicBox.h:376:8: error: 'tethered' was not declared in this scope
+     if(tethered){
+        ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:376:8: note: suggested alternative: 'checktethered'
+     if(tethered){
+        ^~~~~~~~
+        checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:378:6: error: 'freedom' was not declared in this scope
+      freedom=true;
+      ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:378:6: note: suggested alternative: 'fread'
+      freedom=true;
+      ^~~~~~~
+      fread
+C:\myIncludez\XFILES\DrawLogicBox.h:380:6: error: 'staked' was not declared in this scope
+      staked=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:380:6: note: suggested alternative: 'speed'
+      staked=false;
+      ^~~~~~
+      speed
+C:\myIncludez\XFILES\DrawLogicBox.h:381:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:381:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:382:6: error: 'wander' was not declared in this scope
+      wander=true;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:382:6: note: suggested alternative: 'linger'
+      wander=true;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:383:6: error: 'aeroplane' was not declared in this scope
+      aeroplane=false;
+      ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:383:6: note: suggested alternative: 'checkaeroplane'
+      aeroplane=false;
+      ^~~~~~~~~
+      checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:384:6: error: 'boom' was not declared in this scope
+      boom=false;
+      ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:384:6: note: suggested alternative: 'bool'
+      boom=false;
+      ^~~~
+      bool
+C:\myIncludez\XFILES\DrawLogicBox.h:389:6: error: 'freedom' was not declared in this scope
+      freedom=false;
+      ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:389:6: note: suggested alternative: 'fread'
+      freedom=false;
+      ^~~~~~~
+      fread
+C:\myIncludez\XFILES\DrawLogicBox.h:391:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:391:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:392:6: error: 'boom' was not declared in this scope
+      boom=false;
+      ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:392:6: note: suggested alternative: 'bool'
+      boom=false;
+      ^~~~
+      bool
+C:\myIncludez\XFILES\DrawLogicBox.h:393:6: error: 'staked' was not declared in this scope
+      staked=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:393:6: note: suggested alternative: 'speed'
+      staked=false;
+      ^~~~~~
+      speed
+C:\myIncludez\XFILES\DrawLogicBox.h:394:6: error: 'wander' was not declared in this scope
+      wander=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:394:6: note: suggested alternative: 'linger'
+      wander=false;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:395:6: error: 'aeroplane' was not declared in this scope
+      aeroplane=false;
+      ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:395:6: note: suggested alternative: 'checkaeroplane'
+      aeroplane=false;
+      ^~~~~~~~~
+      checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:401:8: error: 'staked' was not declared in this scope
+     if(staked){
+        ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:401:8: note: suggested alternative: 'speed'
+     if(staked){
+        ^~~~~~
+        speed
+C:\myIncludez\XFILES\DrawLogicBox.h:403:6: error: 'freedom' was not declared in this scope
+      freedom=true;
+      ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:403:6: note: suggested alternative: 'fread'
+      freedom=true;
+      ^~~~~~~
+      fread
+C:\myIncludez\XFILES\DrawLogicBox.h:405:6: error: 'tethered' was not declared in this scope
+      tethered=false;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:405:6: note: suggested alternative: 'checktethered'
+      tethered=false;
+      ^~~~~~~~
+      checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:406:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:406:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:407:6: error: 'boom' was not declared in this scope
+      boom=false;
+      ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:407:6: note: suggested alternative: 'bool'
+      boom=false;
+      ^~~~
+      bool
+C:\myIncludez\XFILES\DrawLogicBox.h:408:6: error: 'wander' was not declared in this scope
+      wander=true;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:408:6: note: suggested alternative: 'linger'
+      wander=true;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:409:6: error: 'aeroplane' was not declared in this scope
+      aeroplane=false;
+      ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:409:6: note: suggested alternative: 'checkaeroplane'
+      aeroplane=false;
+      ^~~~~~~~~
+      checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:414:6: error: 'freedom' was not declared in this scope
+      freedom=false;   //set all defaults
+      ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:414:6: note: suggested alternative: 'fread'
+      freedom=false;   //set all defaults
+      ^~~~~~~
+      fread
+C:\myIncludez\XFILES\DrawLogicBox.h:416:6: error: 'tethered' was not declared in this scope
+      tethered=false;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:416:6: note: suggested alternative: 'checktethered'
+      tethered=false;
+      ^~~~~~~~
+      checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:417:6: error: 'wander' was not declared in this scope
+      wander=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:417:6: note: suggested alternative: 'linger'
+      wander=false;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:418:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:418:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:419:6: error: 'boom' was not declared in this scope
+      boom=false;
+      ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:419:6: note: suggested alternative: 'bool'
+      boom=false;
+      ^~~~
+      bool
+C:\myIncludez\XFILES\DrawLogicBox.h:420:6: error: 'aeroplane' was not declared in this scope
+      aeroplane=false;
+      ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:420:6: note: suggested alternative: 'checkaeroplane'
+      aeroplane=false;
+      ^~~~~~~~~
+      checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:426:8: error: 'freedom' was not declared in this scope
+     if(freedom){
+        ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:426:8: note: suggested alternative: 'fread'
+     if(freedom){
+        ^~~~~~~
+        fread
+C:\myIncludez\XFILES\DrawLogicBox.h:427:8: error: 'wander' was not declared in this scope
+     if(wander){
+        ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:427:8: note: suggested alternative: 'linger'
+     if(wander){
+        ^~~~~~
+        linger
+C:\myIncludez\XFILES\DrawLogicBox.h:429:6: error: 'flight' was not declared in this scope
+      flight=true;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:429:6: note: suggested alternative: 'ilights'
+      flight=true;
+      ^~~~~~
+      ilights
+C:\myIncludez\XFILES\DrawLogicBox.h:434:6: error: 'flight' was not declared in this scope
+      flight=false;   //set all defaults
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:434:6: note: suggested alternative: 'ilights'
+      flight=false;   //set all defaults
+      ^~~~~~
+      ilights
+C:\myIncludez\XFILES\DrawLogicBox.h:440:8: error: 'freedom' was not declared in this scope
+     if(freedom){
+        ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:440:8: note: suggested alternative: 'fread'
+     if(freedom){
+        ^~~~~~~
+        fread
+C:\myIncludez\XFILES\DrawLogicBox.h:441:8: error: 'flight' was not declared in this scope
+     if(flight){
+        ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:441:8: note: suggested alternative: 'ilights'
+     if(flight){
+        ^~~~~~
+        ilights
+C:\myIncludez\XFILES\DrawLogicBox.h:443:6: error: 'wander' was not declared in this scope
+      wander=true;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:443:6: note: suggested alternative: 'linger'
+      wander=true;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:444:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:444:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:449:6: error: 'wander' was not declared in this scope
+      wander=false;
+      ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:449:6: note: suggested alternative: 'linger'
+      wander=false;
+      ^~~~~~
+      linger
+C:\myIncludez\XFILES\DrawLogicBox.h:450:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:450:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:456:8: error: 'flight' was not declared in this scope
+     if(flight){
+        ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:456:8: note: suggested alternative: 'ilights'
+     if(flight){
+        ^~~~~~
+        ilights
+C:\myIncludez\XFILES\DrawLogicBox.h:457:8: error: 'aeroplane' was not declared in this scope
+     if(aeroplane){
+        ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:457:8: note: suggested alternative: 'checkaeroplane'
+     if(aeroplane){
+        ^~~~~~~~~
+        checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:459:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:459:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:463:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=false;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:463:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=false;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:471:23: error: 'staked' was not declared in this scope
+                   if(!staked  && !wander){
+                       ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:471:23: note: suggested alternative: 'speed'
+                   if(!staked  && !wander){
+                       ^~~~~~
+                       speed
+C:\myIncludez\XFILES\DrawLogicBox.h:471:35: error: 'wander' was not declared in this scope
+                   if(!staked  && !wander){
+                                   ^~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:471:35: note: suggested alternative: 'linger'
+                   if(!staked  && !wander){
+                                   ^~~~~~
+                                   linger
+C:\myIncludez\XFILES\DrawLogicBox.h:472:8: error: 'exwhyzed' was not declared in this scope
+     if(exwhyzed){
+        ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:472:8: note: suggested alternative: 'checkexwhyzed'
+     if(exwhyzed){
+        ^~~~~~~~
+        checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:474:9: error: 'tethered' was not declared in this scope
+      if(tethered)boom=true;
+         ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:474:9: note: suggested alternative: 'checktethered'
+      if(tethered)boom=true;
+         ^~~~~~~~
+         checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:474:18: error: 'boom' was not declared in this scope
+      if(tethered)boom=true;
+                  ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:474:18: note: suggested alternative: 'bool'
+      if(tethered)boom=true;
+                  ^~~~
+                  bool
+C:\myIncludez\XFILES\DrawLogicBox.h:475:9: error: 'freedom' was not declared in this scope
+      if(freedom)aeroplane=true;
+         ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:475:9: note: suggested alternative: 'fread'
+      if(freedom)aeroplane=true;
+         ^~~~~~~
+         fread
+C:\myIncludez\XFILES\DrawLogicBox.h:475:17: error: 'aeroplane' was not declared in this scope
+      if(freedom)aeroplane=true;
+                 ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:475:17: note: suggested alternative: 'checkaeroplane'
+      if(freedom)aeroplane=true;
+                 ^~~~~~~~~
+                 checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:480:9: error: 'tethered' was not declared in this scope
+      if(tethered)boom=false;
+         ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:480:9: note: suggested alternative: 'checktethered'
+      if(tethered)boom=false;
+         ^~~~~~~~
+         checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:480:18: error: 'boom' was not declared in this scope
+      if(tethered)boom=false;
+                  ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:480:18: note: suggested alternative: 'bool'
+      if(tethered)boom=false;
+                  ^~~~
+                  bool
+C:\myIncludez\XFILES\DrawLogicBox.h:481:9: error: 'freedom' was not declared in this scope
+      if(freedom)aeroplane=false;
+         ^~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:481:9: note: suggested alternative: 'fread'
+      if(freedom)aeroplane=false;
+         ^~~~~~~
+         fread
+C:\myIncludez\XFILES\DrawLogicBox.h:481:17: error: 'aeroplane' was not declared in this scope
+      if(freedom)aeroplane=false;
+                 ^~~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:481:17: note: suggested alternative: 'checkaeroplane'
+      if(freedom)aeroplane=false;
+                 ^~~~~~~~~
+                 checkaeroplane
+C:\myIncludez\XFILES\DrawLogicBox.h:487:8: error: 'tethered' was not declared in this scope
+     if(tethered){
+        ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:487:8: note: suggested alternative: 'checktethered'
+     if(tethered){
+        ^~~~~~~~
+        checktethered
+C:\myIncludez\XFILES\DrawLogicBox.h:488:8: error: 'boom' was not declared in this scope
+     if(boom){
+        ^~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:488:8: note: suggested alternative: 'bool'
+     if(boom){
+        ^~~~
+        bool
+C:\myIncludez\XFILES\DrawLogicBox.h:490:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=true;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:490:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=true;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:495:6: error: 'exwhyzed' was not declared in this scope
+      exwhyzed=false;
+      ^~~~~~~~
+C:\myIncludez\XFILES\DrawLogicBox.h:495:6: note: suggested alternative: 'checkexwhyzed'
+      exwhyzed=false;
+      ^~~~~~~~
+      checkexwhyzed
+C:\myIncludez\XFILES\DrawLogicBox.h:501:8: error: 'Picking' was not declared in this scope
+     if(Picking){
+        ^~~~~~~
+In file included from OctaSphereMSwin.cpp:60:
+C:\myIncludez\XFILES\Init.cpp: In function 'void Init()':
+C:\myIncludez\XFILES\Init.cpp:2:17: error: 'WIDTH' was not declared in this scope
+    InitialiseGL(WIDTH, HEIGHT);
+                 ^~~~~
+C:\myIncludez\XFILES\Init.cpp:2:24: error: 'HEIGHT' was not declared in this scope
+    InitialiseGL(WIDTH, HEIGHT);
+                        ^~~~~~
+C:\myIncludez\XFILES\Init.cpp:2:24: note: suggested alternative: 'HTRIGHT'
+    InitialiseGL(WIDTH, HEIGHT);
+                        ^~~~~~
+                        HTRIGHT
+C:\myIncludez\XFILES\Init.cpp:300:9: error: 'foggy' was not declared in this scope
+      if(foggy){
+         ^~~~~
+OctaSphereMSwin.cpp: In function 'void EventLoop()':
+OctaSphereMSwin.cpp:86:8: error: 'staked' was not declared in this scope
+     if(staked){
+        ^~~~~~
+OctaSphereMSwin.cpp:86:8: note: suggested alternative: 'speed'
+     if(staked){
+        ^~~~~~
+        speed
+OctaSphereMSwin.cpp:92:5: error: 'shift1' was not declared in this scope
+     shift1=0.0;  //  x leftright
+     ^~~~~~
+OctaSphereMSwin.cpp:92:5: note: suggested alternative: 'Left1'
+     shift1=0.0;  //  x leftright
+     ^~~~~~
+     Left1
+OctaSphereMSwin.cpp:93:5: error: 'shift2' was not declared in this scope
+     shift2=0.0;   // in/out
+     ^~~~~~
+OctaSphereMSwin.cpp:93:5: note: suggested alternative: 'Left2'
+     shift2=0.0;   // in/out
+     ^~~~~~
+     Left2
+OctaSphereMSwin.cpp:94:5: error: 'shift3' was not declared in this scope
+     shift3=0.0;   // z up/down
+     ^~~~~~
+OctaSphereMSwin.cpp:94:5: note: suggested alternative: 'Left3'
+     shift3=0.0;   // z up/down
+     ^~~~~~
+     Left3
+OctaSphereMSwin.cpp:95:5: error: 'shift4' was not declared in this scope
+     shift4=150.0;    //  x in/out
+     ^~~~~~
+OctaSphereMSwin.cpp:95:5: note: suggested alternative: 'short'
+     shift4=150.0;    //  x in/out
+     ^~~~~~
+     short
+OctaSphereMSwin.cpp:96:5: error: 'shift5' was not declared in this scope
+     shift5=150.0;    //  y left/right
+     ^~~~~~
+OctaSphereMSwin.cpp:96:5: note: suggested alternative: 'short'
+     shift5=150.0;    //  y left/right
+     ^~~~~~
+     short
+OctaSphereMSwin.cpp:97:5: error: 'shift6' was not declared in this scope
+     shift6=-100.0;    //  radial+-
+     ^~~~~~
+OctaSphereMSwin.cpp:97:5: note: suggested alternative: 'short'
+     shift6=-100.0;    //  radial+-
+     ^~~~~~
+     short
+OctaSphereMSwin.cpp:98:5: error: 'shift7' was not declared in this scope
+     shift7=0.0;
+     ^~~~~~
+OctaSphereMSwin.cpp:98:5: note: suggested alternative: 'short'
+     shift7=0.0;
+     ^~~~~~
+     short
+OctaSphereMSwin.cpp:99:5: error: 'shift8' was not declared in this scope
+     shift8=0.0;
+     ^~~~~~
+OctaSphereMSwin.cpp:99:5: note: suggested alternative: 'quint8'
+     shift8=0.0;
+     ^~~~~~
+     quint8
+OctaSphereMSwin.cpp:100:5: error: 'shift9' was not declared in this scope
+     shift9=0.0;
+     ^~~~~~
+OctaSphereMSwin.cpp:100:5: note: suggested alternative: 'short'
+     shift9=0.0;
+     ^~~~~~
+     short
+OctaSphereMSwin.cpp:101:5: error: 'shift10' was not declared in this scope
+     shift10=0.0;
+     ^~~~~~~
+OctaSphereMSwin.cpp:102:5: error: 'shift11' was not declared in this scope
+     shift11=0.0;
+     ^~~~~~~
+OctaSphereMSwin.cpp:103:5: error: 'shift12' was not declared in this scope
+     shift12=0.0;
+     ^~~~~~~
+OctaSphereMSwin.cpp:264:5: error: 'Triangles' was not declared in this scope
+     Triangles=(Triangle*)calloc(Ttotal, sizeof(Triangle));
+     ^~~~~~~~~
+OctaSphereMSwin.cpp:264:5: note: suggested alternative: 'Triangle'
+     Triangles=(Triangle*)calloc(Ttotal, sizeof(Triangle));
+     ^~~~~~~~~
+     Triangle
+OctaSphereMSwin.cpp:265:5: error: 'NodeV' was not declared in this scope
+     NodeV=(D3Dvec*)calloc(Ntotal, sizeof(D3Dvec));
+     ^~~~~
+OctaSphereMSwin.cpp:265:5: note: suggested alternative: 'mode_t'
+     NodeV=(D3Dvec*)calloc(Ntotal, sizeof(D3Dvec));
+     ^~~~~
+     mode_t
+OctaSphereMSwin.cpp:378:14: error: aggregate 'std::ofstream file_out' has incomplete type and cannot be defined
+     ofstream file_out;
+              ^~~~~~~~
+OctaSphereMSwin.cpp: In function 'void RenderScene(CCam&)':
+OctaSphereMSwin.cpp:1051:12: error: 'boom' was not declared in this scope
+         if(boom){
+            ^~~~
+OctaSphereMSwin.cpp:1051:12: note: suggested alternative: 'bool'
+         if(boom){
+            ^~~~
+            bool
+OctaSphereMSwin.cpp:1052:14: error: 'exwhyzed' was not declared in this scope
+           if(exwhyzed){
+              ^~~~~~~~
+OctaSphereMSwin.cpp:1109:27: error: 'NodeV' was not declared in this scope
+                  xvals[j]=NodeV[ Triangles[i].Get1()].GetX();
+                           ^~~~~
+OctaSphereMSwin.cpp:1109:27: note: suggested alternative: 'mode_t'
+                  xvals[j]=NodeV[ Triangles[i].Get1()].GetX();
+                           ^~~~~
+                           mode_t
+OctaSphereMSwin.cpp:1109:34: error: 'Triangles' was not declared in this scope
+                  xvals[j]=NodeV[ Triangles[i].Get1()].GetX();
+                                  ^~~~~~~~~
+OctaSphereMSwin.cpp:1109:34: note: suggested alternative: 'Triangle'
+                  xvals[j]=NodeV[ Triangles[i].Get1()].GetX();
+                                  ^~~~~~~~~
+                                  Triangle
+make: *** [OctaSphereMSwin.o] Error 1
